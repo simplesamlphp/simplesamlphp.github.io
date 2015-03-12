@@ -1,3 +1,7 @@
+---
+layout: default
+title: Awards
+---
 # Awards
 
 SimpleSAMLphp won the [IDDY award in 2008](http://projectliberty.org/liberty/news_events/iddy_awards/?f=liberty/news_events/iddy_awards).
