@@ -1,4 +1,9 @@
-<img src="/res/ssplogo-fish-only.jpg" style="float: right; " />
+---
+layout: default
+title: Front Page
+---
+
+<img src="{{ site.url }}/res/ssplogo-fish-only.jpg" style="float: right; " />
 
 **SimpleSAMLphp** is an [award-winning]({{ site.baseurl}}/awards) application written in native PHP that deals with
 authentication. The project is led by [UNINETT](https://www.uninett.no/), has a [large user base]({{ site.baseurl }}
