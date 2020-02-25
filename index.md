@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Front Page
+title: Home
 ---
 
 <img src="{{ site.url }}/res/ssplogo-fish-only.jpg" style="float: right; " />
@@ -10,8 +10,8 @@ authentication. The project is led by [UNINETT](https://www.uninett.no/), has a 
 /users), a helpful [user community]({{ site.baseurl }}/lists) and a [large set of external contributors](
 {{ site.baseurl }}/developers). The main focus of SimpleSAMLphp is providing support for:
 
- * [**SAML 2.0** as a Service Provider (SP)]({{ site.baseurl }}/samlsp)
- * [**SAML 2.0** as an Identity Provider (IdP)]({{ site.baseurl }}/samlidp)
+ * [**SAML 2.0** as a Service Provider (SP)]({{ site.baseurl }}/samlsp/)
+ * [**SAML 2.0** as an Identity Provider (IdP)]({{ site.baseurl }}/samlidp/)
 
 However, it also supports some other identity protocols and frameworks, such as Shibboleth 1.3, A-Select, CAS, OpenID,
 WS-Federation or OAuth, and is easily [extendable]({{ site.baseurl }}/modules), so you can develop your own modules if
