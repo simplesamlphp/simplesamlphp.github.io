@@ -45,10 +45,9 @@ div.mtoolbar div.menuitem a {
 
 	border: 1px solid #555;
 	padding: 5px;
-	margin: 0px;
-	margin-left: -1px;
+	margin: 0 0 0 -1px;
 	color: #eee;
-	font-weight: thin;
+	font-weight: lighter;
 	height: 30px;
 
 	text-shadow: #777 1px 1px 1px;
@@ -116,7 +115,7 @@ pre {
 
 div.sidebar h2, div.sidebar-warning h2 {
 	font-size: 130%;
-	margin: 5px 0px;
+	margin: 5px 0;
 	font-weight: normal;
 	border: none;
 }
@@ -124,7 +123,7 @@ div.sidebar, div.sidebar-warning {
 	font-size: 80%;
 	float: right;
 	background: #dee;
-	margin: .3em 0px .3em 1em;
+	margin: .3em 0 .3em 1em;
 	padding: 3px 10px;
 	width: 30%;
 	border: 1px solid #abb;
@@ -285,8 +284,8 @@ div.fcol.notinuse input{
 }
 ul.statusupdates  {
 	list-style:none inside;
-	padding:0px;
-	margin:0px;
+	padding: 0;
+	margin: 0;
 }
 
 div#createnew {
@@ -379,6 +378,6 @@ dt {
 	font-weight: bold;
 }
 dd p {
-	margin: 0px 1em .1em 0px;
+	margin: 0 1em .1em 0;
 }
 
