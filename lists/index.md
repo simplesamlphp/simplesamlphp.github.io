@@ -14,6 +14,13 @@ This mailing list is for users of simpleSAMLphp. If you have general questions a
 <strong>Your e-mail address</strong> 
 <input type="text" name="email" size="30" value="your@emailaddress.com" />
 <input type="submit" name="sub" value="Subscribe">
+<<<<<<< .mine
+<input type="submit" name="sub" value="Subscribe">
+
+=======
+<input type=BUTTON NAME="sub" size="30" value="Subscribe1" onclick="submit();">
+<input type=submit name="sub" value="Subscribe">
+>>>>>>> .theirs
 </form>
 
 * [Mailing list home page](http://groups.google.com/group/simplesamlphp)
