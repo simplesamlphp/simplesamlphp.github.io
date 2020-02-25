@@ -1,3 +1,7 @@
+---
+layout: default
+title: Mailing lists
+---
 # SimpleSAMLphp mailing lists
 
 We have number of mailing lists for SimpleSAMLphp. If you want to post questions, and discuss SimpleSAMLphp, then join the User's list. This is a high volume list, with several messages each day. If you do only want to catch the important announcements, such as security issues and new releases, then join the announcement list. All messages sent to the announcement list will also be sent to the user's list.

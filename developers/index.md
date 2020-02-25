@@ -1,3 +1,7 @@
+---
+layout: default
+title: Developers
+---
 # Developers
 
 * Jaime P&eacute;rez Crespo, UNINETT, Project Manager

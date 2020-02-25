@@ -1,3 +1,7 @@
+---
+layout: default
+title: SimpleSAMLphp as a Service Provide
+---
 # SimpleSAMLphp as a Service Provider (SP)
 
 If you have a web application that needs to authenticate users, SimpleSAMLphp can help you out. In addition to

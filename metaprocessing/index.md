@@ -1,3 +1,7 @@
+---
+layout: default
+title: Metadata processing performance
+---
 # Metadata processing performance
 
 Due to a [known issue in XML canonicalization](https://bugs.php.net/bug.php?id=53655) in PHP, processing large metadata

@@ -1,3 +1,7 @@
+---
+layout: default
+title: SimpleSAMLphp as an Identity Provider
+---
 # SimpleSAMLphp as an Identity Provider (IdP)
 
 If you have a directory of users, a database, an LDAP or a Radius interface, you can setup an installation of SimpleSAMLphp to have your own federated Single Sign-On environment.

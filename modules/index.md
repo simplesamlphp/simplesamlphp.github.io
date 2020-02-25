@@ -1,3 +1,7 @@
+---
+layout: default
+title: Modules
+---
 # Third-party modules
 
 SimpleSAMLphp contains an Extension API, allowing third-party modules to extend some parts of SimpleSAMLphp. Some of the

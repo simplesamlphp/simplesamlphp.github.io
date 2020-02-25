@@ -1,3 +1,7 @@
+---
+layout: default
+title: Support
+---
 # Support
 
 SimpleSAMLphp has a large set of developers and several contributors that provide documentation, translations,

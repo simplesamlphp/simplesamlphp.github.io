@@ -1,3 +1,7 @@
+---
+layout: default
+title: Security Advisories
+---
 # Security Advisories
 
 SimpleSAMLphp is a software product critical for the security of applications and the privacy of users. As such, we take

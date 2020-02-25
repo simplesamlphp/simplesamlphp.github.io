@@ -1,3 +1,7 @@
+---
+layout: default
+title: Trasnlation
+---
 # Translation
 
 Please help translating simpleSAMLphp to your language! 
