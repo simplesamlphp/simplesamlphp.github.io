@@ -13,7 +13,7 @@ This mailing list is for users of simpleSAMLphp. If you have general questions a
 <form action="http://groups.google.com/group/simplesamlphp/boxsubscribe">
 <strong>Your e-mail address</strong> 
 <input type="text" name="email" size="30" value="your@emailaddress.com" />
-<input type=submit name="sub" value="Subscribe">
+<input type="submit" name="sub" value="Subscribe">
 </form>
 
 * [Mailing list home page](http://groups.google.com/group/simplesamlphp)
