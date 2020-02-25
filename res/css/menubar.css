@@ -36,13 +36,11 @@ div.mtoolbar div.menuitem a {
 /*	border: 1px solid #ccc;*/
 	border: 1px solid #8d3434;
 	padding: 5px;
-	margin: 0px;
-	margin-left: -1px;
+	margin: 0 0 0 -1px;
 	color: #eee;
-	font-weight: thin;
+	font-weight: lighter;
 	height: 30px;
 
-	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8d3434), to(#8d3434), color-stop(.5,#bb463b));*/
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8d3434), to(#bb463b));
 	text-shadow: #833 1px 1px 1px;
 	
