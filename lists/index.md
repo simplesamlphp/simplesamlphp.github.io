@@ -40,8 +40,8 @@ This mailing list is for translators of simpleSAMLphp. If you have helped out wi
 
 <form action="http://groups.google.com/group/simplesamlphp-translation/boxsubscribe">
 <strong>Your e-mail address</strong>
-<input type="text" name="email" size="30" value="your@emailaddress.com" />
-<input type=submit name="sub" value="Subscribe">
+<input type="text" name="email" size="30" placeholder="your@emailaddress.com" />
+<input type="submit" name="sub" value="Subscribe">
 </form>
 
 * [Mailing list home page](http://groups.google.com/group/simplesamlphp-translation)
@@ -55,8 +55,8 @@ contribute, this is your list.
 
 <form action="http://groups.google.com/group/simplesamlphp-dev/boxsubscribe">
 <strong>Your e-mail address</strong>
-<input type="text" name="email" size="30" value="your@emailaddress.com" />
-<input type=submit name="sub" value="Subscribe">
+<input type="text" name="email" size="30" placeholder="your@emailaddress.com" />
+<input type="submit" name="sub" value="Subscribe">
 </form>
 
 * [Mailing list home page](http://groups.google.com/group/simplesamlphp-dev)
