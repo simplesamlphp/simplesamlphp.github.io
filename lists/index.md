@@ -11,8 +11,8 @@ We have number of mailing lists for SimpleSAMLphp. If you want to post questions
 This mailing list is for users of simpleSAMLphp. If you have general questions about simpleSAMLphp, have feature requests, or want do discuss something about simpleSAMLphp, please join the list.
 
 <form action="http://groups.google.com/group/simplesamlphp/boxsubscribe">
-<strong>Your e-mail address</strong> 
-<input type="text" name="email" size="30" value="your@emailaddress.com" />
+<strong>Your e-mail address</strong>
+<input type="text" name="email" size="30" placeholder="your@emailaddress.com" />
 <input type="submit" name="sub" value="Subscribe">
 </form>
 
@@ -24,8 +24,8 @@ This mailing list is for users of simpleSAMLphp. If you have general questions a
 This list is for announcement regarding SimpleSAMLphp from the project team at UNINETT. Information such as security issues and new releases will be sent to this list. You could sign up to the list, or alternatively use the RSS feed.
 
 <form action="http://groups.google.com/group/simplesamlphp-announce/boxsubscribe">
-<strong>Your e-mail address</strong> 
-<input type="text" name="email" size="30" value="your@emailaddress.com" />
+<strong>Your e-mail address</strong>
+<input type="text" name="email" size="30" placeholder="your@emailaddress.com" />
 <input type=submit name="sub" value="Subscribe">
 </form>
 
@@ -39,7 +39,7 @@ This mailing list is for translators of simpleSAMLphp. If you have helped out wi
 
 
 <form action="http://groups.google.com/group/simplesamlphp-translation/boxsubscribe">
-<strong>Your e-mail address</strong> 
+<strong>Your e-mail address</strong>
 <input type="text" name="email" size="30" value="your@emailaddress.com" />
 <input type=submit name="sub" value="Subscribe">
 </form>
