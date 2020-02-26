@@ -4,7 +4,7 @@ title: SimpleSAML Users
 ---
 # SimpleSAMLphp Users
 
-Here are some users of SimpleSAMLphp and what they have to say about the software. To get in contact with these and other users of SimpleSAMLphp, [please join the mailinglist](/mailinglists).
+Here are some users of SimpleSAMLphp and what they have to say about the software. To get in contact with these and other users of SimpleSAMLphp, [please join the mailinglist](/lists/).
 
 ## TEQneers GmbH & Co. KG
 

@@ -61,5 +61,5 @@ and many others who have helped use through the years make this project possible
 contributors](https://github.com/simplesamlphp/simplesamlphp/graphs/contributors) for a comprehensive list of people who
 have contributed to the project in one way or another. Thanks a lot to all of you!
 
-Lots of credits to [Pat Patterson](http://blogs.sun.com/superpat/) which made SimpleSAMLphp possible by releasing the
+Lots of credits to Pat Patterson which made SimpleSAMLphp possible by releasing the
 proof of concept implementation Lightbulb, showing that lightweight SAML implementations actually works.
