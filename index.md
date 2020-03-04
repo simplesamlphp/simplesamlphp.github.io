@@ -30,6 +30,6 @@ the [issue tracker](https://github.com/simplesamlphp/simplesamlphp/issues).
 
 {% for post in site.posts %}
 
-* _{{ post.date | date: '%Y-%M-%d' }}_: {{ post.excerpt | remove: '<p>' | remove: '</p>' }} 
+* _{{ post.date | date: '%Y-%m-%d' }}_: {{ post.excerpt | remove: '<p>' | remove: '</p>' }} 
 
 {% endfor %}
