@@ -27,6 +27,16 @@ div#content h1 {
     background: linear-gradient(141deg, #b8002c 0%, #db0100 51%, #e8410c 75%)
 }
 
+.logo-header {
+    min-width: 8em;
+    height: 6rem;
+    max-width: 70%;
+}
+.v-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .simple {
     font-weight: 300;
 }
