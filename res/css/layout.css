@@ -23,7 +23,8 @@ div#content h1 {
 
 #header {
     z-index: 0;
-    background:url("images/topp-bakgrunn_small.png") repeat-x;
+    height: 6rem;
+    background: linear-gradient(141deg, #b8002c 0%, #db0100 51%, #e8410c 75%)
 }
 
 #header #ulogo {
@@ -32,14 +33,12 @@ div#content h1 {
 	z-index: 10;
 }
 #header #logo {
-	color: #fff;
-	font-family: "Verdana", "sans-serif";
+	font-family: sans-serif;
+	font-size: 2.5em;
+	color: white;
+	text-shadow: 0 3px 2px #532900;
 	font-weight: bold;
 	letter-spacing: -0.12em;
-	text-shadow: 0 2px 0 #900;
-	font-size: 30px;
-/*	position: absolute;
-	top: 2px; left: 2px; */
 	z-index: 10;
 }
 #header #version {
