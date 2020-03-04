@@ -34,4 +34,3 @@ Make sure you follow the
 SimpleSAMLphp is available as a Debian package. You can therefore install it with apt-get,
 but bear in mind that the version available in Debian stable might be outdated. Therefore,
 **we don't recommend using the Debian package**.
-~
