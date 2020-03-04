@@ -27,6 +27,16 @@ div#content h1 {
     background: linear-gradient(141deg, #b8002c 0%, #db0100 51%, #e8410c 75%)
 }
 
+.simple {
+    font-weight: 300;
+}
+.saml {
+    font-family: Verdana;
+    letter-spacing: -0.12em;
+    font-weight: 600;
+    margin-left: -0.05em;
+}
+
 #header #ulogo {
 	position: absolute;
 	top: 10px; right: 20px;
