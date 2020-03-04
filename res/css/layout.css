@@ -72,6 +72,9 @@ div#content h1 {
 	letter-spacing: 0;
 }
 
+.right {
+    float: right;
+}
 
 /* --- langbar --- */
 
