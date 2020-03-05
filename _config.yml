@@ -5,7 +5,7 @@ description: SimpleSAMLphp** is an award-winning application written in native P
   implements support for multiple protocols, most notably SAML, OpenID or OAuth.
 baseurl: ""
 url: "https://simplesamlphp.github.io"
-twitter_username:
+twitter_username: simplesamlphp
 github_username:  simplesamlphp
 
 # Build settings
