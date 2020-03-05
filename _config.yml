@@ -7,6 +7,12 @@ baseurl: ""
 url: "https://simplesamlphp.github.io"
 twitter_username: simplesamlphp
 github_username:  simplesamlphp
+plugins_dir: ./_plugins
 
 # Build settings
 markdown: kramdown
+
+jekyll_get:
+  - data: releases
+    json: 'https://api.github.com/repos/simplesamlphp/simplesamlphp/releases'
+    cache: false
