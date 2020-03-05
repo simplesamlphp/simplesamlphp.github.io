@@ -8,12 +8,17 @@ title: Downloads
 Here you will find the packages with the current simpleSAMLphp versions:
 
 * <img style="position: relative; top: 5px" src="/res/icons/completed.png" alt="stable" />
-[**Latest stable version**](https://github.com/simplesamlphp/simplesamlphp/releases/latest)
+[**Latest release ({{ site.data.latest.tag_name | remove_first: "v" }})**]({{ site.data.latest.assets[0].browser_download_url }})
+
+    Released: {{ site.data.latest.published_at | date: "%Y-%m-%d" }}
+
+    {% assign sha = site.data.latest.body | split: '`' %}
+    SHA256 checksum: {{ sha[1] }}
 
     [View changes](/docs/stable/simplesamlphp-changelog)
 
 Check the [GitHub releases page](https://github.com/simplesamlphp/simplesamlphp/releases)
-in case you are looking for any other older version.
+in case you are looking for any other version.
 
 ## Github repository
 
@@ -32,5 +37,6 @@ Make sure you follow the
 ## Debian package
 
 SimpleSAMLphp is available as a Debian package. You can therefore install it with apt-get,
-but bear in mind that the version available in Debian stable might be outdated. Therefore,
-**we don't recommend using the Debian package**.
+but bear in mind that the version available in Debian stable might be outdated. Since Debian
+backports security fixes, it is fine to use the version you may get with apt-get, but you will
+miss the latest features.

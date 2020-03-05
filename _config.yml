@@ -13,6 +13,6 @@ plugins_dir: ./_plugins
 markdown: kramdown
 
 jekyll_get:
-  - data: releases
-    json: 'https://api.github.com/repos/simplesamlphp/simplesamlphp/releases'
+  - data: latest
+    json: 'https://api.github.com/repos/simplesamlphp/simplesamlphp/releases/latest'
     cache: false
