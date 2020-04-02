@@ -43,6 +43,8 @@ contact us privately first in order to avoid any potential damage to those using
 
 ## List of Security Advisories
 
+* [**SSPSA 202004-01**](/security/202004-01): Information disclosure of source code.
+
 * [**SSPSA 202001-02**](/security/202001-02): Log injection.
 
 * [**SSPSA 202001-01**](/security/202001-01): Cross-site scripting in error reports.
