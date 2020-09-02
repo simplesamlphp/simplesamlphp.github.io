@@ -5,9 +5,21 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.github.io/</link>
     <atom:link href="https://simplesamlphp.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 May 2020 12:58:24 +0000</pubDate>
-    <lastBuildDate>Tue, 12 May 2020 12:58:24 +0000</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2020 12:28:18 +0000</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2020 12:28:18 +0000</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Simplesamlphp 1.18.8</title>
+        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp 1.18.8&lt;/strong&gt; has been released. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more
+ information.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://simplesamlphp.github.io/2020/09/02/SimpleSAMLphp-1.18.8.html</link>
+        <guid isPermaLink="true">https://simplesamlphp.github.io/2020/09/02/SimpleSAMLphp-1.18.8.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Simplesamlphp 1.18.7</title>
