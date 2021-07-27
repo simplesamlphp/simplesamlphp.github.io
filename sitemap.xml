@@ -1,169 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://simplesamlphp.org/</loc>
-  <changefreq>daily</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-install</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-subversion</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-upgrade-notes-1.5</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-changelog</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-sp</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/saml:sp</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-reference-idp-remote</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-ukaccess</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-sp-migration</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-idp</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-reference-idp-hosted</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-googleapps</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-idp-more</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-automated_metadata</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-maintenance</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-authproc</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-advancedfeatures</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-translation</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-theming</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-modules</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/consent:consent</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/consentAdmin:consentAdmin</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/openidProvider:provider</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/authorize:authorize</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/InfoCard:usage</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/autotest:test</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/statistics:statistics</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/aggregator:aggregator</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://simplesamlphp.org/docs/stable/simplesamlphp-errorhandling</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/404.html</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/feed.xml</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/awards/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/support/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/developers/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlsp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/download/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/users/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlidp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/translation/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/modules/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/docs/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/lists/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/sitemap.xml</loc>
+        </url>
+    
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/2021/04/29/SimpleSAMLphp-1.19.1.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2021/01/21/SimpleSAMLphp-1.19.0.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2020/09/02/SimpleSAMLphp-1.18.8.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2020/05/12/SimpleSAMLphp-1.18.7.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2020/04/17/SimpleSAMLphp-1.18.6.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2020/03/19/SimpleSAMLphp-1.18.5.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2020/01/24/SimpleSAMLphp-1.18.4.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2019/12/09/SimpleSAMLphp-1.18.3.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2019/11/26/SimpleSAMLphp-1.18.2.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2019/11/26/SimpleSAMLphp-1.18.1.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2019/11/20/SimpleSAMLphp-1.17.8.html</loc>
+        </url>
+  
+        <url>
+            <loc>https://simplesamlphp.github.io/2019/11/19/SimpleSAMLphp-1.18.0.html</loc>
+        </url>
+  
 </urlset>
