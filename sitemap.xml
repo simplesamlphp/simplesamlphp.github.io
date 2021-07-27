@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
+            <loc>https://simplesamlphp.github.io/security/201404-01.html</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.github.io/404.html</loc>
         </url>
     
