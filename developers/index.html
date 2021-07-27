@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Developers</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.github.io/developers/">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.github.io/feed.xml" />
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <div id="header">
+    <div class="right">
+      <form style="margin-top: 2.5rem; margin-right: 2rem" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4" />
+        <input type="search" name="q" placeholder="Search" value="" />
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.github.io" style="color: #fff; text-decoration: none">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <div id="headerbar" style="clear: both">
+  <p id="breadcrumb"><a href="https://simplesamlphp.github.io">Home</a> » Developers</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/translation/">Translation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/developers/">Developers</a>
+      </div>
+      <div class="menuitem">
+        <a href="https://github.com/simplesamlphp/simplesamlphp/projects">Roadmap</a>
+      </div>
+      <div class="menuitem">
+        <a href="/awards">Awards</a>
+      </div>
+      <div class="menuitem">
+        <a href="/users/">Users</a>
+      </div>
+      <div class="menuitem">
+        <a href="/lists/">Mailing lists</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/support/">Support</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px" />
+  <br style="height: 0px; clear: both" />
+  </div><!-- /#headerbar -->
+
+  <div id="content">
+
+    <h1 id="developers">Developers</h1>
+
+<ul>
+  <li>Jaime Pérez Crespo, UNINETT, Project Manager</li>
+  <li>Tim van Dijen, Main Developer</li>
+  <li>Olav Morken, UNINETT, Project Architect</li>
+  <li>Andreas Åkre Solberg, UNINETT, Project Founder</li>
+</ul>
+
+<p>One important core component of SimpleSAMLphp is xmlseclibs, maintained by:</p>
+
+<ul>
+  <li>Rob Richards</li>
+</ul>
+
+<p>We’ve had many contributors through the years. Here are some of them, in no particular order, that we would like to
+thank:</p>
+
+<ul>
+  <li>Andreas Mayer and the Chair for Network and Data Security of the Ruhr-University Bochum: Holder-of-Key profile support for both SP and IdP.</li>
+  <li>Shoaib Ali (and Bill Young): Artifact support for the SP.</li>
+  <li>Patrick Honing: aselect authentication module and various bugfixes.</li>
+  <li>Emmanuel Dreyfus: authX509 module, SASL support in LDAP and proxy authentication in LDAP</li>
+  <li><a href="mailto:danny.bollaert@gmail.com">Danny Bollaert</a>: Added support for sending HTTP-Artifact on the IdP. Created cas authentication source (based on original by Mads Freek)</li>
+  <li>Lasse Birnbaum Jensen (Wayf.dk)</li>
+  <li>Mads Freek Petersen (Wayf.dk)</li>
+  <li>Anders Lund: Improved LDAP handling in authentication modules.</li>
+  <li>Enrique de la Hoz: Working with PKI and client certificates with simpleSAMLphp. Adding tlsclient authentication module using apache (mod_ssl)</li>
+  <li>Joakim Recht: Support for different logout response location than logout request location. Support for sending XML encoded attributes.</li>
+  <li>Jacob Christiansen: consentAdmin. IsPassive (with Mads)</li>
+  <li>Hans Zandbelt: a lot of testing, tips and tricks, WS-Federation support and A-Select support</li>
+  <li><a href="mailto:thomas.zangerl@freenet.de">Thomas Zangerl</a>: <code class="highlighter-rouge">core:ScopeFromAttribute</code> filter</li>
+  <li>Lorenzo Gil: Add multiauth module.</li>
+  <li>Pavel Šejnoha: Support for multiple servers in authmemcookie.</li>
+  <li>Thomas Graff: Several usability improvements</li>
+  <li>Harald Hannelius: Support for showing link to privacy policy on consent page.</li>
+  <li>Georg Gollmann: Add support for multiple AssertionConsumerService endpoints.</li>
+  <li><a href="http://code.google.com/u/gyufii/">gyufii</a>: SAMLParser: Extract name and description from SP metadata.</li>
+  <li><a href="mailto:pitbulk@gmail.com">pitbulk@gmail.com</a>: <code class="highlighter-rouge">cron</code>: View result in web page. <code class="highlighter-rouge">core:AttributeMap</code> - multiple target attributes.</li>
+  <li>Peter Dam Mains: working on consent module</li>
+  <li>Bjørn Ove Grøtan: Patches to LDAP login module</li>
+  <li>Lukas Haemmerle: XML security improvements, eduGAIN handling and shibboleth testing.</li>
+  <li>Stefan Winter: Radius attribute fetching, WebAuthn module</li>
+  <li>Cato Olsen: Improved LDAP authentication module.</li>
+  <li>José Alfonso Accino: Working with PAPI support in simpleSAMLphp. Various bugfixes.</li>
+  <li><a href="mailto:victoriano@uma.es">Victoriano Giralt</a>: Have done a great work with spanish localization of SimpleSAMLphp. Support for authenticating with a privileged account before fetching user attributes.</li>
+  <li>fronter.com: They operate an e-learning platform and is working with implementing the Shibboleth 1.2 attribute profile.</li>
+  <li>Ernesto Revilla: authorize-module and various bugfixes</li>
+  <li>Kenneth Svee: Support for absolute paths in configuration options.</li>
+  <li>Thijs Kinkhorst: Plenty of bugfixes and improvements.</li>
+  <li>Boy Baukema: Did an excellent job extracting the SAML2 library from SimpleSAMLphp.</li>
+  <li>Dick Visser: who has been running SimpleSAMLphp as a proxy for years and helped us debug and fix numerous issues.</li>
+  <li>Hanne Moa: who started the migration to twig and a new internationalization system.</li>
+  <li>Olimpia Magliulo: whose work on a new user interface was fundamental towards 2.0.</li>
+  <li>Patrick Radtke: who takes care of several modules, and made many useful contributions.</li>
+  <li>Dedra Chamberlin: who made an effort making SimpleSAMLphp known and used in the US.</li>
+  <li>Guy Halse: multiple improvements and translations.</li>
+  <li>Sergio Gómez: who helped us out take the most out of Symfony.</li>
+  <li>Peter Schober: for his invaluable help in our mailing lists.</li>
+</ul>
+
+<p>and many others who have helped use through the years make this project possible. Take a look at the <a href="https://github.com/simplesamlphp/simplesamlphp/graphs/contributors">list of
+contributors</a> for a comprehensive list of people who
+have contributed to the project in one way or another. Thanks a lot to all of you!</p>
+
+<p>Lots of credits to Pat Patterson which made SimpleSAMLphp possible by releasing the
+proof of concept implementation Lightbulb, showing that lightweight SAML implementations actually works.</p>
+
+    </div>    <!-- /#content -->
+
+<div id="footer">
+    <a href="https://www.uninett.no"><img id="ulogo" alt="notes" src="/res/uninettlogo.png" /></a>
+</div><!-- /#footer -->
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-431110-21");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
+  </body>
+</html>

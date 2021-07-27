@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Security Advisories</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.github.io/security/">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.github.io/feed.xml" />
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <div id="header">
+    <div class="right">
+      <form style="margin-top: 2.5rem; margin-right: 2rem" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4" />
+        <input type="search" name="q" placeholder="Search" value="" />
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.github.io" style="color: #fff; text-decoration: none">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <div id="headerbar" style="clear: both">
+  <p id="breadcrumb"><a href="https://simplesamlphp.github.io">Home</a> » Security Advisories</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/translation/">Translation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/developers/">Developers</a>
+      </div>
+      <div class="menuitem">
+        <a href="https://github.com/simplesamlphp/simplesamlphp/projects">Roadmap</a>
+      </div>
+      <div class="menuitem">
+        <a href="/awards">Awards</a>
+      </div>
+      <div class="menuitem">
+        <a href="/users/">Users</a>
+      </div>
+      <div class="menuitem">
+        <a href="/lists/">Mailing lists</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/support/">Support</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px" />
+  <br style="height: 0px; clear: both" />
+  </div><!-- /#headerbar -->
+
+  <div id="content">
+
+    <h1 id="security-advisories">Security Advisories</h1>
+
+<p>SimpleSAMLphp is a software product critical for the security of applications and the privacy of users. As such, we take
+every security issue very seriously, and try to solve them as fast as possible, avoiding any potential damage to both
+users of this software and end users.</p>
+
+<p>This page contains information about security vulnerabilities, incidents or issues related to SimpleSAMLphp. Read below
+to learn how to properly report vulnerabilities, as well as to find information about issues already reported and fixed.</p>
+
+<h2 id="reporting-vulnerabilities">Reporting vulnerabilities</h2>
+
+<p>In case you find a vulnerability in SimpleSAMLphp, or you want to confirm a possible security issue in the software,
+please get in touch with us through <a href="https://www.uninett.no/cert">UNINETT’s CERT team</a>. Please use our PGP public key
+to encrypt any possible sensitive data that you may need to submit. We will get back to you as soon as possible
+according to our working hours in Central European Time.</p>
+
+<p>When reporting a security issue, please add as much information as possible to help us identify, confirm, replicate and
+fix the problem. In particular, remember to include the following information in your report:</p>
+
+<ul>
+  <li>The version or versions of SimpleSAMLphp affected.</li>
+  <li>An exact version that can be used to replicate the issue.</li>
+  <li>Any module or modules involved in the issue.</li>
+  <li>Any particular configuration details relevant to the setup affected.</li>
+  <li>A detailed description and a clear and concise, step-by-step guide to allow us reproduce the issue.</li>
+  <li>Screenshots, videos, or any other media that would help identify the issue.</li>
+  <li>Pointers to the exact line or lines in the code where the vulnerability is supposed to be.</li>
+  <li>Context on how you discovered the issue.</li>
+  <li>Your own name and whether you want to be credited for the discovery or not.</li>
+</ul>
+
+<p>Please <strong>DO NOT</strong> report security incidents related to systems that use SimpleSAMLphp, where this software is not the
+cause of the incident. Issues related to the use (or misuse) of infrastructure, misconfiguration of the software,
+malfunction of a particular system or user-related errors should not be reported either. If you are using SimpleSAMLphp
+to authenticate or login to services, but you don’t know what SimpleSAMLphp is or you are not sure about the nature of
+the issue, please contact the organization running the service for you.</p>
+
+<p>Finally, be reasonable. We’ll do our best to resolve the issue according to our principles of security and transparency.
+Every confirmed vulnerability will be published and resolved in a timely manner. All we ask in return is that you
+contact us privately first in order to avoid any potential damage to those using the software.</p>
+
+<h2 id="list-of-security-advisories">List of Security Advisories</h2>
+
+<ul>
+  <li>
+    <p><a href="/security/202004-01"><strong>SSPSA 202004-01</strong></a>: Information disclosure of source code.</p>
+  </li>
+  <li>
+    <p><a href="/security/202001-02"><strong>SSPSA 202001-02</strong></a>: Log injection.</p>
+  </li>
+  <li>
+    <p><a href="/security/202001-01"><strong>SSPSA 202001-01</strong></a>: Cross-site scripting in error reports.</p>
+  </li>
+  <li>
+    <p><a href="/security/201911-02"><strong>SSPSA 201911-02</strong></a>: Information disclosure.</p>
+  </li>
+  <li>
+    <p><a href="/security/201911-01"><strong>SSPSA 201911-01</strong></a>: Signature validation bypass.</p>
+  </li>
+  <li>
+    <p><a href="/security/201907-01"><strong>SSPSA 201907-01</strong></a>: Reflected Cross-Site-Scripting.</p>
+  </li>
+  <li>
+    <p><a href="/security/201812-01"><strong>SSPSA 201812-01</strong></a>: Credentials exposure in session storage.</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-03"><strong>SSPSA 201809-03</strong></a>: Multiple XPath injections (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-02"><strong>SSPSA 201809-02</strong></a>: Dangerous use of <code class="highlighter-rouge">file_get_contents</code> (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-01"><strong>SSPSA 201809-01</strong></a>: Insecure signature validation (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201803-01"><strong>SSPSA 201803-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201802-01"><strong>SSPSA 201802-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-03"><strong>SSPSA 201801-03</strong></a>: Use of insecure connection charset (sqlauth module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-02"><strong>SSPSA 201801-02</strong></a>: Open redirection protection bypass.</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-01"><strong>SSPSA 201801-01</strong></a>: Denial of Service in timestamp validation function (SAML2 library).</p>
+  </li>
+  <li>
+    <p><a href="/security/201710-01"><strong>SSPSA 201710-01</strong></a>: Signature validation bypass (in SAML 1.1).</p>
+  </li>
+  <li>
+    <p><a href="/security/201709-01"><strong>SSPSA 201709-01</strong></a>: Cross Site Scripting (XSS) in the consentAdmin module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201708-01"><strong>SSPSA 201708-01</strong></a>: Invalid token creation and validation.</p>
+  </li>
+  <li>
+    <p><a href="/security/201705-01"><strong>SSPSA 201705-01</strong></a>: Session fixation issue and authentication bypass in the authcrypt module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201704-02"><strong>SSPSA 201704-02</strong></a>: Authentication context bypass (multiauth module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201704-01"><strong>SSPSA 201704-01</strong></a>: Unauthenticated encryption in CBC mode.</p>
+  </li>
+  <li>
+    <p><a href="/security/201703-02"><strong>SSPSA 201703-02</strong></a>: Incorrect IV generation for encryption.</p>
+  </li>
+  <li>
+    <p><a href="/security/201703-01"><strong>SSPSA 201703-01</strong></a>: Multiple issues due to timing side channels.</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-04"><strong>SSPSA 201612-04</strong></a>: Incorrect persistent NameID generation.</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-03"><strong>SSPSA 201612-03</strong></a>: Incorrect signature validation (InfoCard module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-02"><strong>SSPSA 201612-02</strong></a>: Incorrect signature validation (in SAML 1.1).</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-01"><strong>SSPSA 201612-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201606-01"><strong>SSPSA 201606-01</strong></a>: Link injection in several pages.</p>
+  </li>
+  <li>
+    <p><a href="/security/201603-01"><strong>SSPSA 201603-01</strong></a>: Information leakage issue in the <em>sanitycheck</em>
+module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201404-01"><strong>SSPSA 201404-01</strong></a>: Information and advice for SimpleSAMLphp users related
+to the Heartbleed vulnerability.</p>
+  </li>
+</ul>
+
+    </div>    <!-- /#content -->
+
+<div id="footer">
+    <a href="https://www.uninett.no"><img id="ulogo" alt="notes" src="/res/uninettlogo.png" /></a>
+</div><!-- /#footer -->
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-431110-21");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
+  </body>
+</html>

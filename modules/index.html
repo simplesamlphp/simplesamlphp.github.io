@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Modules</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.github.io/modules/">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.github.io/feed.xml" />
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <div id="header">
+    <div class="right">
+      <form style="margin-top: 2.5rem; margin-right: 2rem" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq" />
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4" />
+        <input type="search" name="q" placeholder="Search" value="" />
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.github.io" style="color: #fff; text-decoration: none">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <div id="headerbar" style="clear: both">
+  <p id="breadcrumb"><a href="https://simplesamlphp.github.io">Home</a> » Modules</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/translation/">Translation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/developers/">Developers</a>
+      </div>
+      <div class="menuitem">
+        <a href="https://github.com/simplesamlphp/simplesamlphp/projects">Roadmap</a>
+      </div>
+      <div class="menuitem">
+        <a href="/awards">Awards</a>
+      </div>
+      <div class="menuitem">
+        <a href="/users/">Users</a>
+      </div>
+      <div class="menuitem">
+        <a href="/lists/">Mailing lists</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/support/">Support</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px" />
+  <br style="height: 0px; clear: both" />
+  </div><!-- /#headerbar -->
+
+  <div id="content">
+
+    <h1 id="third-party-modules">Third-party modules</h1>
+
+<p>SimpleSAMLphp contains an Extension API, allowing third-party modules to extend some parts of SimpleSAMLphp. Some of the
+most important extension points of SimpleSAMLphp include:</p>
+
+<ul>
+  <li><strong>Authentication Modules</strong> allow you to implement your own authentication method, such as PKI-based, using a
+proprietary user data source, or any other kind of authentication mechanism.</li>
+  <li><strong>Authentication Processing Filters</strong> allow any kind of processing right after authentication has taken place.</li>
+  <li><strong>Themes</strong> allow you to customize the look of any page served by SimpleSAMLphp. You can change only the CSS, headers,
+footers, or you can modify the look of any particular page.</li>
+  <li><strong>Modules</strong> allow you to extend SimpleSAMLphp with any new identity protocols, pages, registry systems or anything
+you’d like.</li>
+</ul>
+
+<p>SimpleSAMLphp comes with a number of modules, authentication modules and processing filters that you may use, or use as
+a base for customizing SimpleSAMLphp to fit your specific needs. It also provides:</p>
+
+<ul>
+  <li>an abstract data store API, allowing alternative ways of storing data</li>
+  <li>an abstraction layer of metadata handling, allowing alternative implementations of metadata consumption</li>
+  <li>multiple session handlers, which you can use the session handling built-in to PHP or use memcache</li>
+  <li>multiple handlers for logging. You can choose between syslog and a normal file logger</li>
+</ul>
+
+<p>Apart from the modules that ship by default with SimpleSAMLphp, there’s plenty of modules that third-party developers
+make available for you to cover specific features. Here we provide a (non-exhaustive) list of modules available:</p>
+
+<h3 id="how-to-install-third-party-modules">How to install third-party modules</h3>
+
+<p>SimpleSAMLphp makes use of <a href="https://getcomposer.org/">Composer</a> to manage dependencies and third-party modules. Those
+modules that have been properly configured can be easily installed with composer. Just execute the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer.phar require vendor/simplesamlphp-module-mymodule version
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">vendor</code> is the name of the vendor of the module, <code class="highlighter-rouge">mymodule</code> is the name of the module itself and <code class="highlighter-rouge">version</code> is the
+version of the module you want to install, for example, 1.0.</p>
+
+<p>Please note that if you don’t have console access to your web server, you will need to deploy the module somewhere else
+and then copy the files to your server.</p>
+
+<h4 id="a-select"><a name="aselect" href="#aselect">A-Select</a></h4>
+
+<p>This module allows you to use A-Select (or any service that understands the A-Select 1.5 protocol) to authenticate users
+in SimpleSAMLphp.</p>
+
+<p>See the <a href="https://non-gnu.uvt.nl/simplesamlphp-aselect/">website</a> for more information on how to download and install it.</p>
+
+<h4 id="attribute-authority"><a name="attrauth" href="#attrauth">Attribute Authority</a></h4>
+
+<p>This module provides back-end SAML Attribute Authority functionality.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-aa</code></li>
+  <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-aa">NIIF/simplesamlphp-module-aa</a></li>
+</ul>
+
+<h4 id="attribute-aggregator"><a name="attraggregator" href="#attraggregator">Attribute Aggregator</a></h4>
+
+<p>The Attribute Aggregator module is implemented as an
+<a href="http://www.famine.vm/docs/stable/simplesamlphp-authproc">Authentication Processing Filter</a>. It can be configured in the
+SP’s <code class="highlighter-rouge">config.php</code> file.</p>
+
+<p>It is recommended to run the Attribute Aggregator module at the SP and configure the filter to run after the federated
+identity, usually <em>eduPersonPrincipalName</em>, is resolved.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-attributeaggregator</code></li>
+  <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-attributeaggregator">NIIF/simplesamlphp-module-atributeaggregator</a></li>
+</ul>
+
+<h4 id="attribute-scope-filter"><a name="attrscopefilter" href="#attrscopefilter">Attribute Scope Filter</a></h4>
+
+<p>This module ensures that scoped attributes (such as <code class="highlighter-rouge">eduPersonPrincipalName</code>) have the right scopes defined in the
+entity metadata. It removes values:</p>
+
+<ul>
+  <li>that should be scoped but are not;</li>
+  <li>whose scope does not match the shibmd:Scope element in the metadata.</li>
+</ul>
+
+<p>Additionally, it is also capable of handling <em>scope attributes</em> such as <code class="highlighter-rouge">schacHomeOrganization</code> that should be
+equivalent to the <code class="highlighter-rouge">shibmd:Scope</code> element in the metadata.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-attributescope</code></li>
+  <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-attributescope">NIIF/simplesamlphp-module-attributescope</a></li>
+</ul>
+
+<h4 id="authmemcookie"><a name="authmemcookie" href="#authmemcookie">AuthMemCookie</a></h4>
+
+<p>This module implements <a href="http://authmemcookie.sourceforge.net/">Auth MemCookie</a> support for SimpleSAMLphp. This allows
+you to integrate SimpleSAMLphp with web applications written in languages other than PHP.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-memcookie</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-memcookie">simplesamlphp/simplesamlphp-module-memcookie</a></li>
+</ul>
+
+<h4 id="autotest"><a name="autotest" href="#autotest">Autotest</a></h4>
+
+<p>This module provides an interface to do automatic testing of authentication sources.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-autotest</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-autotest">simplesamlphp/simplesamlphp-module-autotest</a></li>
+</ul>
+
+<h4 id="cassandra-store"><a name="cassandrastore" href="#cassandrastore">Cassandra Store</a></h4>
+
+<p>A SimpleSAMLphp module providing support for Cassandra backends to store both session information and metadata.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">feideconnect/simplesamlphp-module-cassandrastore</code></li>
+  <li>Repository: <a href="https://github.com/feideconnect/simplesamlphp-module-cassandrastore">feideconnect/simplesamlphp-module-cassandrastore</a></li>
+</ul>
+
+<h4 id="consent-simple-admin"><a name="consentsimpleadmin" href="#consentsimpleadmin">Consent Simple Admin</a></h4>
+
+<p>A SimpleSAMLphp module implementing a very simple user interface for managing consent.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-consentsimpleadmin</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-consentsimpleadmin">simplesamlphp/simplesamlphp-module-consentsimpleadmin</a></li>
+</ul>
+
+<h4 id="discojuice"><a name="discojuice" href="#discojuice">DiscoJuice</a></h4>
+
+<p>A SimpleSAMLphp module to provide a very flexible User Interface implementing an IdP Discovery Service. See the
+<a href="http://discojuice.org">web page</a> for more information.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-discojuice</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-discojuice">simplesamlphp/simplesamlphp-module-discojuice</a></li>
+</ul>
+
+<h4 id="entattribsattributefromentity"><a name="attrfromentity" href="#attrfromentity">entattribs:AttributeFromEntity</a></h4>
+
+<p>This SimpleSAMLphp authentication processing filter allows you to provide additional attributes based on entity
+attributes in the metadata. It is useful when entity metadata contains definitive information that you wish to convert
+into a SAML attribute (e.g. an entity attribute containing the value that should be used for <em>schacHomeOrganization</em> in
+remote IdP metadata).</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-entattribs</code></li>
+  <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-entattribs">safire-ac-za/simplesamlphp-modules-entattribs</a></li>
+</ul>
+
+<h4 id="f-ticks"><a name="fticks" href="#fticks">F-ticks</a></h4>
+
+<p>Log statistics in the <a href="https://wiki.geant.org/display/gn42jra3/F-ticks+standard">F-ticks federation log format</a>.</p>
+
+<p>The filter aims to produce as many F-ticks attributes as possible, irrespective of whether SimpleSAMLphp is acting as an
+Identity Provider or a SAML Service Provider.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-fticks</code></li>
+  <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-fticks">safire-ac-za/simplesamlphp-modules-fticks</a></li>
+</ul>
+
+<h4 id="generate-unique-id"><a name="generateuniqueid" href="#generateuniqueid">Generate Unique ID</a></h4>
+
+<p>Generate an <code class="highlighter-rouge">eduPersonUniqueId</code> attribute from various LDAP implementations’ objectGUID.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-genuniqueid</code></li>
+  <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-genuniqueid">safire-ac-za/simplesamlphp-modules-genuniqueid</a></li>
+</ul>
+
+<h4 id="infocard"><a name="infocard" href="#infocard">InfoCard</a></h4>
+
+<p>This is a SimpleSAMLphp module that works with Information Cards technologies and provides some basic functionalities:</p>
+
+<ul>
+  <li>
+    <p><strong>RP</strong>: acting as a Relying Party, you can accept user authentication through InfoCards consuming tokens sent by an
+STS.</p>
+  </li>
+  <li>
+    <p><strong>STS</strong>: acting as a Secure Token Service you can provide information to a RP generating tokens. Currently, only user
+password and self issued credentials are supported.</p>
+  </li>
+  <li>
+    <p><strong>InfoCard Generator</strong>: your users could request their InfoCard filling a form with their username and password.</p>
+  </li>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-infocard</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-infocard">simplesamlphp/simplesamlphp-module-infocard</a></li>
+</ul>
+
+<h4 id="kerberos"><a name="kerberos" href="#kerberos">Kerberos</a></h4>
+
+<p>Kerberos 5 authentication module for SimpleSAMLphp.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">ualberta-iapps/simplesamlphp-module-kerberos</code></li>
+  <li>Repository: <a href="https://github.com/ualberta-iapps/simplesamlphp-module-kerberos">ualberta-iapps/simplesamlphp-module-kerberos</a></li>
+</ul>
+
+<h4 id="logpeek"><a name="logpeek" href="#logpeek">Logpeek</a></h4>
+
+<p>This module provides a web API that you can use to search for all to lines in the logs corresponding to a specific
+session identifier.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-logpeek</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-logpeek">simplesamlphp/simplesamlphp-module-logpeek</a></li>
+</ul>
+
+<h4 id="metadata-aggregator"><a name="mdaggregator" href="#mdaggregator">Metadata aggregator</a></h4>
+
+<p>This module aggregates a set of SAML entities into SAML 2.0 metadata documents. The resulting metadata documents contain
+an EntitiesDescriptor element with the multiple entities configured as sources inside. Multiple aggregates can be
+configured at the same time.</p>
+
+<p>Please note that <strong>this module has been deprecated</strong> in favour of the more recent
+<a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator2">Aggregator2 module</a>.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator">simplesamlphp/simplesamlphp-module-aggregator</a></li>
+</ul>
+
+<h4 id="metadata-aggregator-2"><a name="mdaggregator2" href="#mdaggregator2">Metadata aggregator 2</a></h4>
+
+<p>This is a module for metadata aggregation. It is designed to preserve most of the common metadata items, and it also
+attempts to preserve unknown elements. It parses and rebuilds metadata sources, so small differences between them and
+the generated metadata may occur.</p>
+
+<p>Please note that this aggregator works only with XML metadata, and does its work independently of other parts of
+SimpleSAMLphp, such as the <em>metarefresh</em> module.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator2</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator2">simplesamlphp/simplesamlphp-module-aggregator2</a></li>
+</ul>
+
+<h4 id="metaedit"><a name="metaedit" href="#metaedit">Metaedit</a></h4>
+
+<p>This module allows you to do very basic editing of metadata (AssertionConsumerService, SingleLogoutService, name and
+description, as well as manually registering metadata for service providers.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-metaedit</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-metaedit">simplesamlphp/simplesamlphp-module-metaedit</a></li>
+</ul>
+
+<h4 id="modinfo"><a name="modinfo" href="#modinfo">Modinfo</a></h4>
+
+<p>A very straightforward module for SimpleSAMLphp that displays the list of modules and their status in the web interface.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-modinfo</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-modinfo">simplesamlphp/simplesamlphp-module-modinfo</a></li>
+</ul>
+
+<h4 id="monitor"><a name="monitor" href="#monitor">Monitor</a></h4>
+
+<p>A SimpleSAMLphp module that can monitor authsources, metadata, certificate validity, etc. It can output results as HTML,
+XML or JSON it can be easily extended with your own test cases</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">tvdijen/simplesamlphp-module-monitor</code></li>
+  <li>Repository: <a href="https://github.com/tvdijen/simplesamlphp-module-monitor">tvdijen/simplesamlphp-module-monitor</a></li>
+</ul>
+
+<h4 id="oauth2"><a name="oauth2" href="#oauth2">OAuth2</a></h4>
+
+<p>A module adding support for <a href="http://oauth.net/2/">the OAuth2 protocol</a>.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">sgomez/simplesamlphp-module-oauth2</code></li>
+  <li>Repository: <a href="https://github.com/sgomez/simplesamlphp-module-oauth2">sgomez/simplesamlphp-module-oauth2</a></li>
+</ul>
+
+<h4 id="openid-consumer"><a name="oidconsumer" href="#oidconsumer">OpenID Consumer</a></h4>
+
+<p>A module adding support for the OpenID protocol as a Consumer.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-openid</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-openid">simplesamlphp/simplesamlphp-module-openid</a></li>
+</ul>
+
+<h4 id="openid-provider"><a name="oidprovider" href="#oidprovider">OpenID Provider</a></h4>
+
+<p>A module adding support for the OpenID protocol as an Identity Provider.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-openidprovider</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-openidprovider">simplesamlphp/simplesamlphp-module-openidprovider</a></li>
+</ul>
+
+<h4 id="papi"><a name="papi" href="#papi">PAPI</a></h4>
+
+<p>This authentication module makes use of an external library, <a href="https://forja.rediris.es/projects/phppoa/"><em>phpPoA</em></a>, in
+order to authenticate users by means of the PAPI protocol. It can therefore be used to bridge between protocols,
+behaving like a PAPI <em>Point of Access</em> or as a <em>Service Provider</em>.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">rediris-es/simplesamlphp-module-papi</code></li>
+  <li>Repository: <a href="https://github.com/rediris-es/simplesamlphp-module-papi">rediris-es/simplesamlphp-module-papi</a></li>
+</ul>
+
+<h4 id="privacyidea"><a name="privacyidea" href="#privacyidea">PrivacyIDEA</a></h4>
+
+<p>This module enables SimpleSAMLphp to perform two-factor authentication against a <em>privacyIDEA</em> server. Users can
+authenticate with normal OTP tokens, challenge-response tokens via email or text messages, or U2F devices.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">privacyidea/simplesamlphp-module-privacyidea</code></li>
+  <li>Repository: <a href="https://github.com/privacyidea/simplesamlphp-module-privacyidea">privacyidea/simplesamlphp-module-privacyidea</a></li>
+</ul>
+
+<h4 id="saml-20-debugger"><a name="samldebug" href="#samldebug">SAML 2.0 Debugger</a></h4>
+
+<p>This module allows you to debug SAML 2.0 messages by decoding or encoding them according to the binding they are using,
+supporting both the HTTP-Redirect and HTTP-POST bindings.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-saml2debug</code></li>
+  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-saml2debug">simplesamlphp/simplesamlphp-module-saml2debug</a></li>
+</ul>
+
+<h4 id="selfregister"><a name="selfregister" href="#selfregister">Selfregister</a></h4>
+
+<p>A module that allows registration of users accounts. The original version was developed by UNINETT and supported LDAP as
+a backend. This fork adds support for SQL databases as the back-end.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">geant/simplesamlphp-module-selfregister</code></li>
+  <li>Repository: <a href="https://github.com/TERENA/simplesamlphp-module-selfregister">geant/simplesamlphp-module-selfregister</a></li>
+</ul>
+
+<h4 id="sql-attributes"><a name="sqlattrs" href="#sqlattrs">SQL Attributes</a></h4>
+
+<p>An authentication processing filter that allows you to provide additional attributes from a SQL datastore. It is useful
+in situations where your primary authentication source is a directory (e.g. AD) that you do not have direct control
+over, and you need to add additional attributes for specific users but cannot add them to the directory or modify the
+schema.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-module-sqlattribs</code></li>
+  <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-sqlattribs">safire-ac-za/simplesamlphp-module-sqlattribs</a></li>
+</ul>
+
+<h4 id="voot-groups"><a name="voot" href="#voot">VOOT Groups</a></h4>
+
+<p>A module to fetch group memberships from an API service protected with OAuth 2.0 using the VOOT protocol and add them
+to the list of attributes received from the identity provider.</p>
+
+<ul>
+  <li>Package name: <code class="highlighter-rouge">openconextapps/simplesamlphp-module-vootgroups</code></li>
+  <li>Repository: <a href="https://github.com/OpenConextApps/ssp-voot-groups">OpenConextApps/ssp-voot-groups</a></li>
+</ul>
+
+<h2 id="extending-simplesamlphp">Extending SimpleSAMLphp</h2>
+
+<p>If you plan to extend SimpleSAMLphp with some functionality, we advise you to follow these recommendations:</p>
+
+<ol>
+  <li>
+    <p>Check the existing functionalities and modules. The feature you want to implement may already exist.</p>
+  </li>
+  <li>
+    <p>Try to code with the <a href="http://www.php-fig.org/psr/psr-2/">PHP PSR-2 guidelines</a> in mind.</p>
+  </li>
+  <li>
+    <p>Make sure your module is <a href="https://github.com/simplesamlphp/composer-module-installer">installable through composer</a>.</p>
+  </li>
+  <li>
+    <p>Let us know about your module so we can reference it in this web site, so that our users can easily find it.</p>
+  </li>
+</ol>
+
+    </div>    <!-- /#content -->
+
+<div id="footer">
+    <a href="https://www.uninett.no"><img id="ulogo" alt="notes" src="/res/uninettlogo.png" /></a>
+</div><!-- /#footer -->
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-431110-21");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+/* --- General --- */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+p {
+/*	margin: 0px;
+	padding: 0px;*/
+}
+
+div#content {
+	padding: 0 1.4em;
+}
+div#content h1 {
+	margin-top: 10px;
+}
+
+
+/*  --- Header ---  */
+
+
+#header {
+    z-index: 0;
+    height: 6rem;
+    background: linear-gradient(141deg, #b8002c 0%, #db0100 51%, #e8410c 75%)
+}
+
+.logo-header {
+    min-width: 8em;
+    height: 6rem;
+    max-width: 70%;
+    padding-left: 2rem;
+}
+.v-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.simple {
+    font-weight: 300;
+}
+.saml {
+    font-family: Verdana;
+    letter-spacing: -0.12em;
+    font-weight: 600;
+    margin-left: -0.05em;
+}
+
+#header #ulogo {
+	position: absolute;
+	top: 10px; right: 20px;
+	z-index: 10;
+}
+#header #logo {
+	font-family: sans-serif;
+	font-size: 2.5em;
+	color: white;
+	text-shadow: 0 3px 2px #532900;
+	font-weight: bold;
+	letter-spacing: -0.12em;
+	z-index: 10;
+}
+#header #version {
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	font-size: x-small;
+	text-shadow: 0 1px 0 #900;
+}
+#header #logo #news, #header #logo #mailinglist {
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+.right {
+    float: right;
+}
+
+/* --- langbar --- */
+
+#langbar {
+	font: 80% "arial", sans-serif;
+	text-align: right;
+	margin: 0;
+	padding: 1px 1em 0 1em;
+	color: #222;
+}
+#langbar a {
+	color: #600;
+}
+
+
+/* --- headerbar --- */
+
+#headerbar {
+/*	position: absolute;
+	top: 42px;
+	width: 100%;
+	
+	*/
+	font-size: 90%;
+	background: #eee;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin: 3px 0 0 0;
+	padding: 0 0 0 0;
+	z-index: 1;
+}
+#headerbar #breadcrumb {
+	float: left; 
+	margin: 9px 1em;
+	
+}
+
+
+
+
+/*  --- Footer ---  */
+
+#footer {
+/*	width: 100%;*/
+	clear: both;
+	border-top: 1px solid #ccc;
+	text-align: center;
+	margin-top: 1em; 
+	padding: 0 0 0 0;
+	z-index: 1;
+}
+#footer img {
+	padding-top: 10px;
+}
+
+
+
+
+/* --- columned --- */
+
+
+
+.columned .gutter
+{
+	float: left;
+	width: 1%;
+	height: 1px;
+}
+
+.columned .col1
+{
+	float: left;
+	width: 48%;
+	margin-bottom: 1em;
+	border-right: 1px solid #ccc;
+	padding-right: 1%;
+}
+
+.columned .col2
+{
+	float: left;
+	width: 23%;
+	margin-left: 1%;
+	margin-bottom: 1em;
+	border-right: 1px solid #ccc;
+	padding-right: 1%;
+}
+
+.columned .col3
+{
+	float: left;
+	width: 21%;
+	margin-left: 1%;
+	margin-bottom: 1em;
+}
+
+
+
+
