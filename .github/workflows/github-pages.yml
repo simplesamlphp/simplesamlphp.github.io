@@ -6,10 +6,19 @@ on:
       - release
 
 jobs:
-  github-pages:
+  jekyll:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@v2
+      - name: 📂 setup
+        uses: actions/checkout@v2
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.BUILD_WEBSITE }}
+          ruby-version: 2.7
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
