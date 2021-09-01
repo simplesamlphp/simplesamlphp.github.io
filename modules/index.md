@@ -63,7 +63,7 @@ It is recommended to run the Attribute Aggregator module at the SP and configure
 identity, usually _eduPersonPrincipalName_, is resolved.
 
 * Package name: `NIIF/simplesamlphp-module-attributeaggregator`
-* Repository: [NIIF/simplesamlphp-module-atributeaggregator](https://github.com/NIIF/simplesamlphp-module-attributeaggregator)
+* Repository: [NIIF/simplesamlphp-module-attributeaggregator](https://github.com/NIIF/simplesamlphp-module-attributeaggregator)
 
 #### <a name="attrscopefilter" href="#attrscopefilter">Attribute Scope Filter</a>
 
