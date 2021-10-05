@@ -94,11 +94,11 @@ are vulnerable, and in such case, restore their installation to a secure state.<
   </li>
   <li>
     <p>If your SimpleSAMLphp was compromised, then you need to change a few things. First, change your administrator
- password. We recommend you to use a <code class="highlighter-rouge">SSHA</code>  password instead of a plaintext one, as in this case the attacker would
+ password. We recommend you to use a <code class="language-plaintext highlighter-rouge">SSHA</code>  password instead of a plaintext one, as in this case the attacker would
  need to break the hash to know the real password. If your password is secure enough (long, not a word in the
  dictionary, with a reasonable mix of characters, numbers and symbols), then it will be pretty difficult to obtain the
  original password, and therefore your new password will be more secure if your installation gets compromised again.
- You can change the administrator password with the <code class="highlighter-rouge">auth.adminpassword</code> option in the <code class="highlighter-rouge">config/config.php</code> file.</p>
+ You can change the administrator password with the <code class="language-plaintext highlighter-rouge">auth.adminpassword</code> option in the <code class="language-plaintext highlighter-rouge">config/config.php</code> file.</p>
   </li>
   <li>
     <p>If you are using the cron module, change the corresponding key.</p>

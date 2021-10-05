@@ -118,10 +118,10 @@ make available for you to cover specific features. Here we provide a (non-exhaus
 <p>SimpleSAMLphp makes use of <a href="https://getcomposer.org/">Composer</a> to manage dependencies and third-party modules. Those
 modules that have been properly configured can be easily installed with composer. Just execute the following command:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer.phar require vendor/simplesamlphp-module-mymodule version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer.phar require vendor/simplesamlphp-module-mymodule version
 </code></pre></div></div>
 
-<p>where <code class="highlighter-rouge">vendor</code> is the name of the vendor of the module, <code class="highlighter-rouge">mymodule</code> is the name of the module itself and <code class="highlighter-rouge">version</code> is the
+<p>where <code class="language-plaintext highlighter-rouge">vendor</code> is the name of the vendor of the module, <code class="language-plaintext highlighter-rouge">mymodule</code> is the name of the module itself and <code class="language-plaintext highlighter-rouge">version</code> is the
 version of the module you want to install, for example, 1.0.</p>
 
 <p>Please note that if you don’t have console access to your web server, you will need to deploy the module somewhere else
@@ -139,7 +139,7 @@ in SimpleSAMLphp.</p>
 <p>This module provides back-end SAML Attribute Authority functionality.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-aa</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">NIIF/simplesamlphp-module-aa</code></li>
   <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-aa">NIIF/simplesamlphp-module-aa</a></li>
 </ul>
 
@@ -147,19 +147,19 @@ in SimpleSAMLphp.</p>
 
 <p>The Attribute Aggregator module is implemented as an
 <a href="http://www.famine.vm/docs/stable/simplesamlphp-authproc">Authentication Processing Filter</a>. It can be configured in the
-SP’s <code class="highlighter-rouge">config.php</code> file.</p>
+SP’s <code class="language-plaintext highlighter-rouge">config.php</code> file.</p>
 
 <p>It is recommended to run the Attribute Aggregator module at the SP and configure the filter to run after the federated
 identity, usually <em>eduPersonPrincipalName</em>, is resolved.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-attributeaggregator</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">NIIF/simplesamlphp-module-attributeaggregator</code></li>
   <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-attributeaggregator">NIIF/simplesamlphp-module-attributeaggregator</a></li>
 </ul>
 
 <h4 id="attribute-scope-filter"><a name="attrscopefilter" href="#attrscopefilter">Attribute Scope Filter</a></h4>
 
-<p>This module ensures that scoped attributes (such as <code class="highlighter-rouge">eduPersonPrincipalName</code>) have the right scopes defined in the
+<p>This module ensures that scoped attributes (such as <code class="language-plaintext highlighter-rouge">eduPersonPrincipalName</code>) have the right scopes defined in the
 entity metadata. It removes values:</p>
 
 <ul>
@@ -167,11 +167,11 @@ entity metadata. It removes values:</p>
   <li>whose scope does not match the shibmd:Scope element in the metadata.</li>
 </ul>
 
-<p>Additionally, it is also capable of handling <em>scope attributes</em> such as <code class="highlighter-rouge">schacHomeOrganization</code> that should be
-equivalent to the <code class="highlighter-rouge">shibmd:Scope</code> element in the metadata.</p>
+<p>Additionally, it is also capable of handling <em>scope attributes</em> such as <code class="language-plaintext highlighter-rouge">schacHomeOrganization</code> that should be
+equivalent to the <code class="language-plaintext highlighter-rouge">shibmd:Scope</code> element in the metadata.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">NIIF/simplesamlphp-module-attributescope</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">NIIF/simplesamlphp-module-attributescope</code></li>
   <li>Repository: <a href="https://github.com/NIIF/simplesamlphp-module-attributescope">NIIF/simplesamlphp-module-attributescope</a></li>
 </ul>
 
@@ -181,7 +181,7 @@ equivalent to the <code class="highlighter-rouge">shibmd:Scope</code> element in
 you to integrate SimpleSAMLphp with web applications written in languages other than PHP.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-memcookie</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-memcookie</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-memcookie">simplesamlphp/simplesamlphp-module-memcookie</a></li>
 </ul>
 
@@ -190,7 +190,7 @@ you to integrate SimpleSAMLphp with web applications written in languages other 
 <p>This module provides an interface to do automatic testing of authentication sources.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-autotest</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-autotest</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-autotest">simplesamlphp/simplesamlphp-module-autotest</a></li>
 </ul>
 
@@ -199,7 +199,7 @@ you to integrate SimpleSAMLphp with web applications written in languages other 
 <p>A SimpleSAMLphp module providing support for Cassandra backends to store both session information and metadata.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">feideconnect/simplesamlphp-module-cassandrastore</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">feideconnect/simplesamlphp-module-cassandrastore</code></li>
   <li>Repository: <a href="https://github.com/feideconnect/simplesamlphp-module-cassandrastore">feideconnect/simplesamlphp-module-cassandrastore</a></li>
 </ul>
 
@@ -208,7 +208,7 @@ you to integrate SimpleSAMLphp with web applications written in languages other 
 <p>A SimpleSAMLphp module implementing a very simple user interface for managing consent.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-consentsimpleadmin</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-consentsimpleadmin</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-consentsimpleadmin">simplesamlphp/simplesamlphp-module-consentsimpleadmin</a></li>
 </ul>
 
@@ -218,7 +218,7 @@ you to integrate SimpleSAMLphp with web applications written in languages other 
 <a href="http://discojuice.org">web page</a> for more information.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-discojuice</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-discojuice</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-discojuice">simplesamlphp/simplesamlphp-module-discojuice</a></li>
 </ul>
 
@@ -230,7 +230,7 @@ into a SAML attribute (e.g. an entity attribute containing the value that should
 remote IdP metadata).</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-entattribs</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">safire-ac-za/simplesamlphp-modules-entattribs</code></li>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-entattribs">safire-ac-za/simplesamlphp-modules-entattribs</a></li>
 </ul>
 
@@ -242,16 +242,16 @@ remote IdP metadata).</p>
 Identity Provider or a SAML Service Provider.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-fticks</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">safire-ac-za/simplesamlphp-modules-fticks</code></li>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-fticks">safire-ac-za/simplesamlphp-modules-fticks</a></li>
 </ul>
 
 <h4 id="generate-unique-id"><a name="generateuniqueid" href="#generateuniqueid">Generate Unique ID</a></h4>
 
-<p>Generate an <code class="highlighter-rouge">eduPersonUniqueId</code> attribute from various LDAP implementations’ objectGUID.</p>
+<p>Generate an <code class="language-plaintext highlighter-rouge">eduPersonUniqueId</code> attribute from various LDAP implementations’ objectGUID.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-modules-genuniqueid</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">safire-ac-za/simplesamlphp-modules-genuniqueid</code></li>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-genuniqueid">safire-ac-za/simplesamlphp-modules-genuniqueid</a></li>
 </ul>
 
@@ -271,7 +271,7 @@ password and self issued credentials are supported.</p>
   <li>
     <p><strong>InfoCard Generator</strong>: your users could request their InfoCard filling a form with their username and password.</p>
   </li>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-infocard</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-infocard</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-infocard">simplesamlphp/simplesamlphp-module-infocard</a></li>
 </ul>
 
@@ -280,7 +280,7 @@ password and self issued credentials are supported.</p>
 <p>Kerberos 5 authentication module for SimpleSAMLphp.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">ualberta-iapps/simplesamlphp-module-kerberos</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">ualberta-iapps/simplesamlphp-module-kerberos</code></li>
   <li>Repository: <a href="https://github.com/ualberta-iapps/simplesamlphp-module-kerberos">ualberta-iapps/simplesamlphp-module-kerberos</a></li>
 </ul>
 
@@ -290,7 +290,7 @@ password and self issued credentials are supported.</p>
 session identifier.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-logpeek</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-logpeek</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-logpeek">simplesamlphp/simplesamlphp-module-logpeek</a></li>
 </ul>
 
@@ -304,7 +304,7 @@ configured at the same time.</p>
 <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator2">Aggregator2 module</a>.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator">simplesamlphp/simplesamlphp-module-aggregator</a></li>
 </ul>
 
@@ -318,7 +318,7 @@ the generated metadata may occur.</p>
 SimpleSAMLphp, such as the <em>metarefresh</em> module.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator2</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator2</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator2">simplesamlphp/simplesamlphp-module-aggregator2</a></li>
 </ul>
 
@@ -328,7 +328,7 @@ SimpleSAMLphp, such as the <em>metarefresh</em> module.</p>
 description, as well as manually registering metadata for service providers.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-metaedit</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-metaedit</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-metaedit">simplesamlphp/simplesamlphp-module-metaedit</a></li>
 </ul>
 
@@ -337,7 +337,7 @@ description, as well as manually registering metadata for service providers.</p>
 <p>A very straightforward module for SimpleSAMLphp that displays the list of modules and their status in the web interface.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-modinfo</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-modinfo</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-modinfo">simplesamlphp/simplesamlphp-module-modinfo</a></li>
 </ul>
 
@@ -347,7 +347,7 @@ description, as well as manually registering metadata for service providers.</p>
 XML or JSON it can be easily extended with your own test cases</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">tvdijen/simplesamlphp-module-monitor</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">tvdijen/simplesamlphp-module-monitor</code></li>
   <li>Repository: <a href="https://github.com/tvdijen/simplesamlphp-module-monitor">tvdijen/simplesamlphp-module-monitor</a></li>
 </ul>
 
@@ -356,7 +356,7 @@ XML or JSON it can be easily extended with your own test cases</p>
 <p>A module adding support for <a href="http://oauth.net/2/">the OAuth2 protocol</a>.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">sgomez/simplesamlphp-module-oauth2</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">sgomez/simplesamlphp-module-oauth2</code></li>
   <li>Repository: <a href="https://github.com/sgomez/simplesamlphp-module-oauth2">sgomez/simplesamlphp-module-oauth2</a></li>
 </ul>
 
@@ -365,7 +365,7 @@ XML or JSON it can be easily extended with your own test cases</p>
 <p>A module adding support for the OpenID protocol as a Consumer.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-openid</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-openid</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-openid">simplesamlphp/simplesamlphp-module-openid</a></li>
 </ul>
 
@@ -374,7 +374,7 @@ XML or JSON it can be easily extended with your own test cases</p>
 <p>A module adding support for the OpenID protocol as an Identity Provider.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-openidprovider</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-openidprovider</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-openidprovider">simplesamlphp/simplesamlphp-module-openidprovider</a></li>
 </ul>
 
@@ -385,7 +385,7 @@ order to authenticate users by means of the PAPI protocol. It can therefore be u
 behaving like a PAPI <em>Point of Access</em> or as a <em>Service Provider</em>.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">rediris-es/simplesamlphp-module-papi</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">rediris-es/simplesamlphp-module-papi</code></li>
   <li>Repository: <a href="https://github.com/rediris-es/simplesamlphp-module-papi">rediris-es/simplesamlphp-module-papi</a></li>
 </ul>
 
@@ -395,7 +395,7 @@ behaving like a PAPI <em>Point of Access</em> or as a <em>Service Provider</em>.
 authenticate with normal OTP tokens, challenge-response tokens via email or text messages, or U2F devices.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">privacyidea/simplesamlphp-module-privacyidea</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">privacyidea/simplesamlphp-module-privacyidea</code></li>
   <li>Repository: <a href="https://github.com/privacyidea/simplesamlphp-module-privacyidea">privacyidea/simplesamlphp-module-privacyidea</a></li>
 </ul>
 
@@ -405,7 +405,7 @@ authenticate with normal OTP tokens, challenge-response tokens via email or text
 supporting both the HTTP-Redirect and HTTP-POST bindings.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">simplesamlphp/simplesamlphp-module-saml2debug</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-saml2debug</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-saml2debug">simplesamlphp/simplesamlphp-module-saml2debug</a></li>
 </ul>
 
@@ -415,7 +415,7 @@ supporting both the HTTP-Redirect and HTTP-POST bindings.</p>
 a backend. This fork adds support for SQL databases as the back-end.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">geant/simplesamlphp-module-selfregister</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">geant/simplesamlphp-module-selfregister</code></li>
   <li>Repository: <a href="https://github.com/TERENA/simplesamlphp-module-selfregister">geant/simplesamlphp-module-selfregister</a></li>
 </ul>
 
@@ -427,7 +427,7 @@ over, and you need to add additional attributes for specific users but cannot ad
 schema.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">safire-ac-za/simplesamlphp-module-sqlattribs</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">safire-ac-za/simplesamlphp-module-sqlattribs</code></li>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-sqlattribs">safire-ac-za/simplesamlphp-module-sqlattribs</a></li>
 </ul>
 
@@ -437,7 +437,7 @@ schema.</p>
 to the list of attributes received from the identity provider.</p>
 
 <ul>
-  <li>Package name: <code class="highlighter-rouge">openconextapps/simplesamlphp-module-vootgroups</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">openconextapps/simplesamlphp-module-vootgroups</code></li>
   <li>Repository: <a href="https://github.com/OpenConextApps/ssp-voot-groups">OpenConextApps/ssp-voot-groups</a></li>
 </ul>
 

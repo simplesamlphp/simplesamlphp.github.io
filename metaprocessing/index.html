@@ -112,15 +112,15 @@ machine. Please note that starting <strong>November 17 of 2014</strong>, the <em
 
 <p>For those using older versions of SimpleSAMLphp or having difficulties to update to the latest version, the workaround
 can be applied by replacing the <strong>xmlseclibs</strong> library with <a href="https://github.com/simplesamlphp/xmlseclibs/blob/b51cc66d576608282272892278a5fc234d21ba34/xmlseclibs.php">this one</a>. Those who
-are using <a href="https://getcomposer.org/">composer</a> can edit their <code class="highlighter-rouge">composer.json</code> file to change the version of
+are using <a href="https://getcomposer.org/">composer</a> can edit their <code class="language-plaintext highlighter-rouge">composer.json</code> file to change the version of
 <strong>xmlseclibs</strong> they are running:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"simplesamlphp/xmlseclibs": "~1.3.2",
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"simplesamlphp/xmlseclibs": "~1.3.2",
 </code></pre></div></div>
 
 <p>and then update it normally:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer.phar update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer.phar update
 </code></pre></div></div>
 
 <p>If you are running the updated library and experience unexpected behaviour, please do not hesitate to <a href="https://groups.google.com/forum/#!forum/simplesamlphp">contact
