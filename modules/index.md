@@ -39,13 +39,6 @@ version of the module you want to install, for example, 1.0.
 Please note that if you don't have console access to your web server, you will need to deploy the module somewhere else
 and then copy the files to your server.
 
-#### <a name="aselect" href="#aselect">A-Select</a>
-
-This module allows you to use A-Select (or any service that understands the A-Select 1.5 protocol) to authenticate users
-in SimpleSAMLphp.
-
-See the [website](https://non-gnu.uvt.nl/simplesamlphp-aselect/) for more information on how to download and install it.
-
 #### <a name="attrauth" href="#attrauth">Attribute Authority</a>
 
 This module provides back-end SAML Attribute Authority functionality.
@@ -93,13 +86,6 @@ This module provides an interface to do automatic testing of authentication sour
 
 * Package name: `simplesamlphp/simplesamlphp-module-autotest`
 * Repository: [simplesamlphp/simplesamlphp-module-autotest](https://github.com/simplesamlphp/simplesamlphp-module-autotest)
-
-#### <a name="cassandrastore" href="#cassandrastore">Cassandra Store</a>
-
-A SimpleSAMLphp module providing support for Cassandra backends to store both session information and metadata.
-
-* Package name: `feideconnect/simplesamlphp-module-cassandrastore`
-* Repository: [feideconnect/simplesamlphp-module-cassandrastore](https://github.com/feideconnect/simplesamlphp-module-cassandrastore)
 
 #### <a name="consentsimpleadmin" href="#consentsimpleadmin">Consent Simple Admin</a>
 
@@ -227,20 +213,6 @@ A module adding support for [the OAuth2 protocol](http://oauth.net/2/).
 
 * Package name: `sgomez/simplesamlphp-module-oauth2`
 * Repository: [sgomez/simplesamlphp-module-oauth2](https://github.com/sgomez/simplesamlphp-module-oauth2)
-
-#### <a name="oidconsumer" href="#oidconsumer">OpenID Consumer</a>
-
-A module adding support for the OpenID protocol as a Consumer.
-
-* Package name: `simplesamlphp/simplesamlphp-module-openid`
-* Repository: [simplesamlphp/simplesamlphp-module-openid](https://github.com/simplesamlphp/simplesamlphp-module-openid)
-
-#### <a name="oidprovider" href="#oidprovider">OpenID Provider</a>
-
-A module adding support for the OpenID protocol as an Identity Provider.
-
-* Package name: `simplesamlphp/simplesamlphp-module-openidprovider`
-* Repository: [simplesamlphp/simplesamlphp-module-openidprovider](https://github.com/simplesamlphp/simplesamlphp-module-openidprovider)
 
 #### <a name="papi" href="#papi">PAPI</a>
 
