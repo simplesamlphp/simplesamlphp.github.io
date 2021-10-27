@@ -22,7 +22,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/developers/</loc>
+            <loc>https://simplesamlphp.github.io/lists/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/modules/</loc>
         </url>
     
         <url>
@@ -34,10 +38,6 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/modules/</loc>
-        </url>
-    
-        <url>
             <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
         </url>
     
@@ -46,7 +46,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/samlidp/</loc>
+            <loc>https://simplesamlphp.github.io/security/</loc>
         </url>
     
         <url>
@@ -58,11 +58,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/security/</loc>
+            <loc>https://simplesamlphp.github.io/developers/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/lists/</loc>
+            <loc>https://simplesamlphp.github.io/samlidp/</loc>
         </url>
     
         <url>
@@ -74,6 +74,10 @@
         </url>
     
     
+        <url>
+            <loc>https://simplesamlphp.github.io/2021/10/27/SimpleSAMLphp-1.19.2.html</loc>
+        </url>
+  
         <url>
             <loc>https://simplesamlphp.github.io/2021/04/29/SimpleSAMLphp-1.19.1.html</loc>
         </url>
