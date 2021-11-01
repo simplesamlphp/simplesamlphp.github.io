@@ -231,6 +231,13 @@ authenticate with normal OTP tokens, challenge-response tokens via email or text
 * Package name: `privacyidea/simplesamlphp-module-privacyidea`
 * Repository: [privacyidea/simplesamlphp-module-privacyidea](https://github.com/privacyidea/simplesamlphp-module-privacyidea)
 
+#### <a name="readid" href="#readid">ReadID</a>
+
+This authentication module adds ReadID Ready App as auth source to simpleSAMLphp. ReadID Ready is an app that can read the data from your passport or other identity documents. Besides collecting your personal data from the document chip it also verifies if your identity document is valid and authentic. By using this module you can use an ID-card, passport or drivers-licence to authenticate.
+
+* Package name: `SURFnet/simplesamlphp-module-readid`
+* Repository: [SURFnet/simplesamlphp-module-readid](https://github.com/SURFnet/simplesamlphp-module-readid)
+
 #### <a name="samldebug" href="#samldebug">SAML 2.0 Debugger</a>
 
 This module allows you to debug SAML 2.0 messages by decoding or encoding them according to the binding they are using,
