@@ -14,23 +14,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/download/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/samlsp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/lists/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/modules/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/docs/</loc>
+            <loc>https://simplesamlphp.github.io/users/</loc>
         </url>
     
         <url>
@@ -42,19 +26,23 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/users/</loc>
-        </url>
-    
-        <url>
             <loc>https://simplesamlphp.github.io/security/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/translation/</loc>
+            <loc>https://simplesamlphp.github.io/docs/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/awards/</loc>
+            <loc>https://simplesamlphp.github.io/lists/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlsp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/modules/</loc>
         </url>
     
         <url>
@@ -62,7 +50,19 @@
         </url>
     
         <url>
+            <loc>https://simplesamlphp.github.io/translation/</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.github.io/samlidp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/download/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/awards/</loc>
         </url>
     
         <url>
