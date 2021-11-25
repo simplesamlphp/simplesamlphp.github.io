@@ -119,8 +119,8 @@ Log statistics in the [F-ticks federation log format](https://wiki.geant.org/dis
 The filter aims to produce as many F-ticks attributes as possible, irrespective of whether SimpleSAMLphp is acting as an
 Identity Provider or a SAML Service Provider.
 
-* Package name: `safire-ac-za/simplesamlphp-modules-fticks`
-* Repository: [safire-ac-za/simplesamlphp-modules-fticks](https://github.com/safire-ac-za/simplesamlphp-module-fticks)
+* Package name: `simplesamlphp/simplesamlphp-module-fticks`
+* Repository: [simplesamlphp/simplesamlphp-module-fticks](https://github.com/simplesamlphp/simplesamlphp-module-fticks)
 
 #### <a name="generateuniqueid" href="#generateuniqueid">Generate Unique ID</a>
 
