@@ -1,0 +1,51 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+June 08, 2016
+<h2>Affected versions</h2>
+<code>&lt; 1.14.4</code>
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="201606-01">201606-01</h1>
+
+<p><strong>Link injection</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>Several scripts part of SimpleSAMLphp display a web page with links obtained from the request parameters.
+This allows us to enhance usability, as the users are presented with links they can follow after completing a certain
+action, like logging out.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The following scripts were not checking the URLs obtained via the HTTP request before displaying them as the target of
+links that the user may click on:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">www/logout.php</code></li>
+  <li><code class="language-plaintext highlighter-rouge">modules/core/www/no_cookie.php</code></li>
+</ul>
+
+<p>The issue allowed attackers to display links targeting a malicious website inside a trusted site running SimpleSAMLphp,
+due to the lack of security checks involving the <code class="language-plaintext highlighter-rouge">link_href</code> and <code class="language-plaintext highlighter-rouge">retryURL</code> HTTP parameters, respectively.
+The issue was resolved by including a verification of the URLs received in the request against a white list of
+websites specified in the <code class="language-plaintext highlighter-rouge">trusted.url.domains</code> configuration option.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All SimpleSAMLphp versions prior to <strong>1.14.4</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>A remote attacker could craft a link pointing to a trusted website running SimpleSAMLphp, including a parameter pointing
+to a malicious website, and try to fool the victim into visiting that website by clicking on a link in the page
+presented by SimpleSAMLphp.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered and reported by John Page (hyp3rlinx).</p>

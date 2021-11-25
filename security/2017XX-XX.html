@@ -1,0 +1,43 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+March 30, 2017
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp &lt;= 1.14.11</code>
+<h2>Severity</h2>
+Medium
+</div></aside>
+
+<h1 id="201612-04">201612-04</h1>
+
+<p><strong>Session fixation attack against the OAuth Request Token approval flow</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>A <a href="https://oauth.net/advisories/2009-1/">session fixation attack was discovered years ago</a> against the OAuth Request
+Token approval flow in the OAuth 1.0 protocol. In order to fix this issue, the revision A of the protocol was
+published.</p>
+
+<h3 id="description">Description</h3>
+
+<p>An attacker may craft a malicious link including a Request Token and send it to the victim, who may then approve the
+use of that token without noticing there is an ongoing attack. The attacker is then able to complete the authorization
+flow with such token, and access the protected resources that are exposed by the Consumer site as part of its service.
+If the attacker has an account in the Consumer site, the access may then be persistent.</p>
+
+<p>The <em>oauth</em> module in SimpleSAMLphp makes use of an external OAuth library which is included in the module itself. This
+library was not compliant with Revision A of the OAuth 1.0 protocol, and therefore was vulnerable to the aforementioned
+attack.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>SimpleSAMLphp</strong> versions before and including <strong>1.14.11</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>Those using the <em>oauth</em> module may be affected by this issue, and therefore access to protected resources may be granted
+to malicious third parties with the help of legitimate users clicking on a manually crafted URL and approving access
+unsuspiciously.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>

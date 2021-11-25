@@ -1,0 +1,48 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+September 4, 2017
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp &lt;= 1.14.15</code>
+<h2>Severity</h2>
+Medium
+<h2>References</h2>
+CVE-2017-18121
+</div></aside>
+
+<h1 id="201709-01">201709-01</h1>
+
+<p><strong>Cross Site Scripting (XSS) in the consentAdmin module</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>The <em>consentAdmin</em> module is an addition to the <em>consent</em> module that allows users to view and manage the consent given
+to send attributes to third-party services. Users of an Identity Provider can leverage this module to keep track of what
+attributes are sent to what services, and withdraw any existing consent.</p>
+
+<h3 id="description">Description</h3>
+
+<p>A Cross Site Scripting (XSS) issue has been found in the <em>consentAdmin</em> module, allowing an attacker to manually craft
+links that a victim can open, executing arbitrary javascript code.</p>
+
+<p>The module exposes one single page where users can view and withdraw all consents given to services to retrieve their
+attributes. This page includes a link that allows users to log out and terminate their session. The way this link was
+built, the current URL as observed by the server was used, with an additional parameter that starts the logout process.
+Since the URL was not properly sanitised, a malicious third party can build a URL that includes Javascript code that
+will be executed by the victim’s web browser.</p>
+
+<p>This issue has been fixed by ignoring the current URL and building the link manually to point to the current page with
+the additional parameter that is needed to start the logout process.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>SimpleSAMLphp</strong> versions before and including <strong>1.14.15</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>When the <em>consentAdmin</em> module is enabled and configured in an Identity Provider, an attacker can leverage this issue
+to manually craft URLs that include Javascript code executed by the victim’s web browser.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>. When an upgrade is not possible immediately, the <em>consentAdmin</em> module
+should be disabled until the upgrade can be performed.</p>

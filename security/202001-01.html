@@ -1,0 +1,51 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+January 24, 2020
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 1.18.0 - 1.18.3</code><br />
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="202001-01">202001-01</h1>
+
+<p><strong>Cross-site scripting in error reports</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>SimpleSAMLphp allows users to report errors and failures to the system administrators via a web form. This web form
+gathers some contextual information automatically, but it also allows the user to provide their email address for
+follow-ups and a free-text explanation of what happened. Once submitted, the report is sent as an email to the
+administrative email address configured in the software.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">www/erroreport.php</code> script allows error reports to be submitted and sent to the system administrator. Starting
+with SimpleSAMLphp 1.18.0, a new <code class="language-plaintext highlighter-rouge">SimpleSAML\Utils\EMail</code> class was introduced to handle sending emails, implemented as
+a wrapper of an external dependency.</p>
+
+<p>This new wrapper allows us to use Twig templates in order to create the email sent with an error report. Since Twig
+provides automatic escaping of variables, manual escaping of the free-text field in <code class="language-plaintext highlighter-rouge">www/errorreport.php</code> was removed
+to avoid double escaping. However, for those not using the new user interface yet, an email template is hardcoded into
+the class itself in plain PHP. Since no escaping is provided in this template, it is then possible to inject HTML
+inside the template by manually crafting the contents of the free-text field.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+<p>SimpleSAMLphp versions <strong>1.18.0 to 1.18.3</strong>, both inclusive.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>An attacker may take advantage of this issue to manually craft a modified email sent via the error reporting mechanism,
+such as this email might trick a system administrator into performing an action, such as introducing their credentials
+into a phishing web site that resembles the original.</p>
+
+<p>Remote execution of javascript code is considered unfeasible since email clients do not run javascript present in
+emails, although there might be email clients which don’t follow this rule, making the attack surface grow.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade the SimpleSAMLphp installation to version <strong>1.18.4</strong>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This vulnerability was discovered and reported by Frederic Vleminckx on January 22, 2020.</p>

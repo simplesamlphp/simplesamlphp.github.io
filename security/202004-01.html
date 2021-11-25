@@ -1,0 +1,47 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+April 03, 2020
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 1.18.5 and older</code><br />
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="202004-01">202004-01</h1>
+
+<p><strong>Information disclosure of source code</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>The module controller in <code class="language-plaintext highlighter-rouge">SimpleSAML\Module</code> that processes requests for pages
+hosted by modules, has code to identify paths ending with <code class="language-plaintext highlighter-rouge">.php</code> and process
+those as PHP code. If no other suitable way of handling the given path exists it
+presents the file to the browser.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The check to identify paths ending with <code class="language-plaintext highlighter-rouge">.php</code> does not account for uppercase
+letters. If someone requests a path ending with e.g. <code class="language-plaintext highlighter-rouge">.PHP</code> and the server is
+serving the code from a case-insensitive file system, such as on Windows, the
+processing of the PHP code does not occur, and the source code is instead
+presented to the browser.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>SimpleSAMLphp versions <strong>1.18.5 and older</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>An attacker may use this issue to gain access to the source code in third-party
+modules that is meant to be private, or even sensitive. However, the attack
+surface is considered small, as the attack will only work when SimpleSAMLphp
+serves such content from a file system that is not case-sensitive, such as on
+Windows.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade the SimpleSAMLphp installation to version <strong>1.18.6</strong>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This vulnerability was discovered and reported by Sławek Naczyński.</p>

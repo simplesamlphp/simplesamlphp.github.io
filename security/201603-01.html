@@ -1,0 +1,44 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+March 08, 2016
+<h2>Affected versions</h2>
+<code>&lt; 1.14.1</code>
+<h2>Severity</h2>
+Low
+<h2>References</h2>
+CVE-2016-3124
+</div></aside>
+
+<h1 id="201603-01">201603-01</h1>
+
+<p><strong>Information leakage issue in the <em>sanitycheck</em> module</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>The <em>sanitycheck</em> module, enabled by default, displays different kinds of information about a SimpleSAMLphp
+installation, aiming to help administrators to determine the correct behaviour of the software, as well as obtain
+valuable information that can be used to resolve problems. It can also be used by automated processes to determine the
+overall status of the software.</p>
+
+<h3 id="description">Description</h3>
+
+<p>An <a href="https://www.owasp.org/index.php/Information_Leakage">information leakage issue</a> has been identified and corrected
+in the <em>sanitycheck</em> module. The issue allows attackers to obtain information about the exact version of PHP run by the
+affected system.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All SimpleSAMLphp versions prior to <strong>1.14.1</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>A remote attacker could learn information about the exact PHP version run by the affected system, allowing the search
+for vulnerabilities known to work with that version.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered and reported by Enrique de la Hoz.</p>

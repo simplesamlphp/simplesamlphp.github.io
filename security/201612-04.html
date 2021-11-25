@@ -1,0 +1,109 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+December 13, 2016
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 1.7.0 - 1.14.10</code>
+<h2>Severity</h2>
+Medium
+<h2>References</h2>
+CVE-2017-12873
+</div></aside>
+
+<h1 id="201612-04">201612-04</h1>
+
+<p><strong>Incorrect persistent NameID generation</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>When a SimpleSAMLphp Identity Provider is misconfigured, a bug in the software when trying to build a persistent
+<code class="language-plaintext highlighter-rouge">NameID</code> to univocally identify the authenticating subject could cause different users to get the same identifier
+generated, depending on the attributes available for them right after authentication.</p>
+
+<p>Please note that even though this is possible thanks to a bug, <strong>an IdP must be misconfigured</strong> to release persistent
+<code class="language-plaintext highlighter-rouge">NameID</code>s even if it is not properly configured to generate them based on the specifics of the deployment.</p>
+
+<h3 id="description">Description</h3>
+
+<p>Persistent <code class="language-plaintext highlighter-rouge">NameID</code>s will typically be sent as part of the <code class="language-plaintext highlighter-rouge">Subject</code> element of a SAML assertion, or as the contents of
+the <code class="language-plaintext highlighter-rouge">eduPersonTargetedID</code> attribute. Here is an example of such a <code class="language-plaintext highlighter-rouge">NameID</code>:</p>
+
+<pre>
+&lt;NameID Format=“urn:oasis:names:tc:SAML:2.0:nameid-format:persistent“&gt;
+    zbonsm0Yn9Gnw14uQEEPr6AO7d+IvxwCQN3t+o24jYs=
+&lt;/NameID&gt;
+</pre>
+
+<p>Some service providers will use this information to identify a user across sessions, because a persistent <code class="language-plaintext highlighter-rouge">NameID</code> will
+never change for a given user. This could lead to different users accessing the same account in those service providers.</p>
+
+<p>In order to be affected by this issue, the following circumstances must concur:</p>
+
+<ul>
+  <li>SimpleSAMLphp acts as an identity provider.</li>
+  <li>The service provider asking for authentication requests a persistent <code class="language-plaintext highlighter-rouge">NameID</code>.</li>
+  <li>No <code class="language-plaintext highlighter-rouge">saml:PersistentNameID</code> authentication processing filter is configured (neither for the whole IdP, nor for
+a given SP).</li>
+  <li>No <code class="language-plaintext highlighter-rouge">simplesaml.nameidattribute</code> configuration option is set (neither for the whole IdP, nor for a given SP).</li>
+  <li>One of the following alternatives:
+    <ul>
+      <li>No <code class="language-plaintext highlighter-rouge">userid.attribute</code> configuration option is set <strong>and</strong> the users don’t have an <code class="language-plaintext highlighter-rouge">eduPersonPrincipalName</code> attribute
+  in the users backend, <strong>or</strong></li>
+      <li>the <code class="language-plaintext highlighter-rouge">userid.attribute</code> configuration option is set to an empty or missing attribute.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If all these requirements are met, the <code class="language-plaintext highlighter-rouge">SimpleSAML_Auth_ProcessingChain</code> class will try to keep a unique user identifier
+in the state array (<code class="language-plaintext highlighter-rouge">addUserID()</code> method). Bear in mind that this code is executed <strong>before</strong> all the authentication
+processing filters configured, meaning that only those attributes retrieved for the user during <strong>initial
+authentication</strong> will be available. If no <code class="language-plaintext highlighter-rouge">userid.attribute</code> configuration option is set, the default
+<code class="language-plaintext highlighter-rouge">eduPersonPrincipalName</code> will then be used. However, since it is missing, no identifier will be kept. Alternatively, if
+<code class="language-plaintext highlighter-rouge">userid.attribute</code> is set to a missing or empty attribute, the <code class="language-plaintext highlighter-rouge">addUserID()</code> method will abort trying to register an
+identifier.</p>
+
+<p>After executing all authentication processing filters, SimpleSAMLphp will build a SAML assertion. If the service
+provider requests persistent <code class="language-plaintext highlighter-rouge">NameID</code>s, SimpleSAMLphp will attempt to generate one given that none is already
+available (because the <code class="language-plaintext highlighter-rouge">saml:PersistentNameID</code> filter was not used). At this point, the code will look for the
+<code class="language-plaintext highlighter-rouge">simplesaml.nameidattribute</code> configuration option in either the local IdP metadata or in the remote SP metadata. If
+none of them are configured, it will default to the unique user identifier previously registered by
+<code class="language-plaintext highlighter-rouge">SimpleSAML_Auth_ProcessingChain</code>. If no identifier was kept there, the code will log an error message:</p>
+
+<pre>
+Unable to generate NameID. Check the userid.attribute option.
+</pre>
+
+<p>However, instead of aborting the <code class="language-plaintext highlighter-rouge">NameID</code> generation at that point, it will go on and use a value missing from the
+state array as the source for the computation, meaning the <code class="language-plaintext highlighter-rouge">null</code> type will be used. Hence, all users connecting to a
+given service provider will get the same <code class="language-plaintext highlighter-rouge">NameID</code> generated, because all the input parameters will be the same:</p>
+
+<ul>
+  <li>The SP’s entity identifier.</li>
+  <li>The IdP’s entity identifier.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">null</code> value.</li>
+  <li>The common secret salt from the main configuration.</li>
+</ul>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>SimpleSAMLphp</strong> versions between <strong>1.7.0</strong> and <strong>1.14.10</strong>, inclusive.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>Those identity providers affected by this bug and misconfigured as previously described could be issuing SAML assertions
+with common <code class="language-plaintext highlighter-rouge">NameID</code>s for all or a subset of their users. If a service provider uses those <code class="language-plaintext highlighter-rouge">NameID</code>s to identify the
+users of the affected IdP, all the users will be associated with the same user account at the service provider,
+causing all sorts of potential security issues like information disclosure or unauthorized access.</p>
+
+<p>While we can consider this unlikely to happen, some cases have been already observed. In particular, some identity
+providers using default configurations and consuming metadata automatically (i.e. using the <em>metarefresh</em> module) while
+using a user backend like <em>Active Directory</em> that does not populate <em>eduPersonPrincipalName</em> are particularly sensitive
+to this issue.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>
+
+<p>Configure a <a href="/docs/stable/saml:nameid"><code class="language-plaintext highlighter-rouge">saml:PersistentNameID</code> authentication processing filter</a>
+according to your needs. Remember to check that <strong>the attribute used as the source</strong> for the <code class="language-plaintext highlighter-rouge">NameID</code> <strong>is present at
+the moment the <code class="language-plaintext highlighter-rouge">saml:PersistentNameID</code> filter is executed</strong>. The attribute used must be <strong>unique</strong> per user, and <strong>must
+not change</strong> over time.</p>

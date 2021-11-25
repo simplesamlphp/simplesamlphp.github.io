@@ -1,0 +1,93 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+December 12, 2016
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp &lt; 1.14.11</code>
+<h2>Severity</h2>
+Medium
+<h2>References</h2>
+CVE-2016-9955
+</div></aside>
+
+<h1 id="201612-02">201612-02</h1>
+
+<p><strong>Incorrect signature verification</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>An incorrect check of return values in the signature validation utilities allows an attacker to get invalid signatures
+accepted as valid by forcing an error during validation.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">SimpleSAML_XML_Validator</code> class allows the verification of the XML digital signature of a SAML 1 message with a
+given key. In particular, the constructor of the class receives an XML node and a key to verify it, and throws an
+exception in case there is any error, either caused by incorrect input or an invalid signature. This method uses the
+<code class="language-plaintext highlighter-rouge">verify()</code> method from the <code class="language-plaintext highlighter-rouge">RobRichards\XMLSecDSig</code> class to verify the signature with the given key, which in turn will
+end up calling <code class="language-plaintext highlighter-rouge">openssl_verify()</code> depending on the signature algorithm used.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">openssl_verify()</code> function returns <code class="language-plaintext highlighter-rouge">1</code> when the signature was successfully verified, <code class="language-plaintext highlighter-rouge">0</code> if it failed to verify
+with the given key, and <code class="language-plaintext highlighter-rouge">-1</code> in case an error occurs. PHP allows translating numerical values to <em>boolean</em> implicitly,
+with the following correspondences:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0</code> equals <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li>Non-zero equals <code class="language-plaintext highlighter-rouge">true</code>.</li>
+</ul>
+
+<p>This means that an implicit conversion to boolean of the values returned by <code class="language-plaintext highlighter-rouge">openssl_verify()</code> will convert an error
+state, signaled by the value <code class="language-plaintext highlighter-rouge">-1</code>, to a successful verification of the signature (represented by the boolean <code class="language-plaintext highlighter-rouge">true</code>).</p>
+
+<p>The aforementioned constructor was performing an implicit conversion to boolean of the values returned
+by the <code class="language-plaintext highlighter-rouge">verify()</code> method, which subsequently will return the same output as <code class="language-plaintext highlighter-rouge">openssl_verify()</code> under most circumstances.
+This means an error during signature verification is treated as a successful verification by the method.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>SimpleSAMLphp</strong> versions prior to <strong>1.14.11</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>Upon successful exploitation, an invalid signature would be regarded as valid by an affected version of the software.
+This allows attackers to modify or manually craft <strong>SAML 1 response messages</strong> and, by triggering a signature validation
+error in the affected party, get those messages accepted as valid and coming from a trusted entity. In practice, this
+means full capabilities to impersonate any individual at a given service provider.</p>
+
+<p>The issue can be exploited to get other invalid messages accepted as valid, though the security implications there are
+minor.</p>
+
+<p>In order to exploit the issue, <strong>SAML 1.1 metadata must be registered by the vulnerable Service Provider for the
+Identity Provider targeted by the attacker</strong> (in <code class="language-plaintext highlighter-rouge">metadata/shib13-idp-remote.php</code>), and an incorrect context must be fed
+to the signature validation routines, or an exceptional error must be triggered. So far, the following cases have been
+identified:</p>
+
+<ul>
+  <li>Using a DSA public key to validate an XML signature made with an RSA-related algorithm.</li>
+  <li>Using an RSA public key to validate an XML signature made with a DSA-related algorithm.</li>
+  <li>Exhausting available memory while verifying the signature.</li>
+</ul>
+
+<p>SimpleSAMLphp <strong>does not support DSA signatures or keys</strong>. Therefore, it is not possible for an attacker to feed an
+incorrect context by sending a signature with an incorrect algorithm. Upon reception of a DSA-SHA1 signature,
+SimpleSAMLphp will refuse to perform the validation due to the algorithm not being supported. On the other hand, if an
+attacker manages to trick a service provider operator to change the public key associated to a certain IdP to a DSA key,
+signatures made with any combination of the RSA algorithm will be accepted, regardless of whether they are valid or not.
+This means some serious misconfiguration or social engineering is needed in this case for a successful attack.</p>
+
+<p>Regarding memory exhaustion, it is in theory possible to attack a service provider causing the consumption of all
+available memory while a message with an invalid signature is being validated. However, memory exhaustion must happen
+only during signature validation and not immediately before or after. This means exploitation of this case is extremely
+difficult due to the small time window available for the attacker and the precise control that is needed over the
+service provider.</p>
+
+<p>All in all, the consequences of this issue are critical, so even though we consider it difficult to exploit, and
+considering that other ways to trigger failures in signature validation could be possible but so far unidentified, we
+recommend updating the affected software as soon as possible.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered and reported on December 3, 2016 by Thijs Kinkhorst.</p>

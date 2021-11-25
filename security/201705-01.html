@@ -1,0 +1,66 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+May 5, 2017
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 1.14.12, 1.14.13</code>
+<h2>Severity</h2>
+Critical
+<h2>References</h2>
+CVE-2017-12868
+</div></aside>
+
+<h1 id="201705-01">201705-01</h1>
+
+<p><strong>Session fixation issue and authentication bypass in the authcrypt module</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>In the previous <a href="/security/201703-01">SSPSA 201703-01</a> advisory, a constant time comparison function was introduced
+to avoid <em>timing side-channel attacks</em> when evaluating the authentication token tied to a session (which avoids <em>session
+fixation attacks</em>), and also when authenticating with the <em>authcrypt</em> module and using passwords hashed with the
+<a href="https://en.wikipedia.org/wiki/Crypt_(C)"><code class="language-plaintext highlighter-rouge">crypt()</code> algorithm</a> used in <em>htpasswd</em> files.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The countermeasure to avoid this timing side-channel attacks consisted on the introduction of the
+<code class="language-plaintext highlighter-rouge">SimpleSAML\Utils\Crypto::secureCompare()</code> function. However, an issue in the implementation of this function introduced
+another vulnerability, as the output of the function was always true for strings with equal length, regardless of their
+contents, when running a version of PHP older than 5.6.</p>
+
+<p>The issue was due to improper conversion to an integer of individual bytes in both strings, right before applying the
+XOR operator to them (<code class="language-plaintext highlighter-rouge">^</code>). In PHP, the XOR operation applied to strings (or characters) returns always an empty string,
+which was then converted to numerical <code class="language-plaintext highlighter-rouge">0</code> before applying a bitwise OR operation. This implies the result of the
+constant time comparison was always <code class="language-plaintext highlighter-rouge">0</code>, making the function return the boolean <code class="language-plaintext highlighter-rouge">true</code> even if the contents of the two
+strings were completely different.</p>
+
+<p>Strings with different length were not affected, as an specific check for that condition exists in the function.</p>
+
+<p>Similarly, those running a version of PHP equal or newer than 5.6 were not affected, since in their case the
+function acts as a simple wrapper to <code class="language-plaintext highlighter-rouge">hash_equals()</code>.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p><strong>SimpleSAMLphp</strong> versions <strong>1.14.12</strong> and <strong>1.14.13</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>The issue described here has a critical impact, as it runs the affected function useless. As such, the session
+validation mechanism, consisting on the check for an authentication cookie whose value must be equal to an identifier
+held in the session’s contents, is also useless, opening for
+<a href="https://www.owasp.org/index.php/Session_fixation">session fixation attacks</a> under certain circumstances.</p>
+
+<p>In the same way, authentication with the <em>authcrypt</em> module is also affected by this issue. By exploiting it, an
+attacker can authenticate with any account and a random password, provided that the original password is stored in an
+<em>htpasswd</em> file and hashed using the <code class="language-plaintext highlighter-rouge">crypt()</code> algorithm. While this is even more critical than a session fixation
+attack, the <code class="language-plaintext highlighter-rouge">crypt()</code> algorithm has been considered insecure for many years now, and even without this particular
+issue it would be possible to exploit it to gain unauthorized access. Therefore, the fix for the issue described here
+does not make the use of this algorithm secure, and it should be avoided in any case.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered on May 5, 2017 by Jaime Pérez Crespo, and reported on the same day by Matt
+Schwager.</p>

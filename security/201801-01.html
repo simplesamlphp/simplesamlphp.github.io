@@ -1,0 +1,50 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+January 25, 2018
+<h2>Affected versions</h2>
+<code>simplesamlphp/saml2 &lt; 1.10.4</code><br />
+<code>simplesamlphp/saml2 &lt; 2.3.5</code><br />
+<code>simplesamlphp/saml2 &lt; 3.1.1</code><br />
+<h2>Severity</h2>
+Info
+<h2>Reference</h2>
+CVE-2018-6519
+</div></aside>
+
+<h1 id="201801-01">201801-01</h1>
+
+<p><strong>Denial of Service in timestamp validation function</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>SAML messages and metadata use timestamps to express the validity of a given document based on the current time. These
+timestamps use a common format, <code class="language-plaintext highlighter-rouge">xs:DateTime</code>, in order to convey precise moments in time. Even though the SAML
+standard recommends not relying on time resolutions finer than milliseconds, the fact is that implementors use different
+precisions and therefore the SAML2 library tries to accommodate for all possible (and legal) values.</p>
+
+<h3 id="description">Description</h3>
+
+<p>When parsing a timestamp contained inside a SAML document, the SAML2 library uses a regular expression to validate its
+format and parse its components. The given regular expression sets no limits for the fraction of seconds part, such that
+an arbitrary amount of digits can be processed. This opens up the possibility to perform a <em>denial of service</em> attack
+by sending a large number of digits as the fraction of a second in a timestamp, making the processing script choke while
+evaluating the regular expression.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>simplesamlphp/saml2</strong> versions 1.x, 2.x and 3.x are affected, up to (including) <strong>1.10.3</strong>, <strong>2.3.4</strong> and <strong>3.1</strong>,
+respectively.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>An attacker can inject an arbitrary amount of digits into a valid <code class="language-plaintext highlighter-rouge">xs:DateTime</code> timestamp and send a SAML document with
+it to be processed by the library, making it hang while trying to process it, effectively achieving a denial of
+service.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the latest versions of the library.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered during a security audit performed by Cure53 and reported on December 18, 2017.</p>

@@ -1,0 +1,60 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+November 19, 2019
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 1.17.0 - 1.17.7</code><br />
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="201911-02">201911-02</h1>
+
+<p><strong>Information disclosure</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>SimpleSAMLphp 1.17 includes a preview of the new user interface to be included in the future version 2.0. This new user
+interface can be enabled by setting the <code class="language-plaintext highlighter-rouge">usenewui</code> configuration option to <code class="language-plaintext highlighter-rouge">true</code>, and it includes a new admin interface
+in a module called <em>admin</em>, which can be disabled.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The new admin interface includes a way to view information about the host where SimpleSAMLphp is installed, by means of
+the <code class="language-plaintext highlighter-rouge">phpinfo()</code> PHP function. An endpoint that exposes the output of that function is included in the admin module for
+easier debugging.</p>
+
+<p>The aforementioned endpoint had no checks for administrator privileges. This would allow any individual
+to access the given endpoint without authenticating, gathering information about the affected system.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All SimpleSAMLphp 1.17 versions up to 1.17.7 are affected, provided that the new, experimental use interface is enabled,
+together with the new <em>admin</em> module.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>An attacker could leverage this issue by accessing the unprotected endpoint and gather intelligence about the host where
+SimpleSAMLphp is deployed, using it later for their own advantage in case other issues arise.</p>
+
+<p>However, the impact of this issue is deemed as low, given that the new user interface must be explicitly enabled by
+means of the <code class="language-plaintext highlighter-rouge">usenewui</code> configuration option, and the new <em>admin</em> module must also be enabled.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to SimpleSAMLphp 1.17.8 or 1.18. This can be done by downloading the package, or by running <code class="language-plaintext highlighter-rouge">composer update</code>.
+Refer to the documentation for instructions on how to
+<a href="https://simplesamlphp.org/docs/stable/simplesamlphp-install-repo">run composer</a>.</p>
+
+<p>Alternatively, the issue can be mitigated by either disabling the new user interface by setting the <code class="language-plaintext highlighter-rouge">usenewui</code>
+configuration option to <code class="language-plaintext highlighter-rouge">false</code>, or by disabling the <em>admin</em> module in the configuration:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'module.enable' =&gt; [
+        ...
+        'admin' =&gt; false,
+        ...
+    ],
+</code></pre></div></div>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was reported  by Dirk-jan Mollema and reported on November 19, 2019.</p>

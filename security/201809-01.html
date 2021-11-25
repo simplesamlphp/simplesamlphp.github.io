@@ -1,0 +1,67 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+September 27, 2018
+<h2>Affected versions</h2>
+<code>robrichards/xmlseclibs &lt;= 3.0.1</code><br />
+<code>robrichards/xmlseclibs &lt;= 2.0.1</code><br />
+<code>robrichards/xmlseclibs &lt;= 1.4.2</code>
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="201809-01">201809-01</h1>
+
+<p><strong>Insecure signature validation</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>XMLSecLibs is a library written by Rob Richards that implements the
+<a href="https://www.w3.org/TR/2002/REC-xmlenc-core-20021210/Overview.html">xml-enc</a> and
+<a href="https://www.w3.org/TR/xmldsig-core1/">xml-dsig</a> W3C recommendations. It allows its users to handle encrypted and
+digitally signed XML documents. SimpleSAMLphp delegates encryption and signature handling to this library.</p>
+
+<h3 id="description">Description</h3>
+
+<p>When verifying a digital signature embedded on an XML document, the <code class="language-plaintext highlighter-rouge">validateDigest()</code> method of the <code class="language-plaintext highlighter-rouge">XMLSecurityDSig</code>
+class of XMLSecLibs computes the digest of the signed fragment of the document using the algorithm specified. Once this
+digest is computed, it is then compared to the given digest that’s being evaluated (which should be in turn encrypted
+with the private asymmetric key of the signer). The comparison is performed by means of the regular <code class="language-plaintext highlighter-rouge">==</code> PHP operator.</p>
+
+<p>The issue is precisely the use of this operator. Since PHP is a loosely typed language, this operator will convert its
+operands to integers when possible. This conversion will take into account the values represented by the strings, even
+supporting scientific number notation. Due to this, PHP will evaluate the strings <code class="language-plaintext highlighter-rouge">"1e3"</code> and <code class="language-plaintext highlighter-rouge">"1000"</code> as equal.</p>
+
+<p>Given this premise, there is a case where digests can be evaluated equal regardless of their actual values, based only
+on the integer equivalence they represent. Two strings starting with <code class="language-plaintext highlighter-rouge">"0e"</code> and followed by digits will always be
+evaluated as equal.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>robrichards/xmlseclibs</strong> versions 1.x, 2.x and 3.x are affected, up to (including) <strong>1.4.2</strong>, <strong>2.0.1</strong> and
+<strong>3.0.1</strong>, respectively.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>An attacker could leverage this issue to modify a signed XML document and have the signature validated without access to
+the signing key.</p>
+
+<p>However, two prerequisites need to concur to make this issue exploitable, effectively lowering its impact:</p>
+
+<ul>
+  <li>The original signed digest must start with <code class="language-plaintext highlighter-rouge">"0e"</code> and be followed by digits exclusively.</li>
+  <li>The digest of the modified XML document must also start with <code class="language-plaintext highlighter-rouge">"0e"</code> and be followed by digits exclusively, so the
+attacker must be able to modify the document in a way such as its digest meets the requirement.</li>
+</ul>
+
+<p>The probability of such an event has been considered to be around 2<sup>-99</sup>.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the latest versions of the library.</p>
+
+<p>For SimpleSAMLphp users, run <code class="language-plaintext highlighter-rouge">composer update</code> or upgrade to SimpleSAMLphp 1.16. Refer to the documentation for
+instructions on how to <a href="https://simplesamlphp.org/docs/stable/simplesamlphp-install-repo">run composer</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered during a security audit performed by Cure53 and reported on December 18, 2017.</p>

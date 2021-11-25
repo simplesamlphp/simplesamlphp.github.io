@@ -1,0 +1,88 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+April 26, 2017
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp &lt;= 1.14.12</code>
+<h2>Severity</h2>
+Medium
+<h2>References</h2>
+CVE-2017-12870
+</div></aside>
+
+<h1 id="201704-01">201704-01</h1>
+
+<p><strong>Unauthenticated encryption in CBC mode</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>Encryption provides confidentiality, but not authentication over the plaintext message. This means we can decrypt
+encrypted data, but we can’t be sure that it hasn’t been tampered with. This is particularly important in some
+encryption modes, as changing something in the ciphertext may be possible without breaking decryption. This
+means an attacker may change a ciphertext in a way that results in a modified plaintext instead of a decryption failure.
+<em>Cipher Block Chaining</em> (CBC) mode of operation and other unauthenticated modes of symmetric encryption algorithms are
+affected by this issue.</p>
+
+<p>The ability to modify the ciphertext affecting the result of decryption allows an attacker to recover the original
+plaintext corresponding to a certain ciphertext by using a
+<a href="https://en.wikipedia.org/wiki/Padding_oracle_attack"><em>Padding Oracle Attack</em></a>.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">SimpleSAML\Utils\Crypto</code> class provides a couple of methods to encrypt and decrypt data, <code class="language-plaintext highlighter-rouge">aesEncrypt()</code> and
+<code class="language-plaintext highlighter-rouge">aesDecrypt()</code>, respectively. They encrypt and decrypt data using the AES algorithm in CBC mode, which does not
+provide authentication of the ciphertext, and is therefore vulnerable to <em>Padding Oracle Attacks</em>. Neither function
+provides authentication itself on top of the encryption algorithm, running them vulnerable too.</p>
+
+<p>Those functions are used when we need to send an HTTP POST request via an insecure
+channel (that is, when HTTPS is not used) after authentication. The typical use case is when the SAML IdP is
+accessible via HTTPS, but an SP is not. In such case, the browser will display a warning or even block the request
+because we are sending data obtained from a secure channel, through an insecure one. We avoid the issue by encrypting
+the session identifier so that we can <em>redirect</em> to a page that is available via plain HTTP without compromising the
+user’s session by sending it in the clear. This page decrypts the session identifier to recover the current state and
+uses that to send the final response to the service provider via the insecure channel. The web browser will not complain
+because we are not sending an HTTP POST request to an HTTP URL, but redirecting there instead. When we perform the
+HTTP POST request to send a SAML response to the service provider, both the origin of the request and its target are
+using plain HTTP.</p>
+
+<p>The issue that affects the encryption and decryption methods in the <code class="language-plaintext highlighter-rouge">SimpleSAML\Utils\Crypto</code> class makes it possible
+for an attacker eavesdropping the network to capture the encrypted session identifier, and mount a <em>Padding Oracle
+Attack</em> to recover that identifier and try to use it to impersonate the user. Bear in mind that the attacker will be
+able to impersonate the user towards the service regardless of this vulnerability, due to the lack of HTTPS protection
+in the service provider. In order to use the session identifier just obtained to access other services, the attacker
+would need though the authentication token, that is not encrypted together with the session ID and is also sent using
+the same configuration for the session cookie. This means if session cookies are set to be sent only for HTTPS requests,
+an attacker will be unable to get the authentication token anyway and the session ID obtained by this attack is
+useless without it.</p>
+
+<p>This particular use case is <em>not possible by default</em>, as it requires setting explicitly the <code class="language-plaintext highlighter-rouge">enable.http_post</code>
+configuration option in the <code class="language-plaintext highlighter-rouge">config.php</code> file.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>SimpleSAMLphp</strong> versions before and including <strong>1.14.12</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>The issue presented here makes all the data encrypted with <code class="language-plaintext highlighter-rouge">SimpleSAML\Utils\Crypto::aesEncrypt()</code> vulnerable to
+different kinds of attacks that could allow a third party to recover the original data or to modify the encrypted
+data so that it decrypts into a different plaintext chosen by the attacker.</p>
+
+<p>Beside any uses of those methods in third-party modules, SimpleSAMLphp only uses them to protect the session identifier
+when replying to non-HTTPS service providers. In such case, an attacker could already impersonate a user if those
+replies are captured, so this vulnerability doesn’t give any particular advantage without the ability to get the
+authentication token. However, an attacker could combine this attack with other attacks unknown to date to recover the
+authentication token too and be able to impersonate a user for every service available.</p>
+
+<p>Even though SimpleSAMLphp is not vulnerable by default and those vulnerable instances (those with <code class="language-plaintext highlighter-rouge">enable.http_post</code>
+set to <code class="language-plaintext highlighter-rouge">true</code>) aren’t more vulnerable due to this than they already are because of the fact they are sending SAML
+responses through unprotected channels, other modules may be using these functions to encrypt and decrypt data, unaware
+of the issues described here, and posing unforeseeable security risks.</p>
+
+<p>Therefore, it is recommended to upgrade to the latest version as soon as possible. We also recommend keeping the
+<code class="language-plaintext highlighter-rouge">enable.http_post</code> configuration option to <code class="language-plaintext highlighter-rouge">false</code> as it is set by default, and requiring all service providers and
+identity providers to enforce the use of HTTPS and restrict session cookies to be sent over secure channels with the
+<code class="language-plaintext highlighter-rouge">session.cookie.secure</code> configuration option set to <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="/download">latest version</a>.</p>

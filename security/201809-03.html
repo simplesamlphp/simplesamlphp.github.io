@@ -1,0 +1,50 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+September 27, 2018
+<h2>Affected versions</h2>
+<code>robrichards/xmlseclibs &lt;= 3.0.1</code><br />
+<code>robrichards/xmlseclibs &lt;= 2.0.1</code><br />
+<code>robrichards/xmlseclibs &lt;= 1.4.2</code>
+<h2>Severity</h2>
+Medium
+</div></aside>
+
+<h1 id="201809-03">201809-03</h1>
+
+<p><strong>Multiple XPath injections</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>XMLSecLibs is a library written by Rob Richards that implements the
+<a href="https://www.w3.org/TR/2002/REC-xmlenc-core-20021210/Overview.html">xml-enc</a> and
+<a href="https://www.w3.org/TR/xmldsig-core1/">xml-dsig</a> W3C recommendations. It allows its users to handle encrypted and
+digitally signed XML documents. SimpleSAMLphp delegates encryption and signature handling to this library.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The XMLSecLibs library uses XPath to query XML documents. An important use of these queries is reference resolution,
+which is needed to verify XML signatures. Since the identifier of the reference is provided by the user, it can be
+manipulated to include an XPath sub-expression that opens multiple attack vectors, from denial of service to signature
+verification bypass. The library does not include any mechanism to sanitize user input before using it in XPath queries,
+making it possible for a malicious third-party to alter pre-defined XPath expressions.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>robrichards/xmlseclibs</strong> versions 1.x, 2.x and 3.x are affected, up to (including) <strong>1.4.2</strong>, <strong>2.0.1</strong> and
+<strong>3.0.1</strong>, respectively.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>No way to take advantage of this issue to bypass signature verification routines has been identified. However, other
+attack vectors might be viable and lead to serious consequences like denial of service.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the latest versions of the library.</p>
+
+<p>For SimpleSAMLphp users, run <code class="language-plaintext highlighter-rouge">composer update</code> or upgrade to SimpleSAMLphp 1.16. Refer to the documentation for
+instructions on how to <a href="https://simplesamlphp.org/docs/stable/simplesamlphp-install-repo">run composer</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered during a security audit performed by Cure53 and reported on December 18, 2017.</p>

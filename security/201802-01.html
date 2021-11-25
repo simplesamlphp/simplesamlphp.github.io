@@ -1,0 +1,135 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+February 26, 2018
+<h2>Affected versions</h2>
+<code>simplesamlphp/saml2 &lt; 3.1.3</code><br />
+<code>simplesamlphp/saml2 &lt; 2.3.7</code><br />
+<code>simplesamlphp/saml2 &lt; 1.10.5</code><br />
+<code>simplesamlphp/saml2 0.x</code><br />
+<code>SimpleSAMLphp 1.14.0 - 1.15.2</code>
+<h2>Severity</h2>
+Critical
+<h2>References</h2>
+CVE-2018-7644
+</div></aside>
+
+<h1 id="201802-01">201802-01</h1>
+
+<p><strong>Improper signature validation</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>XMLSecLibs is a library written that implements the
+<a href="https://www.w3.org/TR/2002/REC-xmlenc-core-20021210/Overview.html">xml-enc</a> and
+<a href="https://www.w3.org/TR/xmldsig-core1/">xml-dsig</a> W3C recommendations. It allows its users to handle encrypted and
+digitally signed XML documents. SimpleSAMLphp delegates encryption and signature handling to this library.</p>
+
+<h3 id="description">Description</h3>
+
+<p>SimpleSAMLphp delegates creating and handling all SAML objects (messages, specific elements, etc) to a separate library
+called the SAML2 library (<em>simplesamlphp/saml2</em>). This library performs all kinds of validations, including the
+verification of XML signatures. Signature validation is in turn delegated to XMLSecLibs.</p>
+
+<p>When verifying a signature, the API in XMLSecLibs mandates the creation of an <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code> object, which is built
+depending on the algorithm the key is going to be used for. The key material is later loaded into the object, and it is
+then ready to use to verify a given signature against that key. <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code> objects are always used regardless of
+the algorithm associated with the key, and the library does not perform any checks on the type of key being loaded into
+the object. This leads to a <em>key confusion</em> issue, where an <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code> object can be instantiated with a specific
+algorithm, and key material that doesn’t correspond that particular algorithm. Additionally, since the API provides
+common methods regardless of the algorithm, those methods may return different values depending on the underlying
+backend used, which in turns depends on the algorithm.</p>
+
+<p>The combination of these two factors came into play in the SAML2 library, effectively allowing a SAML message to be
+signed using the <strong>HMAC_SHA1</strong> algorithm and the <strong>public key</strong> of a SAML2 entity as the <strong>secret</strong> material used for
+that algorithm. Obviously, a public key is intended to be <strong>public</strong>, and as such must always be considered in
+possession of an attacker.</p>
+
+<p>In order to use the <em>HTTP-Redirect</em> SAML2 binding, the SAML2 library provides the <code class="language-plaintext highlighter-rouge">SAML2\HTTPRedirect</code> class, which
+is used by SimpleSAMLphp when a message is received using this binding in the <em>Assertion Consumer Service</em> endpoint
+(note that this endpoint is always available, and if a binding is supported, then it can always be used: it is not
+possible to switch off the use of a particular binding on an endpoint). The <code class="language-plaintext highlighter-rouge">SAML2\HTTPRedirect</code> class provides a static
+method called <code class="language-plaintext highlighter-rouge">validateSignature()</code> that extracts the relevant information from the query, and performs the verification
+of the signature by calling the <code class="language-plaintext highlighter-rouge">verifySignature()</code> method provided by <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code>.</p>
+
+<p>One of the arguments used to validate the signature is the algorithm, which is of course provided by the user. Since
+multiple algorithms are supported for digital signatures in SAML2, the SAML2 library allows creating a key with the
+right algorithm associated by means of the <code class="language-plaintext highlighter-rouge">SAML2\Utils\castKey()</code> method. This method simply checks the algorithm used
+in a given key (which defaults to <em>RSA_SHA1</em>), and if they don’t match, it instantiates a new <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code> object
+with the algorithm provided. We should stress again that the algorithm is provided by the user. Once a new key is
+instantiated, the <code class="language-plaintext highlighter-rouge">castKey()</code> method loads the key material present in the given key into this new instance, assuming
+the material is a public key.</p>
+
+<p>XMLSecLibs version 1.3.3 added support for the <em>HMAC_SHA1</em> algorithm in 2015. Therefore, since that version it was
+possible then to call <code class="language-plaintext highlighter-rouge">castKey()</code> with that algorithm, and get a <code class="language-plaintext highlighter-rouge">XMLSecurityKey</code> object for that algorithm in return,
+loaded with the public key of the SAML2 entity whose signature we want to verify. Of course, the <em>HMAC_SHA1</em> algorithm
+is a symmetric algorithm, meaning in order to verify the signature, the key material used must be secret. That given, it
+is possible for an attacker to use the <em>HMAC_SHA1</em> algorithm with that public key to generate a signature for a manually
+crafted SAML assertion, and a SimpleSAMLphp instance receiving the message with the <em>HTTP-Redirect</em> binding will
+consider it as a legitimate signature.</p>
+
+<p>This issue was possible, to summarise, due to several facts concurring at the same time:</p>
+
+<ul>
+  <li>The API provided by XMLSecLibs does not differentiate between keys for symmetric or asymmetric algorithms, or keys
+used for encryption or digital signatures.</li>
+  <li>The assumption that all algorithms supported for digital signatures were asymmetric algorithms (<em>HMAC_SHA1</em> is not).</li>
+  <li>The lack of proper check of the value returned by <code class="language-plaintext highlighter-rouge">XMLSecurityKey::verifySignature()</code> in the
+<code class="language-plaintext highlighter-rouge">SAML2\HTTPRedirect::validateSignature()</code> method.</li>
+</ul>
+
+<p>Had any of these requisites not been met, the issue would have been averted. A fix for the latter is in fact what
+avoided this issue from being present in other bindings like HTTP-POST, as <code class="language-plaintext highlighter-rouge">verifySignature()</code> returns the integer <code class="language-plaintext highlighter-rouge">1</code>
+when a public key algorithm is used and the signature is validated, as opposed to the boolean <code class="language-plaintext highlighter-rouge">true</code> when the signature
+is deemed valid by using the <em>HMAC_SHA1</em> algorithm. This particular issue opens up for other kinds of side attacks
+previously fixed in other places, like <a href="201612-01">201612-01</a>, <a href="201612-02">201612-02</a> or <a href="201612-03">201612-03</a>.
+It has also been fixed in versions 3.1.4, 2.3.8 and 1.10.6 of the SAML2 library and in version 1.15.4 of SimpleSAMLphp.
+A security advisory has been published for it with the identifier
+<a href="201803-01">SSPSA 201803-01</a>.</p>
+
+<p>Regarding the other two requisites, the first one implies a complete rewrite of the XMLSecLibs library, in order to
+offer separate programming interfaces depending on the use that can be made of a key and the type of key itself. We
+have been in contact with the author and maintainer of the library, but unfortunately the fix for this problem was
+deemed too complex to have in a reasonable time span, and it would also entail major changes for all code
+making use of this library.</p>
+
+<p>The second requisite was fixed by introducing a <em>whitelisting</em> mechanism in the <code class="language-plaintext highlighter-rouge">SAML2\Utils::castKey()</code> method,
+effectively ensuring that only the supported <em>RSA_SHA*</em> algorithms can be used. This fix was introduced in versions
+3.1.3, 2.3.7 and 1.10.5 of the SAML2 library, and in version 1.15.3 of SimpleSAMLphp, and it effectively tackles the
+security issue regardless of the API provided by XMLSecLibs and the value returned by <code class="language-plaintext highlighter-rouge">verifySignature()</code>.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>All <strong>simplesamlphp/saml2</strong> versions 0.x, 1.x, 2.x and 3.x are affected, up to (including) <strong>1.10.4</strong>, <strong>2.3.6</strong> and
+<strong>3.1.2</strong>.</p>
+
+<p>All SimpleSAMLphp 1.14.x and 1.15.x versions are affected, up to (including) <strong>1.15.2</strong>.</p>
+
+<p>Other software using the <code class="language-plaintext highlighter-rouge">XMLSecLibs</code> library might be affected by the same issue. Several vendors have been contacted,
+and so far the following implementations have been verified to <strong>not</strong> be affected:</p>
+
+<ul>
+  <li><a href="https://github.com/onelogin/php-saml">OneLogin’s SAML PHP toolkit</a></li>
+  <li><a href="http://www.adas-sso.com/en/">adAS</a>.</li>
+</ul>
+
+<h3 id="impact">Impact</h3>
+
+<p>For a SimpleSAMLphp installed as an Identity Provider, an attacker may impersonate a Service Provider asking for
+authentication or to log a user out. Neither of both cases have important consequences.</p>
+
+<p>When SimpleSAMLphp is installed as a Service Provider, attackers may manually craft a SAML2 assertion to their complete
+will, including altering, adding or removing attributes, changing the subject of the assertion, specifying higher
+levels of assurance in the authentication context, etc. The only requirement for that is the public key of the Identity
+Provider being impersonated. The Service Provider will validate the signature as legitimate, and assume the assertion
+comes from the Identity Provider and corresponds to a legitimate user that has been properly authenticated.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the latest versions of the SAML2 library.</p>
+
+<p>For SimpleSAMLphp users, run <code class="language-plaintext highlighter-rouge">composer update</code> or upgrade to SimpleSAMLphp 1.15.3.Refer to the documentation for
+instructions on how to <a href="/docs/stable/simplesamlphp-install-repo">run composer</a>.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This security issue was discovered during a security audit performed by Cure53 and reported on December 18, 2017.</p>

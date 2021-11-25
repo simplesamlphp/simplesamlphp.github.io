@@ -1,0 +1,81 @@
+<aside><div class="sidebar-warning" style="float: right;">
+<h2>Date</h2>
+December 12, 2016
+<h2>Affected versions</h2>
+<code>simplesamlphp/simplesamlphp-module-infocard &lt; 1.0.1</code>
+<h2>Severity</h2>
+Medium
+<h2>References</h2>
+CVE-2017-12874
+</div></aside>
+
+<h1 id="201612-03">201612-03</h1>
+
+<p><strong>Incorrect signature verification</strong></p>
+
+<h3 id="background">Background</h3>
+
+<p>An incorrect check of return values in the signature validation utilities allows an attacker to get invalid signatures
+accepted as valid by forcing an error during validation.</p>
+
+<h3 id="description">Description</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">InfoCard</code> SimpleSAMLphp module allows incorporates a series of libraries provided by the Zend Framework. As part
+of this third-party library, the class <code class="language-plaintext highlighter-rouge">Zend_InfoCard_Xml_Security</code> allows the verification of the XML digital signature
+of XML chunks with a given key. In particular, the <code class="language-plaintext highlighter-rouge">validateXMLSignature()</code> method receives an string containing an XML
+document and a key to verify it, and throws an exception in case there is any error, either caused by incorrect input or
+an invalid signature. This method uses the <code class="language-plaintext highlighter-rouge">openssl_verify()</code> function provided by the <em>openssl</em> PHP extension.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">openssl_verify()</code> function returns <code class="language-plaintext highlighter-rouge">1</code> when the signature was successfully verified, <code class="language-plaintext highlighter-rouge">0</code> if it failed to verify
+with the given key, and <code class="language-plaintext highlighter-rouge">-1</code> in case an error occurs. PHP allows translating numerical values to <em>boolean</em> implicitly,
+with the following correspondences:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">0</code> equals <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li>Non-zero equals <code class="language-plaintext highlighter-rouge">true</code>.</li>
+</ul>
+
+<p>This means that an implicit conversion to boolean of the values returned by <code class="language-plaintext highlighter-rouge">openssl_verify()</code> will convert an error
+state, signaled by the value <code class="language-plaintext highlighter-rouge">-1</code>, to a successful verification of the signature (represented by the boolean <code class="language-plaintext highlighter-rouge">true</code>).</p>
+
+<p>The aforementioned method was performing an implicit conversion to boolean of the values returned by the
+<code class="language-plaintext highlighter-rouge">openssl_verify()</code> function. This means an error during signature verification is treated as a successful verification
+by the method.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>The <strong>InfoCard</strong> module version <strong>1.0</strong>.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>Upon successful exploitation, an invalid signature would be regarded as valid by an affected version of the software.
+This allows attackers to modify or manually craft <strong>XML messages</strong> and, by triggering a signature validation
+error in the affected party, get those messages accepted as valid and coming from a trusted entity. In practice, this
+could mean the capability to access resources while impersonating other individuals, effectively bypassing
+authentication.</p>
+
+<p>In order to exploit the issue an incorrect context must be fed to the signature validation routines, or an exceptional
+error must be triggered. So far, the following cases have been identified:</p>
+
+<ul>
+  <li>Using a DSA public key to validate an XML signature made with an RSA-related algorithm.</li>
+  <li>Using an RSA public key to validate an XML signature made with a DSA-related algorithm.</li>
+  <li>Exhausting available memory while verifying the signature.</li>
+</ul>
+
+<p>The code allows for both DSA and RSA keys being used. However, a check between the configured key and the one received
+in the XML message is performed, aborting execution in case a mismatch is detected.</p>
+
+<p>Regarding memory exhaustion, it is in theory possible to attack a service provider causing the consumption of all
+available memory while a message with an invalid signature is being validated. However, memory exhaustion must happen
+only during signature validation and not immediately before or after. This means exploitation of this case is extremely
+difficult due to the small time window available for the attacker and the precise control that is needed over the
+service provider.</p>
+
+<p>All in all, the consequences of this issue are critical, so even though we consider it difficult to exploit, and
+considering that other ways to trigger failures in signature validation could be possible but so far unidentified, we
+recommend updating the affected software as soon as possible.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade to the <a href="https://github.com/simplesamlphp/simplesamlphp-module-infocard/releases">latest version</a>.</p>
