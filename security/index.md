@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Security Advisories
+title: "Security Advisories"
 ---
 # Security Advisories
 
