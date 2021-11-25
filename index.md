@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<img src="{{ site.url }}/res/ssplogo-fish-only.jpg" style="float: right; " />
+<img src="{{ site.url }}/res/ssplogo-fish-only.jpg" style="float: right; " alt="SimpleSAMLphp fish logo">
 
 **SimpleSAMLphp** is an [award-winning]({{ site.baseurl}}/awards) application written in native PHP that deals with
 authentication. The community-led project has a [large user base]({{ site.baseurl }}
