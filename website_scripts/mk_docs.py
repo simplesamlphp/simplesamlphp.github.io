@@ -184,10 +184,11 @@ with open(footer, 'r') as f:
 # Now generate contents based documentation for core simplesamlphp repo
 for ssp_version in ssp_versions:
    print("Working on: " + ssp_version)
-   print("Version dir: " + version_dir)
    print("Repo Root: " + repo_root_dir)
    
    version_dir = tempdir + ssp_version + "/"
+   print("Version dir: " + version_dir)
+
    
    getgitrepo('https://github.com/simplesamlphp/simplesamlphp.git', version_dir, repo_root_dir, ssp_version)
 
