@@ -15,7 +15,7 @@ repo_root_dir = "simplesamlphp/"
 repo_docs_dir = "docs/"
 repo_modules_dir = "modules/"
 
-site_root_dir = root_dir + "html/"
+site_root_dir = "./_site/docs/"
 header = root_dir + "resources/header"
 footer = root_dir + "resources/footer"
 
