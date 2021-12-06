@@ -7,19 +7,7 @@ import urllib.request
 import json 
 from bs4 import BeautifulSoup
 
-# Configuration of static variables
-root_dir = "website_scripts/"
-tempdir = "/tmp/ssp_tmp/"
-
-repo_root_dir = "simplesamlphp/"
-repo_docs_dir = "docs/"
-repo_modules_dir = "modules/"
-
-site_root_dir = "./_site/docs/"
-header = root_dir + "resources/header"
-footer = root_dir + "resources/footer"
-
-# for whch versions should we generate documentation?
+# for which versions should we generate documentation?
 # ToDo: replace with dynamic assasment based on github tags
 ssp_versions=["latest","1.19", "1.18", "1.17"]
 #ssp_versions=["latest"]
@@ -67,7 +55,7 @@ def getsubdirs(dir_path):
 
 # search a filesystem directory for markdown (md) files and parse these into html using the md2html function
 def parsefiles(docsdir, outputdir):
-    #print(docsdir)
+    print("parsing files from '" + docsdir + "' into '" + outputdir + "'")
 
     if os.path.isdir(docsdir):
 
@@ -164,17 +152,32 @@ def mkResources(root_dir, web_root):
 #
 ################################################
 
+# Configuration of static variables
+root_dir = "website_scripts/"
+tempdir = "/tmp/ssp_tmp/"
+
+repo_root_dir = "simplesamlphp/"
+repo_docs_dir = "docs/"
+repo_modules_dir = "modules/"
+
+site_root_dir = "./_site/docs/"
+header = "website_scripts/resources/header"
+footer = "website_scripts/resources/footer"
+
+
 # Housekeeping actions
 # Clean up the tempdir, just to be sure
-os.system('rm -Rf ' +  site_root_dir + '/*')
+#os.system('rm -Rf ' +  site_root_dir + '/*')
 
 # Clean up the html dir, just to be sure
-os.system('rm -Rf ' +  tempdir)
+#os.system('rm -Rf ' +  tempdir)
 
 # make the header and footer available as global vars
+print("reading Header")
 with open(header, 'r') as f:
   header = f.read()
 
+print("reading Footer")
 with open(footer, 'r') as f:
   footer = f.read()
 
@@ -196,7 +199,7 @@ for ssp_version in ssp_versions:
    print("versioned_site_root: " + versioned_site_root)
    
    # Parse main docs for this version
-   #parsefiles(os.path.join(version_dir, repo_root_dir, repo_docs_dir), versioned_site_root)
+   parsefiles(os.path.join(version_dir, repo_root_dir, repo_docs_dir), versioned_site_root)
 
    # get all the modules in this version
    #mods = getsubdirs(os.path.join(os.path.join(version_dir, repo_root_dir, repo_modules_dir)))
