@@ -62,6 +62,8 @@ def parsefiles(docsdir, outputdir):
       if not os.path.isdir(outputdir):
         os.makedirs(outputdir)
 
+      print("OutputDir? " + os.path.isdir(outputdir))
+
       os.chdir(docsdir)
 
       for file in glob.glob('*.md'):
@@ -201,7 +203,6 @@ for ssp_version in ssp_versions:
    print("versioned_site_root: " + versioned_site_root)
    
    # Parse main docs for this version
-   print(os.path.join(version_dir, repo_root_dir, repo_docs_dir))
    parsefiles(os.path.join(version_dir, repo_root_dir, repo_docs_dir), versioned_site_root)
 
    # get all the modules in this version
