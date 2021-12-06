@@ -62,7 +62,7 @@ def parsefiles(docsdir, outputdir):
       if not os.path.isdir(outputdir):
         os.makedirs(outputdir)
 
-      print("OutputDir? " + os.path.isdir(outputdir))
+      print("OutputDir? " + str(os.path.isdir(outputdir)))
 
       os.chdir(docsdir)
 
