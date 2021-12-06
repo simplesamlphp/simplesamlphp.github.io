@@ -1,4 +1,3 @@
-
 name: Build and deploy documentation site to GitHub Pages based on repo contents
 
 on:
@@ -19,7 +18,7 @@ jobs:
         python-version: 3.8 #install the python needed
     - run: pip install markdown
     - run: pip install glob2
-    - run: pip install os-sys
+#    - run: pip install os-sys
     - run: pip install urllib3
     - run: pip install beautifulsoup4
     - name: execute py script # run the run.py to get the latest data
