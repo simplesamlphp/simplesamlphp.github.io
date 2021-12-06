@@ -21,7 +21,7 @@ jobs:
 #    - run: pip install os-sys
     - run: pip install urllib3
     - run: pip install beautifulsoup4
-    - run ls /tmp/ssp_docs/
+    - run: ls /tmp/ssp_docs/
     - name: execute py script # run the run.py to get the latest data
       run: |
          python website_scripts/mk_docs.py
