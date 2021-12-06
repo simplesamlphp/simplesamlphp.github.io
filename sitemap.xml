@@ -134,35 +134,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/samlsp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/docs/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/samlidp/</loc>
-        </url>
-    
-        <url>
             <loc>https://simplesamlphp.github.io/support/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/developers/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/users/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/download/</loc>
         </url>
     
         <url>
@@ -170,11 +142,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
+            <loc>https://simplesamlphp.github.io/download/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/awards/</loc>
+            <loc>https://simplesamlphp.github.io/users/</loc>
         </url>
     
         <url>
@@ -182,7 +154,35 @@
         </url>
     
         <url>
+            <loc>https://simplesamlphp.github.io/awards/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/docs/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/developers/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/translation/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlidp/</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.github.io/modules/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlsp/</loc>
         </url>
     
         <url>
