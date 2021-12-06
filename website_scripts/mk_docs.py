@@ -179,7 +179,7 @@ with open(footer, 'r') as f:
   footer = f.read()
 
 # Copy the starter index.html that will always redirect to "latest"
-mkResources(root_dir, site_root_dir)
+#mkResources(root_dir, site_root_dir)
 
 # Now generate contents based documentation for core simplesamlphp repo
 for ssp_version in ssp_versions:
