@@ -189,7 +189,12 @@ for ssp_version in ssp_versions:
    getgitrepo('https://github.com/simplesamlphp/simplesamlphp.git', version_dir, repo_root_dir, ssp_version)
 
    versioned_site_root =  site_root_dir + ssp_version + "/"
+   print("--")
+   print(version_dir)
+   print(repo_root_dir)
+   print(repo_docs_dir)
    print(versioned_site_root)
+   print("--")
    
    # Parse main docs for this version
    parsefiles(os.path.join(version_dir, repo_root_dir, repo_docs_dir), versioned_site_root)
