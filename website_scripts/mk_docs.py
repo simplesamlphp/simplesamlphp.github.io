@@ -98,6 +98,8 @@ def getgitrepo(repo, repo_clone_dir, repo_root, version=None):
    os.system('git clone --depth=1 ' + repo)
    os.chdir(repo_clone_dir + repo_root)
    
+   print("Working in git repo from" + os.getcwd())
+   
    if (version is not None):
       os.system('git checkout -b ' + version)
    os.system('git status')
