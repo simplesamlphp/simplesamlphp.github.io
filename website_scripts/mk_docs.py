@@ -8,8 +8,8 @@ import json
 from bs4 import BeautifulSoup
 
 # Configuration of static variables
-root_dir = "/home/niels/dev/ssp-website/"
-tempdir = "/tmp/ssp/"
+root_dir = "/tmp/ssp_docs/"
+tempdir = "/tmp/ssp_tmp/"
 
 repo_root_dir = "simplesamlphp/"
 repo_docs_dir = "docs/"
