@@ -5,9 +5,20 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.github.io/</link>
     <atom:link href="https://simplesamlphp.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Dec 2021 10:19:31 +0000</pubDate>
-    <lastBuildDate>Tue, 14 Dec 2021 10:19:31 +0000</lastBuildDate>
+    <pubDate>Fri, 28 Jan 2022 08:32:16 +0000</pubDate>
+    <lastBuildDate>Fri, 28 Jan 2022 08:32:16 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Simplesamlphp 1.19.5</title>
+        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp 1.19.5&lt;/strong&gt; has been released. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+        <link>https://simplesamlphp.github.io/2022/01/24/SimpleSAMLphp-1.19.5.html</link>
+        <guid isPermaLink="true">https://simplesamlphp.github.io/2022/01/24/SimpleSAMLphp-1.19.5.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Simplesamlphp 1.19.4</title>
@@ -110,19 +121,6 @@
         <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.github.io/2020/03/19/SimpleSAMLphp-1.18.5.html</link>
         <guid isPermaLink="true">https://simplesamlphp.github.io/2020/03/19/SimpleSAMLphp-1.18.5.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Simplesamlphp 1.18.4</title>
-        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp 1.18.4&lt;/strong&gt; has been released. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more
- information. This is security release related to &lt;a href=&quot;/security/202001-01&quot;&gt;SSPSA 202001-01&lt;/a&gt; and
- &lt;a href=&quot;/security/202001-02&quot;&gt;SSPSA 202001-02&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
-        <link>https://simplesamlphp.github.io/2020/01/24/SimpleSAMLphp-1.18.4.html</link>
-        <guid isPermaLink="true">https://simplesamlphp.github.io/2020/01/24/SimpleSAMLphp-1.18.4.html</guid>
         
         
       </item>

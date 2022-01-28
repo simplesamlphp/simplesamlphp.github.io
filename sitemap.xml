@@ -134,31 +134,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/security/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/samlidp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/users/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/download/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/docs/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.github.io/modules/</loc>
+            <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
         </url>
     
         <url>
@@ -170,11 +146,31 @@
         </url>
     
         <url>
+            <loc>https://simplesamlphp.github.io/users/</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.github.io/lists/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/support/</loc>
+            <loc>https://simplesamlphp.github.io/docs/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/modules/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/download/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/samlidp/</loc>
         </url>
     
         <url>
@@ -182,7 +178,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.github.io/metaprocessing/</loc>
+            <loc>https://simplesamlphp.github.io/translation/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.github.io/support/</loc>
         </url>
     
         <url>
@@ -194,6 +194,10 @@
         </url>
     
     
+        <url>
+            <loc>https://simplesamlphp.github.io/2022/01/24/SimpleSAMLphp-1.19.5.html</loc>
+        </url>
+  
         <url>
             <loc>https://simplesamlphp.github.io/2021/12/13/SimpleSAMLphp-1.19.4.html</loc>
         </url>
