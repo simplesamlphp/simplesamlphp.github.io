@@ -4,7 +4,7 @@ email: support@feide.no
 description: SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It
   implements support for multiple protocols, most notably SAML, OpenID or OAuth.
 baseurl: ""
-url: "https://simplesamlphp.github.io"
+url: "https://simplesamlphp.org"
 twitter_username: simplesamlphp
 github_username:  simplesamlphp
 plugins_dir: ./_plugins
