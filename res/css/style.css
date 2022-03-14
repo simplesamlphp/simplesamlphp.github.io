@@ -23,19 +23,11 @@ div.mtoolbar div.menuitem.selected a {
 
 
 div.mtoolbar div.menuitem.first a {
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-bottomleft: 4px;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 	border-left: none;
 }
 div.mtoolbar div.menuitem.last a {
-	-webkit-border-top-right-radius: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	-moz-border-radius-bottomright: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
@@ -166,29 +158,6 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 
-
-div#content img {
-/*	border: 1px solid #999;*/
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 a.button {
 	outline: none; /* hide dotted outline in Firefox */
 	margin-top: 3px; margin-bottom: 3px;
@@ -245,8 +214,6 @@ div.infobox {
 	background: #ddd;
 	
 	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 }
 div.infobox.maxnum {
 }
@@ -254,11 +221,6 @@ div.infobox.expire {
 }
 div.infobox.registeremail {
 }
-
-
-
-
-
 
 
 
@@ -296,8 +258,6 @@ div#createnew {
 	width: 300px; 
 	margin: 1em .5em .5em .5em;
 	border-radius: 15px;
-	-moz-border-radius: 15px; 
-	-webkit-border-radius: 15px;
 }
 
 
@@ -321,31 +281,9 @@ div.lentry div.lowner {
 }
 
 
-
-
-
-#foodletabs {
-	font-size: 90%;
-}
-
-
-
-img.linkicon {
-}
 span.grey {
 	color: #aaa;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 table {
 	border-collapse:collapse;
@@ -366,8 +304,6 @@ th {
 
 }
 
-address,caption,cite,code,dfn,em,strong,th,var {
-}
 caption,th {
 	text-align:center;
 }
@@ -379,5 +315,9 @@ dt {
 }
 dd p {
 	margin: 0 1em .1em 0;
+}
+
+ssplogomain {
+	float: right;
 }
 
