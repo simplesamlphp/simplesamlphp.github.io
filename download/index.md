@@ -7,12 +7,12 @@ title: Downloads
 
 Here you will find the packages with the current simpleSAMLphp versions:
 
-* <img style="position: relative; top: 5px" src="/res/icons/completed.png" alt="stable" />
+* <img style="position: relative; top: 5px" src="/res/icons/completed.png" alt="stable">
 [**Latest release ({{ site.data.latest.tag_name | remove_first: "v" }})**]({{ site.data.latest.assets[0].browser_download_url }})
 
     Released: {{ site.data.latest.published_at | date: "%Y-%m-%d" }}
 
-    {% assign sha = site.data.latest.body | split: '`' %}
+    {% assign sha = site.data.latest.body | split: 'SHA256 checksum: ' %}
     SHA256 checksum: {{ sha[1] }}
 
     [View changes](/docs/stable/simplesamlphp-changelog)
