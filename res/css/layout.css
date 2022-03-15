@@ -10,10 +10,10 @@ p {
 	padding: 0px;*/
 }
 
-div#content {
+main {
 	padding: 0 1.4em;
 }
-div#content h1 {
+main h1 {
 	margin-top: 10px;
 }
 
