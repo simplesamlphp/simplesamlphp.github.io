@@ -134,43 +134,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/awards/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/download/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/modules/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/users/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/support/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/developers/</loc>
-        </url>
-    
-        <url>
             <loc>https://simplesamlphp.org/samlsp/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/metaprocessing/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/security/</loc>
+            <loc>https://simplesamlphp.org/modules/</loc>
         </url>
     
         <url>
@@ -179,6 +147,38 @@
     
         <url>
             <loc>https://simplesamlphp.org/samlidp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/users/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/developers/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/awards/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/translation/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/download/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/metaprocessing/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/support/</loc>
         </url>
     
         <url>
