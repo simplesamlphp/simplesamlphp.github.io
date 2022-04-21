@@ -59,3 +59,10 @@ board. The lead maintainer will have a range of responsibilities that may includ
 
 The SSP board understands that strong candidates may not have all the qualifications listed above, and therefore we
 expect the right candidate will grow into the position over time.
+
+**How to apply**
+
+If you are interested and feel like you could join us in this position, please send your cover letter and resumé to
+the SSP board via Jan Meijer (jan.meijer@sikt.no). The board will start evaluating applications from May 10 2022.
+
+Should you have any questions, please contact Jan Meijer at jan.meijer@sikt.no.
