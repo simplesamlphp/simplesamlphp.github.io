@@ -7,7 +7,7 @@ title: "Lead developer / maintainer position"
 
 ### Do you want to contribute to an exciting open source project?
 
-SimpleSAMLphp is an open source lightweight implementation of several identity federation protocols writtein in PHP.
+SimpleSAMLphp is an open source lightweight implementation of several identity federation protocols written in PHP.
 SimpleSAMLphp (or SSP in short) allows users to be conveniently authenticated through Internet standards like SAML2 or
 OpenID Connect. SSP is a cornerstone in the authentication and authorisation infrastructures of many National Research
 and Education Networks, but also in healthcare and government. Furthermore, its battle-tested SAML libraries are used
