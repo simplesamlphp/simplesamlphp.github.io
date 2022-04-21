@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Lead developer / maintainer position"
+---
+
 # Lead developer / maintainer
 
 ### Do you want to contribute to an exciting open source project?
