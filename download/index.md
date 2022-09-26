@@ -18,11 +18,11 @@ Here you will find the packages with the current simpleSAMLphp versions:
     [View changes](/docs/stable/simplesamlphp-changelog)
 
 * <img style="position: relative; top: 5px" src="/res/icons/inwork.png" alt="wip">
-[**Release candidate (2.0.0 RC 1)**](https://github.com/simplesamlphp/simplesamlphp/releases/download/v2.0.0-rc1/simplesamlphp-2.0.0-rc1.tar.gz)
+[**Release candidate (2.0.0 RC 2)**](https://github.com/simplesamlphp/simplesamlphp/releases/download/v2.0.0-rc2/simplesamlphp-2.0.0-rc2.tar.gz)
 
-    Released: 2022-07-01
+    Released: 2022-09-22
 
-    SHA256 checksum: a5842b6318142039873f5fdec3b0661ec405e55de425420e1a9d76a8771626d8
+    SHA256 checksum: fc7d301b160ff2f4a3077020cc9ee51e4fbd8813d64c3bf85e8788e0f60788d6
 
     [View changes](/docs/devel/simplesamlphp-changelog)
 
