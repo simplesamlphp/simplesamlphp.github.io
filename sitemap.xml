@@ -134,27 +134,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/awards/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/download/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/samlidp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/developers/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/users/</loc>
+            <loc>https://simplesamlphp.org/samlsp/</loc>
         </url>
     
         <url>
@@ -162,7 +142,27 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/metaprocessing/</loc>
+            <loc>https://simplesamlphp.org/lists/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/samlidp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/users/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/awards/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/developers/</loc>
         </url>
     
         <url>
@@ -170,15 +170,15 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/lists/</loc>
+            <loc>https://simplesamlphp.org/translation/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/samlsp/</loc>
+            <loc>https://simplesamlphp.org/metaprocessing/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/security/</loc>
+            <loc>https://simplesamlphp.org/download/</loc>
         </url>
     
         <url>
@@ -194,6 +194,10 @@
         </url>
     
     
+        <url>
+            <loc>https://simplesamlphp.org/2022/09/26/SimpleSAMLphp-2.0.0rc2.html</loc>
+        </url>
+  
         <url>
             <loc>https://simplesamlphp.org/2022/07/01/SimpleSAMLphp-2.0.0rc1.html</loc>
         </url>

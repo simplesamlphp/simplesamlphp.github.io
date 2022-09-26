@@ -5,9 +5,20 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.org/</link>
     <atom:link href="https://simplesamlphp.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Jul 2022 12:14:35 +0000</pubDate>
-    <lastBuildDate>Tue, 12 Jul 2022 12:14:35 +0000</lastBuildDate>
+    <pubDate>Mon, 26 Sep 2022 09:30:55 +0000</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2022 09:30:55 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Simplesamlphp 2.0.0rc2</title>
+        <description>&lt;p&gt;&lt;strong&gt;The second (and maybe final) release candidate for SimpleSAMLphp 2.0&lt;/strong&gt; is available. Please help us test this pre-release. Check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+        <link>https://simplesamlphp.org/2022/09/26/SimpleSAMLphp-2.0.0rc2.html</link>
+        <guid isPermaLink="true">https://simplesamlphp.org/2022/09/26/SimpleSAMLphp-2.0.0rc2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Simplesamlphp 2.0.0rc1</title>
@@ -106,18 +117,6 @@
         <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.org/2021/01/21/SimpleSAMLphp-1.19.0.html</link>
         <guid isPermaLink="true">https://simplesamlphp.org/2021/01/21/SimpleSAMLphp-1.19.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Simplesamlphp 1.18.8</title>
-        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp 1.18.8&lt;/strong&gt; has been released. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more
- information.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
-        <link>https://simplesamlphp.org/2020/09/02/SimpleSAMLphp-1.18.8.html</link>
-        <guid isPermaLink="true">https://simplesamlphp.org/2020/09/02/SimpleSAMLphp-1.18.8.html</guid>
         
         
       </item>
