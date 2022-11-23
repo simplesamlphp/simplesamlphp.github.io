@@ -28,7 +28,7 @@ the [issue tracker](https://github.com/simplesamlphp/simplesamlphp/issues).
 
 ## Latest news
 
-{% for post in site.posts %}
+{% for post in site.posts limit:10 %}
 
 * _{{ post.date | date: '%Y-%m-%d' }}_: {{ post.excerpt | remove: '<p>' | remove: '</p>' }} 
 
