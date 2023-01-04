@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: SimpleSAMLphp Home
 ---
 
 <img class="ssplogomain" src="{{ site.url }}/res/ssplogo-fish-only.jpg" alt="SimpleSAMLphp fish logo">

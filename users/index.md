@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SimpleSAML Users
+title: SimpleSAMLphp Users
 ---
 # SimpleSAMLphp Users
 
