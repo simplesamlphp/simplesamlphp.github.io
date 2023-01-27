@@ -30,7 +30,7 @@ We would like to thank the organisations that have contributed financially to th
 The project wouldn't be possible either without the in-kind contributions of the many developers who have worked on it:
 
 * Tim van Dijen, main developer
-* Thijs Kinkhorst, SURFnet 
+* Thijs Kinkhorst, SURF
 
 We've had many contributors through the years. Here are some of them that we would like to thank particularly for the
 importance of their past work:
@@ -50,6 +50,6 @@ administrative stuff around it, trying to guarantee its continuity. The Board is
 
 * Jan Meijer, chair, Sikt
 * Dedra Chamberlin, Cirrus Identity
-* Niels van Dijk, SURFnet
+* Niels van Dijk, SURF
 * Jaime Pérez Crespo, Disruptive Technologies
 * Marina Adomeit, SUNET
