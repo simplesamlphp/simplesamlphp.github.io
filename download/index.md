@@ -22,7 +22,7 @@ Here you will find the packages with the current simpleSAMLphp versions:
 
     Released: 2023-01-30
 
-    SHA256 checksum: 66460000ffac4d905e23a89b6688a67030bcb9a8460a8f422ca68703cc0a0f89
+    SHA256 checksum: 042cda06b13aca4399aa6b45fe9950f862ecd769bc1b4faa5e90c7bd0cdf7838
 
     [View changes](/docs/devel/simplesamlphp-changelog)
 
