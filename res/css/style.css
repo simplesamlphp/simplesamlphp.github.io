@@ -11,16 +11,13 @@ div.mtoolbar div.menuitem {
 }
 div.mtoolbar div.menuitem a:hover {  
 	background: #999;
-/*	color: #666;*/
 	border: 1px solid transparent;
 	text-shadow: none;
 }
 div.mtoolbar div.menuitem.selected a {  
 	background: #aaa;
-/*	border: 1px solid #555;*/
 	text-shadow: #777 1px 1px 1px;
 }
-
 
 div.mtoolbar div.menuitem.first a {
 	border-top-left-radius: 4px;
@@ -45,55 +42,12 @@ div.mtoolbar div.menuitem a {
 	text-shadow: #777 1px 1px 1px;
 	
 	background: #666;
-
 }
 
 /* / Menu bar */
 
-
-
-
-
 div#content {
 	font-family: sans-serif;
-}
-
-h1 {
-    font-size: 180%;
-}
-
-h2 {
-    font-size: 150%;
-	margin: 2.5em 0 .3em 0; 
-	font-weight: bold;
-}
-h3 {
-    padding-left: 1em;
-	font-weight: bold;
-}
-h3 {
-    font-size: 125%;
-    font-weight: normal;
-}
-
-h4 {
-    font-size: 115%;
-}
-
-h5 {
-    font-size: 110%;
-}
-
-h6 {
-    font-size: 100%;
-}
-
-p {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0;
-
-
 }
 
 pre {
@@ -123,10 +77,6 @@ div.sidebar-warning {
 	background: #fea;
 }
 
-
-
-
-
 /* --- links --- */
 
 a, a:link, a:active {
@@ -150,138 +100,10 @@ ul li {
 	margin-top: 4px;
 }
 
-
 h1 a, h2 a, h3 a, h4 a {
 	color: #000;
 }
 
-
-a.button {
-	outline: none; /* hide dotted outline in Firefox */
-	margin-top: 3px; margin-bottom: 3px;
-
-	background: transparent url('buttons/bg_button_a.png') no-repeat scroll top right;
-	color: #444 ! important;
-	display: block;
-	float: left;
-	font: normal 12px arial, sans-serif;
-	height: 24px;
-	margin-right: 6px;
-	padding-right: 18px; /* sliding doors padding */
-	text-decoration: none;
-	border: none ! important;
-}
-
-a.button span {
-	background: transparent url('buttons/bg_button_span.png') no-repeat;
-	display: block;
-	line-height: 14px;
-	padding: 5px 0 5px 18px;
-}
-.clear { /* generic container (i.e. div) for floating buttons */
-	overflow: hidden;
-	width: 100%;
-}
-
-
-a.button:active {
-	background-position: bottom right;
-	color: #000 ! important;
-	outline: none; /* hide dotted outline in Firefox */
-}
-
-a.button:active span {
-	background-position: bottom left;
-	padding: 6px 0 4px 18px; /* push text down 1px */
-}
-
-
-
-
-
-
-
-/* --- infobox --- */
-
-
-
-div.infobox {
-	margin: .6em .1em;
-	padding: .3em;
-	border: 1px solid #999;
-	background: #ddd;
-	
-	border-radius: 10px;
-}
-div.infobox.maxnum {
-}
-div.infobox.expire {
-}
-div.infobox.registeremail {
-}
-
-
-
-/* ----------- */
-
-table#tlayout, table#tlayout td {
-	border: none;
-}
-
-
-
-div.fcol.notinuse{
-	background: #eee;
-/*			color: #777; */
-}
-div.fcol.notinuse input{
-	background: #fff;
-}
-
-
-.statusupdates {
-	font-size: 80%;
-}
-ul.statusupdates  {
-	list-style:none inside;
-	padding: 0;
-	margin: 0;
-}
-
-div#createnew {
-	clear: left; 
-	border: 1px solid #ccc; 
-	background: #f4f4f4; 
-	padding:1em; 
-	width: 300px; 
-	margin: 1em .5em .5em .5em;
-	border-radius: 15px;
-}
-
-
-
-/* --- List entries on frontpage --- */
-
-div.lentry {
-	border-top: 1px solid #eee;
-	margin-top: 4px;
-	margin-bottom: 1.3em;
-}
-div.lentry div.lheader {
-	font-size: 110%;
-}
-div.lentry div.lbody {
-	color: #555;
-}
-div.lentry div.lowner {
-	color: #888;
-	font-size: 80%;
-}
-
-
-span.grey {
-	color: #aaa;
-}
 
 table {
 	border-collapse:collapse;
@@ -294,7 +116,6 @@ td {
 }
 td,th {
 	border: 1px solid #aaa;
-/*	text-align: center; */
 }
 th {
 	background: #dda;
@@ -319,3 +140,7 @@ dd p {
 	float: right;
 }
 
+img.icon {
+	position: relative;
+	top: 5px;
+}

@@ -14,7 +14,7 @@ We give no guarantees about the quality of the support given by any of these com
 
 #### 9star Inc
 
-<img src="/res/9star.jpg" style="float: right" alt="9star logo">
+<img src="/res/9star.jpg" class="right" alt="9star logo">
 
 Our team of dependable SimpleSAMLphp experts and experienced professionals can easily take the pain and suffering out of any SimpleSAML based federated access management project. We have years of experience working with the SimpleSAML middleware, executing large and small projects in commercial, academic, healthcare and government markets worldwide.
 
@@ -29,7 +29,7 @@ Customers use our e-Credential SSO management solutions to implement open standa
 
 #### Buckhill
 
-<img src="/res/buckhill.jpg" style="float: right" alt="Buckhill logo">
+<img src="/res/buckhill.jpg" class="right" alt="Buckhill logo">
 
 
 Buckhill was born of a desire to help organisations communicate with their existing and potential customers more efficiently and effectively. We do this through innovative thinking and problem solving software solutions.
@@ -42,7 +42,7 @@ We have been working with PHP for over a decade and have extensive experience in
 
 #### Catalyst IT Ltd
 
-<img src="/res/catalyst.jpg" logo="catalyst logo" style="float: right">
+<img src="/res/catalyst.jpg" logo="catalyst logo" class="right">
 
 Catalyst IT are an Open Source services company based in New Zealand, and we have been engaged by the Ministry of Education here to help design and implement an IAM scheme for compulsory sector education (K12). Everything we have done has been based on *SimpleSAMLphp*, and we continue to push it as a solution to any other customers that we come in contact with looking for similar capabilities.
 
@@ -51,7 +51,7 @@ Catalyst IT are an Open Source services company based in New Zealand, and we hav
 
 #### Cirrus Identity
 
-<img src="/res/cirrus.jpg" logo="Cirrus Identity logo" style="float: right">
+<img src="/res/cirrus.jpg" logo="Cirrus Identity logo" class="right">
 
 Cirrus Identity is a team of experts in identity management for enterprise; we build cool, cloud-hosted identity
 management solutions that can easily complement and/or replace components of locally managed identity systems. Our most
@@ -66,7 +66,7 @@ yourself.
 
 #### DAASI International
 
-<img src="/res/daasi_logo_small.png" logo="DAASI International logo" style="float: right">
+<img src="/res/daasi_logo_small.png" logo="DAASI International logo" class="right">
 
 DAASI International is an expert in the field of Identity and Access Management with open source products, especially
 for large federations like universities, authorities or corporations. We are pleased to consult you on the best
@@ -84,7 +84,7 @@ our own IAM products. For SimpleSAMLphp we offer the following services:
 #### Domingo Mu&ntilde;oz - [t]<sup>2</sup>v
 
 
-<img src="/res/t2v.jpg" logo="t2v Logo" style="float: right">
+<img src="/res/t2v.jpg" logo="t2v Logo" class="right">
 
 * [Read more about t2v services](https://t2v.com/)
 * Email: <mailto:dmg@t2v.com>
@@ -92,7 +92,7 @@ our own IAM products. For SimpleSAMLphp we offer the following services:
 
 #### IDM Engineering
 
-<img src="/res/idmintegration.png" style="float: right" alt="IDM Integration logo">
+<img src="/res/idmintegration.png" class="right" alt="IDM Integration logo">
 
 We've been providing identity management solutions for both enterprise and higher-education clients since 2007. Originally started as IDM Integration, in August of 2019 the IDM Integration partners mutually agreed to go their separate ways, with the bulk of IDMI's engineers continuing their SSO work at IDM Engineering. Our focus is on providing robust, scalable, and secure Identity Management solutions based upon the Secure Assertion Markup Language (SAML) and other technologies.
 
@@ -101,7 +101,7 @@ We've been providing identity management solutions for both enterprise and highe
 
 #### miniOrange
 
-<img src="/res/miniorange.png" alt="miniOrange" style="float:right">
+<img src="/res/miniorange.png" alt="miniOrange" class="right">
 
 miniOrange provides Identity and Access Management services quickly and in
 a very cost-effective manner. We provide support for SimpleSAMLphp as a
@@ -126,7 +126,7 @@ M7 from The Netherlands provides SimpleSAMLphp consultancy service, amongst othe
 
 ####  Nyrup IT
 
-<img src="/res/nyrup.jpg" alt="Nyrup IT logo" style="float: right">
+<img src="/res/nyrup.jpg" alt="Nyrup IT logo" class="right">
 
 Benjamin Nyrup
 
@@ -140,7 +140,7 @@ T: +45 46 94 92 92
 
 #### PRiSE
 
-<img src="/res/prise.jpg" logo="PRiSE logo" style="float: right">
+<img src="/res/prise.jpg" logo="PRiSE logo" class="right">
 
 PRiSE has got an expert team on digital identity who has worked in middleware and digital identity international projects.
 
@@ -161,7 +161,7 @@ for PHP, python, ruby and java. You can contact him at:
 
 #### SSOeasy
 
-<img src="/res/ssoeasy.jpg" style="float: right" alt="SSOeasy research logo">
+<img src="/res/ssoeasy.jpg" class="right" alt="SSOeasy research logo">
 
 SSO Easy is based on a single, simple premise:
 

@@ -7,7 +7,7 @@ title: Downloads
 
 Here you will find the packages with the current SimpleSAMLphp versions:
 
-* <img style="position: relative; top: 5px" src="/res/icons/completed.png" alt="stable">
+* <img class="icon" src="/res/icons/completed.png" alt="stable">
 [**Latest release ({{ site.data.latest.tag_name | remove_first: "v" }})**]({{ site.data.latest.assets[0].browser_download_url }})
 
     Released: {{ site.data.latest.published_at | date: "%Y-%m-%d" }}
@@ -17,7 +17,7 @@ Here you will find the packages with the current SimpleSAMLphp versions:
 
     [View changes](/docs/stable/simplesamlphp-changelog)
 
-* <img style="position: relative; top: 5px" src="/res/icons/inwork.png" alt="wip">
+* <img class="icon" src="/res/icons/inwork.png" alt="wip">
 [**Release candidate (2.0.0 RC 3)**](https://github.com/simplesamlphp/simplesamlphp/releases/download/v2.0.0-rc3/simplesamlphp-2.0.0-rc3.tar.gz)
 
     Released: 2023-01-30
