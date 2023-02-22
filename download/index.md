@@ -41,7 +41,7 @@ SimpleSAMLphp itself has been moved to github too, and you will find it here:
 * [simplesamlphp/simplesamlphp](https://github.com/simplesamlphp/simplesamlphp)
 
 Make sure you follow the
-[instructions to install from the repository](https://simplesamlphp.org/docs/latest/simplesamlphp-install-repo.html).
+[instructions to install from the repository](https://simplesamlphp.org/docs/devel/simplesamlphp-install-repo.html).
 
 ## Debian package
 
