@@ -135,6 +135,11 @@ known brands all over the world.
   * Email: <mailto:info@miniorange.com>
   * [Read more about miniOrange](https://www.miniorange.com)
 
+#### M7
+
+M7 from The Netherlands provides SimpleSAMLphp consultancy service, amongst other IDM and IT consultancy offerings.
+
+* <https://www.m-7.nl/>
 
 ####  Nyrup IT
 
