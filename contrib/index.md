@@ -17,8 +17,15 @@ project has an important need for financial contributions, we of course also ver
 ones, that could help sustain it.
 
 If you have any suggestions or have the ability to contribute either financially or with your work, please do not
-hesitate to contact Jan Meijer at jan.meijer@sikt.no. Any help is welcome, and it can be as simple as [translating
-SimpleSAMLphp into your language](/lists)!
+hesitate to contact Jan Meijer at jan.meijer@sikt.no. Any help is welcome, and it can be as simple as translating
+SimpleSAMLphp into your language!
+
+## Contributing code
+
+If you want to contribute code SimpleSAMLphp, be it a simple bugfix, small improvement or larger new feature,
+this is very welcome! Please read
+[our contribution guidelines](https://github.com/simplesamlphp/simplesamlphp/blob/master/CONTRIBUTING.md)
+for how to best go about reporting a bug or creating pull requests.
 
 ## Contributors
 
