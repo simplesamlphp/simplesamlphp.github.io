@@ -5,10 +5,6 @@ body {
 	padding: 0;
 	font-family: Helvetica, Arial, sans-serif;
 }
-p {
-/*	margin: 0px;
-	padding: 0px;*/
-}
 
 main {
 	padding: 0 1.4em;
@@ -17,9 +13,12 @@ main h1 {
 	margin-top: 10px;
 }
 
-
 /*  --- Header ---  */
 
+.searchbox {
+	margin-top: 2.5rem;
+	margin-right: 2rem;
+}
 
 #header {
     z-index: 0;
@@ -48,11 +47,6 @@ main h1 {
     margin-left: -0.05em;
 }
 
-#header #ulogo {
-	position: absolute;
-	top: 10px; right: 20px;
-	z-index: 10;
-}
 #header #logo {
 	font-family: sans-serif;
 	font-size: 2.5em;
@@ -62,43 +56,16 @@ main h1 {
 	letter-spacing: -0.12em;
 	z-index: 10;
 }
-#header #version {
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	font-size: x-small;
-	text-shadow: 0 1px 0 #900;
-}
-#header #logo #news, #header #logo #mailinglist {
-	font-weight: normal;
-	letter-spacing: 0;
-}
 
 .right {
     float: right;
-}
-
-/* --- langbar --- */
-
-#langbar {
-	font: 80% "arial", sans-serif;
-	text-align: right;
-	margin: 0;
-	padding: 1px 1em 0 1em;
-	color: #222;
-}
-#langbar a {
-	color: #600;
 }
 
 
 /* --- headerbar --- */
 
 #headerbar {
-/*	position: absolute;
-	top: 42px;
-	width: 100%;
-	
-	*/
+	clear: both;
 	font-size: 90%;
 	background: #eee;
 	border-top: 1px solid #ccc;
@@ -110,16 +77,11 @@ main h1 {
 #headerbar #breadcrumb {
 	float: left; 
 	margin: 9px 1em;
-	
 }
-
-
-
 
 /*  --- Footer ---  */
 
 #footer {
-/*	width: 100%;*/
 	clear: both;
 	border-top: 1px solid #ccc;
 	text-align: center;
