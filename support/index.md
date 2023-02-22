@@ -15,11 +15,11 @@ you are using, what the problem is you are trying to solve, and any relevant con
 ## Chat
 
 SimpleSAMLphp offers a Slack workspace where developers and users can chat
-about any questions, comments, ideas and other DOMjudge related things they
+about any questions, comments, ideas and other SimpleSAMLphp related things they
 want.
 
 Our workspace can be found at [simplesamlphp.slack.com](https://simplesamlphp.slack.com/).
-To join as a new member, you can [use this link to sign up](/chat).
+[Use this link to join](https://edu.nl/ssp-chat).
 
 Once you have joined the Slack workspace, feel free to ask any SimpleSAMLphp-related questions you might have.
 Please note that it may sometimes take a bit longer than a few minutes to get a response, also because people might be in different timezones. 
