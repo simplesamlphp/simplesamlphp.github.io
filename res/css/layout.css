@@ -90,11 +90,11 @@ footer {
 	border-top: 1px solid #ccc;
 	text-align: center;
 	margin-top: 2em;
-	padding: 0 0 0 0;
 }
 footer img {
 	float: right;
         margin-right: 3em;
-	width: 4em;
+	width: 3em;
+	padding: 1ex;
 }
 
