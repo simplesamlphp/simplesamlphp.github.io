@@ -24,7 +24,7 @@ thank:
 * Lasse Birnbaum Jensen (Wayf.dk)
 * Mads Freek Petersen (Wayf.dk)
 * Anders Lund: Improved LDAP handling in authentication modules.
-* Enrique de la Hoz: Working with PKI and client certificates with simpleSAMLphp. Adding tlsclient authentication module using apache (mod_ssl)
+* Enrique de la Hoz: Working with PKI and client certificates with SimpleSAMLphp. Adding tlsclient authentication module using apache (mod_ssl)
 * Joakim Recht: Support for different logout response location than logout request location. Support for sending XML encoded attributes.
 * Jacob Christiansen: consentAdmin. IsPassive (with Mads)
 * Hans Zandbelt: a lot of testing, tips and tricks, WS-Federation support and A-Select support
@@ -41,7 +41,7 @@ thank:
 * Lukas Haemmerle: XML security improvements, eduGAIN handling and shibboleth testing.
 * Stefan Winter: Radius attribute fetching, WebAuthn module
 * Cato Olsen: Improved LDAP authentication module.
-* José Alfonso Accino: Working with PAPI support in simpleSAMLphp. Various bugfixes.
+* José Alfonso Accino: Working with PAPI support in SimpleSAMLphp. Various bugfixes.
 * [Victoriano Giralt](mailto:victoriano@uma.es): Have done a great work with spanish localization of SimpleSAMLphp. Support for authenticating with a privileged account before fetching user attributes.
 * fronter.com: They operate an e-learning platform and is working with implementing the Shibboleth 1.2 attribute profile.
 * Ernesto Revilla: authorize-module and various bugfixes
