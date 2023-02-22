@@ -5,7 +5,7 @@ title: Downloads
 
 # Download SimpleSAMLphp
 
-Here you will find the packages with the current simpleSAMLphp versions:
+Here you will find the packages with the current SimpleSAMLphp versions:
 
 * <img style="position: relative; top: 5px" src="/res/icons/completed.png" alt="stable">
 [**Latest release ({{ site.data.latest.tag_name | remove_first: "v" }})**]({{ site.data.latest.assets[0].browser_download_url }})

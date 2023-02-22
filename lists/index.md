@@ -8,7 +8,7 @@ We have number of mailing lists for SimpleSAMLphp. If you want to post questions
 
 #### User's list
 
-This mailing list is for users of simpleSAMLphp. If you have general questions about simpleSAMLphp, have feature requests, or want do discuss something about simpleSAMLphp, please join the list.
+This mailing list is for users of SimpleSAMLphp. If you have general questions about SimpleSAMLphp, have feature requests, or want do discuss something about simpleSAMLphp, please join the list.
 
 <form action="http://groups.google.com/group/simplesamlphp/boxsubscribe">
 <strong>Your e-mail address</strong>
@@ -35,7 +35,7 @@ This list is for announcement regarding SimpleSAMLphp from the project team at U
 
 #### SimpleSAMLphp Translators' list
 
-This mailing list is for translators of simpleSAMLphp. If you have helped out with translating SimpleSAMLphp to some language, you should join this list:
+This mailing list is for translators of SimpleSAMLphp. If you have helped out with translating SimpleSAMLphp to some language, you should join this list:
 
 
 <form action="http://groups.google.com/group/simplesamlphp-translation/boxsubscribe">
