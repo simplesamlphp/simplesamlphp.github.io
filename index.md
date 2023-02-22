@@ -3,7 +3,7 @@ layout: default
 title: SimpleSAMLphp Home
 ---
 
-<img class="ssplogomain" src="{{ site.url }}/res/ssplogo-fish-only.jpg" alt="SimpleSAMLphp fish logo">
+<img class="ssplogomain" src="/res/ssplogo-fish-2.svg" alt="SimpleSAMLphp fish logo">
 
 **SimpleSAMLphp** is an application written in native PHP that deals with
 authentication. The main focus of SimpleSAMLphp is providing support for:
