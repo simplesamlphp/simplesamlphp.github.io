@@ -85,15 +85,16 @@ div#logo a {
 
 /*  --- Footer ---  */
 
-#footer {
+footer {
 	clear: both;
 	border-top: 1px solid #ccc;
 	text-align: center;
-	margin-top: 1em; 
+	margin-top: 2em;
 	padding: 0 0 0 0;
-	z-index: 1;
 }
-#footer img {
-	padding-top: 10px;
+footer img {
+	float: right;
+        margin-right: 3em;
+	width: 4em;
 }
 
