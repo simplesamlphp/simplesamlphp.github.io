@@ -20,12 +20,6 @@ Also see [the support page](/support) for other ways to get support.
 This list is for announcements regarding SimpleSAMLphp from the project team. New releases and security issues will be sent to this list.
 Alternatively, you can subscribe to the RSS feed of the news on this website.
 
-<form action="http://groups.google.com/group/simplesamlphp-announce/boxsubscribe">
-<strong>Your e-mail address</strong>
-<input type="text" name="email" size="30" placeholder="your@emailaddress.com" />
-<input type="submit" name="sub" value="Subscribe">
-</form>
-
 * [Subscribe](mailto:simplesamlphp-announce+subscribe@googlegroups.com)
 * [Mailing list archive](https://groups.google.com/g/simplesamlphp-announce)
 * [RSS Feed website news](/feed.xml)
