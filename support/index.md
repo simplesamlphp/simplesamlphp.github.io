@@ -32,7 +32,7 @@ Please, DO NOT submit issues unless you are sure that there is a problem in the 
 venues mentioned above to discuss this if you are not sure what you are seeing is an actual bug.
 
 Pull requests (either to fix bugs or to implement new functionalities) are always welcome! Please
-see [our contributing page](./contributing) for more information.
+see [our contributing page](/contributing) for more information.
 
 ## Commercial Support
 
