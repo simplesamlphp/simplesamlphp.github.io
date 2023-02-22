@@ -7,7 +7,7 @@ title: Commercial Support
 
 Some companies offer commercial support for SimpleSAMLphp, and we added this page to help you get in contact with them, in case you for some reason need commercial support.
 
-If you buy commercial support for simpleSAMLphp, and invent some addon or new functionality, you are encouraged to share those new bits with the rest of the simpleSAMLphp community.
+If you buy commercial support for simpleSAMLphp, and invent some addon or new functionality, you are encouraged to [share those new bits](/contribute) with the rest of the simpleSAMLphp community.
 
 We give no guarantees about the quality of the support given by any of these companies, we simply just list them here for your convenience. If you have good or bad experience with any of these comanies, please tell us about it.
 
