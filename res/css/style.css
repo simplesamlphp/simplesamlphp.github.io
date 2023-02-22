@@ -138,7 +138,8 @@ dd p {
 
 .ssplogomain {
 	float: right;
-	width: 10ex;
+	width: 20%;
+	padding: 1ex;
 }
 
 img.icon {
