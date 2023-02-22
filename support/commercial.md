@@ -1,35 +1,13 @@
 ---
 layout: default
-title: Support
+title: Commercial Support
 ---
-# Support
-
-SimpleSAMLphp has an active and knowledgable open source community that is glad to help you.
-
-## Mailing list
-
-The main support venue is [our mailing list](/lists). Please join the list and ask any question
-you have about SimpleSAMLphp there. Please do include at least which version of SimpleSAMLphp
-you are using, what the problem is you are trying to solve, and any relevant configuration.
-
-
-
-
-If you have an issue with SimpleSAMLphp, you might want to check the [issue tracker](https://github.com/simplesamlphp/simplesamlphp/issues)
-and see if others had the same problem before. If not, you should probably submit a new issue describing your problem.
-Please, DO NOT submit issues unless you are sure that there is a problem in the source code. Remember to check
-the [documentation](/docs) and ask about your problem in the [mailing list](/lists) before submitting new issues. Submitting
-issues related to your own specific installation and / or configuration will diminish our capacity to improve SimpleSAMLphp.
-
-Patches (either to fix bugs or to implement new functionalities) are always welcome!
-
 
 ## Commercial Support
 
-
 Some companies offer commercial support for SimpleSAMLphp, and we added this page to help you get in contact with them, in case you for some reason need commercial support.
 
-If you buy commercial support for simpleSAMLphp, and invent some addon or new functionality, you are encouraged to share those new bits with the rest of the simpleSAMLphp community. (In fact the open source licence of simpleSAMLphp kind of forces you to do so)
+If you buy commercial support for simpleSAMLphp, and invent some addon or new functionality, you are encouraged to share those new bits with the rest of the simpleSAMLphp community.
 
 We give no guarantees about the quality of the support given by any of these companies, we simply just list them here for your convenience. If you have good or bad experience with any of these comanies, please tell us about it.
 
