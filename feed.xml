@@ -5,13 +5,13 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.org/</link>
     <atom:link href="https://simplesamlphp.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2023 13:33:06 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2023 13:33:06 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Feb 2023 16:13:44 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Feb 2023 16:13:44 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
         <title>Simplesamlphp 2.0.0rc3</title>
-        <description>&lt;p&gt;&lt;strong&gt;The third (and likely final) release candidate for SimpleSAMLphp 2.0&lt;/strong&gt; is available. Please help us test this pre-release. Check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
+        <description>&lt;p&gt;** SimpleSAMLphp 2.0.0** is now available. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.org/2023/01/31/SimpleSAMLphp-2.0.0rc3.html</link>
