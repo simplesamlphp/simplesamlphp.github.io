@@ -17,15 +17,6 @@ Here you will find the packages with the current SimpleSAMLphp versions:
 
     [View changes](/docs/stable/simplesamlphp-changelog)
 
-* <img class="icon" src="/res/icons/inwork.png" alt="wip">
-[**Release candidate (2.0.0 RC 3)**](https://github.com/simplesamlphp/simplesamlphp/releases/download/v2.0.0-rc3/simplesamlphp-2.0.0-rc3.tar.gz)
-
-    Released: 2023-01-30
-
-    SHA256 checksum: 042cda06b13aca4399aa6b45fe9950f862ecd769bc1b4faa5e90c7bd0cdf7838
-
-    [View changes](/docs/devel/simplesamlphp-changelog)
-
 Check the [GitHub releases page](https://github.com/simplesamlphp/simplesamlphp/releases)
 in case you are looking for any other version.
 
