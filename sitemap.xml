@@ -138,15 +138,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/samlsp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/security/</loc>
+            <loc>https://simplesamlphp.org/download/</loc>
         </url>
     
         <url>
@@ -154,11 +146,19 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/samlidp/</loc>
+            <loc>https://simplesamlphp.org/translation/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/download/</loc>
+            <loc>https://simplesamlphp.org/modules/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/samlsp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/samlidp/</loc>
         </url>
     
         <url>
@@ -170,7 +170,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/modules/</loc>
+            <loc>https://simplesamlphp.org/security/</loc>
         </url>
     
         <url>
