@@ -11,6 +11,13 @@ users of this software and end users.
 This page contains information about security vulnerabilities, incidents or issues related to SimpleSAMLphp. Read below
 to learn how to properly report vulnerabilities, as well as to find information about issues already reported and fixed.
 
+## Supported Versions
+
+Only the current minor version (X.Y) receives bug and security fixes as a general rule.
+
+The 1.19 branch will receive security and critical bug fixes until the end of 2023.
+We strongly advice administrators to plan their upgrade to v2.x.
+
 ## Reporting vulnerabilities
 
 In case you find a vulnerability in SimpleSAMLphp, or you want to confirm a possible security issue in the software,
