@@ -13,10 +13,32 @@ to learn how to properly report vulnerabilities, as well as to find information 
 
 ## Supported Versions
 
-Only the current minor version (X.Y) receives bug and security fixes as a general rule.
-
-The 1.19 branch will receive security and critical bug fixes until the end of 2023.
-We strongly advice administrators to plan their upgrade to v2.x.
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Version</th>
+    <th class="tg-0pky">Active support</th>
+    <th class="tg-0pky">Security support</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-d52n">2.0</td>
+    <td class="tg-c6of">Next release</td>
+    <td class="tg-c6of">Next release +1yr</td>
+  </tr>
+  <tr>
+    <td class="tg-3wb8">1.19</td>
+    <td class="tg-c6of">2023-02-23</td>
+    <td class="tg-c6of">2024-02-23</td>
+  </tr>
+  <tr>
+    <td class="tg-tw5s">1.18</td>
+    <td class="tg-c6of">2021-01-21</td>
+    <td class="tg-n9g5">2022-01-21</td>
+  </tr>
+</tbody>
+</table>
 
 ## Reporting vulnerabilities
 
