@@ -19,6 +19,8 @@ The community-led project has a large user base, a helpful [user community](/sup
 
 ## Latest news
 
+* The latest release is *SimpleSAMLphp {{ site.data.latest.tag_name | remove_first: "v" }}*, released _{{ site.data.latest.published_at | date: "%Y-%m-%d" }}_.
+
 {% for post in site.posts limit:10 %}
 
 * _{{ post.date | date: '%Y-%m-%d' }}_: {{ post.excerpt | remove: '<p>' | remove: '</p>' }} 
