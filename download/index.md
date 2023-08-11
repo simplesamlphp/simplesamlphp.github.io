@@ -22,12 +22,12 @@ in case you are looking for any other version.
 
 ## Github repository
 
-The core library handling the basic SAML stuff (messages, bindings, and so on) has been
-detached from SimpleSAMLphp, and can now be found in github:
+The core library handling the basic SAML stuff (messages, bindings, and so on) is
+detached from SimpleSAMLphp, and can be found on GitHub:
 
 * [simplesamlphp/saml2](https://github.com/simplesamlphp/saml2)
 
-SimpleSAMLphp itself has been moved to github too, and you will find it here:
+SimpleSAMLphp itself is also on GitHub, and you will find it here:
 
 * [simplesamlphp/simplesamlphp](https://github.com/simplesamlphp/simplesamlphp)
 
