@@ -19,7 +19,7 @@ The community-led project has a large user base, a helpful [user community](/sup
 
 ## Latest news
 
-* _{{ site.data.latest.published_at | date: "%Y-%m-%d" }}: The [latest release](/downloads/) is **SimpleSAMLphp {{ site.data.latest.tag_name | remove_first: "v" }}**
+* _{{ site.data.latest.published_at | date: "%Y-%m-%d" }}_: The [latest release](/downloads/) is **SimpleSAMLphp {{ site.data.latest.tag_name | remove_first: "v" }}**
 
 {% for post in site.posts limit:10 %}
 
