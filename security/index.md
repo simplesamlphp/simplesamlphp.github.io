@@ -43,7 +43,7 @@ to learn how to properly report vulnerabilities, as well as to find information 
 ## Reporting vulnerabilities
 
 In case you find a vulnerability in SimpleSAMLphp, or you want to confirm a possible security issue in the software,
-please get in touch with us through [UNINETT's CERT team](https://www.uninett.no/cert). Please use our PGP public key
+please get in touch with us through [Sikt's CERT team](https://sikt.no/abuse). Please use our PGP public key
 to encrypt any possible sensitive data that you may need to submit. We will get back to you as soon as possible
 according to our working hours in Central European Time.
 
