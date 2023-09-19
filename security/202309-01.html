@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SSPSA 202309-01: Security header regression in 2.0 - SimpleSAMLphp</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.org/security/202309-01.html">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.org/feed.xml">
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <header>
+  <div id="header">
+    <div class="right">
+      <form class="searchbox" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4">
+        <input type="search" name="q" placeholder="Search" value="">
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.org">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <nav>
+  <div id="headerbar">
+  <p id="breadcrumb"><a href="https://simplesamlphp.org">Home</a> » SSPSA 202309-01: Security header regression in 2.0</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/support/">Support</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/contrib/">Contribute</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px">
+    <br style="height: 0px; clear: both">
+  </div><!-- /#headerbar -->
+  </nav>
+  </header>
+
+  <main>
+
+    <aside><div class="sidebar-warning right">
+<h2>Date</h2>
+1 September 2023
+<h2>Affected versions</h2>
+<code>SimpleSAMLphp 2.0.0 - 2.0.5</code><br />
+<h2>Severity</h2>
+Low
+</div></aside>
+
+<h1 id="202309-01">202309-01</h1>
+
+<p><strong>Security header regression in SimpleSAMLphp 2.0</strong></p>
+
+<h3 id="description">Description</h3>
+
+<p>Web pages can by default be loaded in HTML (i)frames from third party
+websites. This can be used by adversaries for so-called clickjacking
+attacks on a user, by presenting and controlling the legitimate web
+page from the surrounding frame.</p>
+
+<p>SimpleSAMLphp 1.x would automatically send the HTTP header
+<code class="language-plaintext highlighter-rouge">X-Frame-Options: SAMEORIGIN</code> in any response. This prevents the browser
+from loading SimpleSAMLphp’s web pages in another HTML (i)frame, hardening
+against this class of attacks.</p>
+
+<p>SimpleSAMLphp 2.0 unintentionally dropped sending this header on all responses,
+thereby reducing the hardening of SimpleSAMLphp responses against this
+class of attacks.</p>
+
+<h3 id="affected-versions">Affected versions</h3>
+
+<p>SimpleSAMLphp versions <strong>2.0.0</strong> up to <strong>2.0.5</strong> inclusive.</p>
+
+<h3 id="impact">Impact</h3>
+
+<p>The hardening of a SimpleSAMLphp installation may be reduced relative
+to the 1.x version of this installation.</p>
+
+<p>There are other ways for an installation to achieve the same hardning, e.g.
+setting the same header, or an appropriate header <code class="language-plaintext highlighter-rouge">Content-Security-Policy</code>
+with the <code class="language-plaintext highlighter-rouge">frame-ancestors</code> property, outside of SimpleSAMLphp. For example
+sending this header via the web server or load balancer in front of
+SimpleSAMLphp. Installations that set the same effective headers in this
+fashion are not affected.</p>
+
+<h3 id="resolution">Resolution</h3>
+
+<p>Upgrade the SimpleSAMLphp installation to version <strong>2.0.6</strong>. This
+version by default restores the same HTTP security behaviour as was
+present in SimpleSAMLphp 1.x.</p>
+
+<p>A new setting <code class="language-plaintext highlighter-rouge">security.headers</code> has been introduced that allows more
+finegrained control of this and other security-related HTTP readers.
+Refer to the shipped <code class="language-plaintext highlighter-rouge">config.php.dist</code> template for more information.</p>
+
+<p>Alternatively or additionally you can ensure to set the security headers
+appropriate to your application and risk level via the webserver or load
+balancer software.</p>
+
+<p>The website <a href="https://securityheaders.com">securityheaders.com</a> can help
+assess your website’s security headers and opportunities to improve.</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>The regression in setting the security header was discovered and reported
+by Marcel Hellkamp.</p>
+
+<p>Note that CVE id’s are not issued for missing security headers. Therefore
+this advisory will not get a CVE assigned.</p>
+
+    </main>
+
+<footer>
+    <img class="logo" src="/res/ssplogo-fish-2.svg" alt="">
+</footer>
+
+  </body>
+</html>

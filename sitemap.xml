@@ -126,6 +126,10 @@
         </url>
     
         <url>
+            <loc>https://simplesamlphp.org/security/202309-01.html</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.org/404.html</loc>
         </url>
     
@@ -138,7 +142,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
+            <loc>https://simplesamlphp.org/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/support/</loc>
         </url>
     
         <url>
@@ -150,7 +158,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/download/</loc>
+            <loc>https://simplesamlphp.org/translation/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/contrib/</loc>
         </url>
     
         <url>
@@ -158,19 +170,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/support/</loc>
+            <loc>https://simplesamlphp.org/download/</loc>
         </url>
     
         <url>
             <loc>https://simplesamlphp.org/samlsp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/security/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/contrib/</loc>
         </url>
     
         <url>
