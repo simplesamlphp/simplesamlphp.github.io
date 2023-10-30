@@ -23,9 +23,14 @@ to learn how to properly report vulnerabilities, as well as to find information 
 </thead>
 <tbody>
   <tr>
-    <td class="tg-d52n">2.0</td>
+    <td class="tg-d52n">2.1</td>
     <td class="tg-c6of">Next release</td>
     <td class="tg-c6of">Next release +1yr</td>
+  </tr>
+  <tr>
+    <td class="tg-3wb8">2.0</td>
+    <td class="tg-c6of">2023-02-23</td>
+    <td class="tg-c6of">2024-10-30</td>
   </tr>
   <tr>
     <td class="tg-3wb8">1.19</td>
