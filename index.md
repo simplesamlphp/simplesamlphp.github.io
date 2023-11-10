@@ -17,12 +17,15 @@ you like.
 
 The community-led project has a large user base, a helpful [user community](/support) and a diverse set of external contributors.
 
-## Latest news
+## Last release
 
 * _{{ site.data.latest.published_at | date: "%Y-%m-%d" }}_: The [latest release](/download/) is **SimpleSAMLphp {{ site.data.latest.tag_name | remove_first: "v" }}**
 
+## Latest news
+
 {% for post in site.posts limit:10 %}
 
+<a name="news-{{ post.id | remove: '/' }}"></a>
 * _{{ post.date | date: '%Y-%m-%d' }}_: {{ post.excerpt | remove: '<p>' | remove: '</p>' }} 
 
 {% endfor %}
