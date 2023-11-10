@@ -5,9 +5,21 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.org/</link>
     <atom:link href="https://simplesamlphp.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Oct 2023 14:21:11 +0000</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2023 14:21:11 +0000</lastBuildDate>
+    <pubDate>Fri, 10 Nov 2023 12:43:17 +0000</pubDate>
+    <lastBuildDate>Fri, 10 Nov 2023 12:43:17 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Hackathon Tiime</title>
+        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp Hackathon&lt;/strong&gt;: On 30 January 2024 there will be a hackathon open to all interested in improving SimpleSAMLphp. It will take place in Copenhagen, co-hosted with the &lt;a href=&quot;https://tiime-unconference.eu/&quot;&gt;TIIME unconference&lt;/a&gt; on identity. Please &lt;a href=&quot;https://www.conferencemanager.dk/tiime/signup&quot;&gt;get a side meeting ticket&lt;/a&gt; at the TIIME website if you want to participate.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+        <link>https://simplesamlphp.org/2023/11/10/Hackathon-tiime.html</link>
+        <guid isPermaLink="true">https://simplesamlphp.org/2023/11/10/Hackathon-tiime.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Simplesamlphp 2.0.4</title>
@@ -104,17 +116,6 @@
         <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.org/2022/07/01/SimpleSAMLphp-2.0.0rc1.html</link>
         <guid isPermaLink="true">https://simplesamlphp.org/2022/07/01/SimpleSAMLphp-2.0.0rc1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Simplesamlphp 1.19.6</title>
-        <description>&lt;p&gt;&lt;strong&gt;SimpleSAMLphp 1.19.6&lt;/strong&gt; has been released. Please check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
-        <link>https://simplesamlphp.org/2022/07/01/SimpleSAMLphp-1.19.6.html</link>
-        <guid isPermaLink="true">https://simplesamlphp.org/2022/07/01/SimpleSAMLphp-1.19.6.html</guid>
         
         
       </item>

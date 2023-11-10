@@ -142,19 +142,23 @@
         </url>
     
         <url>
+            <loc>https://simplesamlphp.org/modules/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/lists/</loc>
+        </url>
+    
+        <url>
             <loc>https://simplesamlphp.org/contrib/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/support/</loc>
+            <loc>https://simplesamlphp.org/translation/</loc>
         </url>
     
         <url>
             <loc>https://simplesamlphp.org/samlidp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/security/</loc>
         </url>
     
         <url>
@@ -166,15 +170,11 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
+            <loc>https://simplesamlphp.org/support/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/lists/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/modules/</loc>
+            <loc>https://simplesamlphp.org/security/</loc>
         </url>
     
         <url>
@@ -186,6 +186,10 @@
         </url>
     
     
+        <url>
+            <loc>https://simplesamlphp.org/2023/11/10/Hackathon-tiime.html</loc>
+        </url>
+  
         <url>
             <loc>https://simplesamlphp.org/2023/05/12/SimpleSAMLphp-2.0.4.html</loc>
         </url>
