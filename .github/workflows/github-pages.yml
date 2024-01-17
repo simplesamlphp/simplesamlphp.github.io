@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 setup
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
