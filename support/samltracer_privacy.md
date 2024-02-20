@@ -1,3 +1,7 @@
+---
+layout: default
+title: SAML Tracer privacy statement
+---
 # SAML Tracer privacy statement
 
 ## About SimpleSAMLphp and SAML Tracer
