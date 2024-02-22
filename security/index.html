@@ -110,110 +110,144 @@ to learn how to properly report vulnerabilities, as well as to find information 
   </tr>
 -->
   <tr>
-  <tr>
     <td class="tg-tw5s">&lt; 2.0</td>
     <td class="tg-c6of">No support</td>
     <td class="tg-n9g5">No support</td>
   </tr>
-&lt;/tbody&gt;
-&lt;/table&gt;
+</tbody>
+</table>
 
-## Reporting vulnerabilities
+<h2 id="reporting-vulnerabilities">Reporting vulnerabilities</h2>
 
-In case you find a vulnerability in SimpleSAMLphp, or you want to confirm a possible security issue in the software,
-please get in touch with us through [Sikt's CERT team](https://sikt.no/abuse). Please use our PGP public key
+<p>In case you find a vulnerability in SimpleSAMLphp, or you want to confirm a possible security issue in the software,
+please get in touch with us through <a href="https://sikt.no/abuse">Sikt’s CERT team</a>. Please use our PGP public key
 to encrypt any possible sensitive data that you may need to submit. We will get back to you as soon as possible
-according to our working hours in Central European Time.
+according to our working hours in Central European Time.</p>
 
-When reporting a security issue, please add as much information as possible to help us identify, confirm, replicate and
-fix the problem. In particular, remember to include the following information in your report:
+<p>When reporting a security issue, please add as much information as possible to help us identify, confirm, replicate and
+fix the problem. In particular, remember to include the following information in your report:</p>
 
-* The version or versions of SimpleSAMLphp affected.
-* An exact version that can be used to replicate the issue.
-* Any module or modules involved in the issue.
-* Any particular configuration details relevant to the setup affected.
-* A detailed description and a clear and concise, step-by-step guide to allow us reproduce the issue.
-* Screenshots, videos, or any other media that would help identify the issue.
-* Pointers to the exact line or lines in the code where the vulnerability is supposed to be.
-* Context on how you discovered the issue.
-* Your own name and whether you want to be credited for the discovery or not.
+<ul>
+  <li>The version or versions of SimpleSAMLphp affected.</li>
+  <li>An exact version that can be used to replicate the issue.</li>
+  <li>Any module or modules involved in the issue.</li>
+  <li>Any particular configuration details relevant to the setup affected.</li>
+  <li>A detailed description and a clear and concise, step-by-step guide to allow us reproduce the issue.</li>
+  <li>Screenshots, videos, or any other media that would help identify the issue.</li>
+  <li>Pointers to the exact line or lines in the code where the vulnerability is supposed to be.</li>
+  <li>Context on how you discovered the issue.</li>
+  <li>Your own name and whether you want to be credited for the discovery or not.</li>
+</ul>
 
-Please **DO NOT** report security incidents related to systems that use SimpleSAMLphp, where this software is not the
+<p>Please <strong>DO NOT</strong> report security incidents related to systems that use SimpleSAMLphp, where this software is not the
 cause of the incident. Issues related to the use (or misuse) of infrastructure, misconfiguration of the software,
 malfunction of a particular system or user-related errors should not be reported either. If you are using SimpleSAMLphp
-to authenticate or login to services, but you don't know what SimpleSAMLphp is or you are not sure about the nature of
-the issue, please contact the organization running the service for you.
+to authenticate or login to services, but you don’t know what SimpleSAMLphp is or you are not sure about the nature of
+the issue, please contact the organization running the service for you.</p>
 
-Finally, be reasonable. We'll do our best to resolve the issue according to our principles of security and transparency.
+<p>Finally, be reasonable. We’ll do our best to resolve the issue according to our principles of security and transparency.
 Every confirmed vulnerability will be published and resolved in a timely manner. All we ask in return is that you
-contact us privately first in order to avoid any potential damage to those using the software.
+contact us privately first in order to avoid any potential damage to those using the software.</p>
 
-## List of Security Advisories
+<h2 id="list-of-security-advisories">List of Security Advisories</h2>
 
-* [**SSPSA 202309-01**](/security/202309-01): Regression in setting of security headers.
-
-* [**SSPSA 202004-01**](/security/202004-01): Information disclosure of source code.
-
-* [**SSPSA 202001-02**](/security/202001-02): Log injection.
-
-* [**SSPSA 202001-01**](/security/202001-01): Cross-site scripting in error reports.
-
-* [**SSPSA 201911-02**](/security/201911-02): Information disclosure.
-
-* [**SSPSA 201911-01**](/security/201911-01): Signature validation bypass.
-
-* [**SSPSA 201907-01**](/security/201907-01): Reflected Cross-Site-Scripting.
-
-* [**SSPSA 201812-01**](/security/201812-01): Credentials exposure in session storage.
-
-* [**SSPSA 201809-03**](/security/201809-03): Multiple XPath injections (xmlseclibs).
-
-* [**SSPSA 201809-02**](/security/201809-02): Dangerous use of `file_get_contents` (xmlseclibs).
-
-* [**SSPSA 201809-01**](/security/201809-01): Insecure signature validation (xmlseclibs).
-
-* [**SSPSA 201803-01**](/security/201803-01): Incorrect signature validation (in SAML 2.0).
-
-* [**SSPSA 201802-01**](/security/201802-01): Incorrect signature validation (in SAML 2.0).
-
-* [**SSPSA 201801-03**](/security/201801-03): Use of insecure connection charset (sqlauth module).
-
-* [**SSPSA 201801-02**](/security/201801-02): Open redirection protection bypass.
-
-* [**SSPSA 201801-01**](/security/201801-01): Denial of Service in timestamp validation function (SAML2 library).
-
-* [**SSPSA 201710-01**](/security/201710-01): Signature validation bypass (in SAML 1.1).
-
-* [**SSPSA 201709-01**](/security/201709-01): Cross Site Scripting (XSS) in the consentAdmin module.
-
-* [**SSPSA 201708-01**](/security/201708-01): Invalid token creation and validation.
-
-* [**SSPSA 201705-01**](/security/201705-01): Session fixation issue and authentication bypass in the authcrypt module.
-
-* [**SSPSA 201704-02**](/security/201704-02): Authentication context bypass (multiauth module).
-
-* [**SSPSA 201704-01**](/security/201704-01): Unauthenticated encryption in CBC mode.
-
-* [**SSPSA 201703-02**](/security/201703-02): Incorrect IV generation for encryption.
-
-* [**SSPSA 201703-01**](/security/201703-01): Multiple issues due to timing side channels.
-
-* [**SSPSA 201612-04**](/security/201612-04): Incorrect persistent NameID generation.
-
-* [**SSPSA 201612-03**](/security/201612-03): Incorrect signature validation (InfoCard module).
-
-* [**SSPSA 201612-02**](/security/201612-02): Incorrect signature validation (in SAML 1.1).
-
-* [**SSPSA 201612-01**](/security/201612-01): Incorrect signature validation (in SAML 2.0).
-
-* [**SSPSA 201606-01**](/security/201606-01): Link injection in several pages.
-
-* [**SSPSA 201603-01**](/security/201603-01): Information leakage issue in the *sanitycheck*
-module.
-
-* [**SSPSA 201404-01**](/security/201404-01): Information and advice for SimpleSAMLphp users related
-to the Heartbleed vulnerability.
-</tr></tbody></table>
+<ul>
+  <li>
+    <p><a href="/security/202309-01"><strong>SSPSA 202309-01</strong></a>: Regression in setting of security headers.</p>
+  </li>
+  <li>
+    <p><a href="/security/202004-01"><strong>SSPSA 202004-01</strong></a>: Information disclosure of source code.</p>
+  </li>
+  <li>
+    <p><a href="/security/202001-02"><strong>SSPSA 202001-02</strong></a>: Log injection.</p>
+  </li>
+  <li>
+    <p><a href="/security/202001-01"><strong>SSPSA 202001-01</strong></a>: Cross-site scripting in error reports.</p>
+  </li>
+  <li>
+    <p><a href="/security/201911-02"><strong>SSPSA 201911-02</strong></a>: Information disclosure.</p>
+  </li>
+  <li>
+    <p><a href="/security/201911-01"><strong>SSPSA 201911-01</strong></a>: Signature validation bypass.</p>
+  </li>
+  <li>
+    <p><a href="/security/201907-01"><strong>SSPSA 201907-01</strong></a>: Reflected Cross-Site-Scripting.</p>
+  </li>
+  <li>
+    <p><a href="/security/201812-01"><strong>SSPSA 201812-01</strong></a>: Credentials exposure in session storage.</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-03"><strong>SSPSA 201809-03</strong></a>: Multiple XPath injections (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-02"><strong>SSPSA 201809-02</strong></a>: Dangerous use of <code class="language-plaintext highlighter-rouge">file_get_contents</code> (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201809-01"><strong>SSPSA 201809-01</strong></a>: Insecure signature validation (xmlseclibs).</p>
+  </li>
+  <li>
+    <p><a href="/security/201803-01"><strong>SSPSA 201803-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201802-01"><strong>SSPSA 201802-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-03"><strong>SSPSA 201801-03</strong></a>: Use of insecure connection charset (sqlauth module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-02"><strong>SSPSA 201801-02</strong></a>: Open redirection protection bypass.</p>
+  </li>
+  <li>
+    <p><a href="/security/201801-01"><strong>SSPSA 201801-01</strong></a>: Denial of Service in timestamp validation function (SAML2 library).</p>
+  </li>
+  <li>
+    <p><a href="/security/201710-01"><strong>SSPSA 201710-01</strong></a>: Signature validation bypass (in SAML 1.1).</p>
+  </li>
+  <li>
+    <p><a href="/security/201709-01"><strong>SSPSA 201709-01</strong></a>: Cross Site Scripting (XSS) in the consentAdmin module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201708-01"><strong>SSPSA 201708-01</strong></a>: Invalid token creation and validation.</p>
+  </li>
+  <li>
+    <p><a href="/security/201705-01"><strong>SSPSA 201705-01</strong></a>: Session fixation issue and authentication bypass in the authcrypt module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201704-02"><strong>SSPSA 201704-02</strong></a>: Authentication context bypass (multiauth module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201704-01"><strong>SSPSA 201704-01</strong></a>: Unauthenticated encryption in CBC mode.</p>
+  </li>
+  <li>
+    <p><a href="/security/201703-02"><strong>SSPSA 201703-02</strong></a>: Incorrect IV generation for encryption.</p>
+  </li>
+  <li>
+    <p><a href="/security/201703-01"><strong>SSPSA 201703-01</strong></a>: Multiple issues due to timing side channels.</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-04"><strong>SSPSA 201612-04</strong></a>: Incorrect persistent NameID generation.</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-03"><strong>SSPSA 201612-03</strong></a>: Incorrect signature validation (InfoCard module).</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-02"><strong>SSPSA 201612-02</strong></a>: Incorrect signature validation (in SAML 1.1).</p>
+  </li>
+  <li>
+    <p><a href="/security/201612-01"><strong>SSPSA 201612-01</strong></a>: Incorrect signature validation (in SAML 2.0).</p>
+  </li>
+  <li>
+    <p><a href="/security/201606-01"><strong>SSPSA 201606-01</strong></a>: Link injection in several pages.</p>
+  </li>
+  <li>
+    <p><a href="/security/201603-01"><strong>SSPSA 201603-01</strong></a>: Information leakage issue in the <em>sanitycheck</em>
+module.</p>
+  </li>
+  <li>
+    <p><a href="/security/201404-01"><strong>SSPSA 201404-01</strong></a>: Information and advice for SimpleSAMLphp users related
+to the Heartbleed vulnerability.</p>
+  </li>
+</ul>
 
     </main>
 
