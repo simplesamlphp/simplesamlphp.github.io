@@ -27,6 +27,36 @@ this is very welcome! Please read
 [our contribution guidelines](https://github.com/simplesamlphp/simplesamlphp/blob/master/CONTRIBUTING.md)
 for how to best go about reporting a bug or creating pull requests.
 
+## Which branch to use
+
+The "master" branch contains the current breaking development. This is
+where new features are developed that will be in a major release in
+the future. The maintenance of the supported versions happens in the
+"simplesamlphp-2.x" branches.
+
+If you want to contribute new functionality, please target "master".
+
+If you want to fix a bug in an existing feature or functionality,
+please target the simplesamlphp-2.1 (latest release) branch. If
+accepted, the team will take care of backporting it to older supported
+branches and if necessary applying it in master. 
+
+If your bug only concerns an older supported release (e.g. 2.0 but not
+2.1), you can target the older branch directly.
+
+In order to improve the content of the documentation, you commit using
+the same branches used for code contributions at
+https://github.com/simplesamlphp/simplesamlphp. You can address the
+same branches as for code changes.
+
+The documentation under `https://simplesamlphp.org/docs/<VERSION>/` is
+updated automatically from the corresponding `simplesamlphp-<VERSION>`
+branch, where `stable` is an alias for the latest released version and
+`devel` for the "master" branch.
+
+
+
+
 ## Contributors
 
 We would like to thank the organisations that have contributed financially to the survival of the project:
