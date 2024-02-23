@@ -27,6 +27,53 @@ this is very welcome! Please read
 [our contribution guidelines](https://github.com/simplesamlphp/simplesamlphp/blob/master/CONTRIBUTING.md)
 for how to best go about reporting a bug or creating pull requests.
 
+## Which branch to use
+
+The "master" branch contains the current breaking development. This is
+where new features are developed that will be in a major release in
+the future. The maintenance of the supported versions happens in the
+"simplesamlphp-2.x" branches.
+
+If you want to contribute new functionality, please target "master".
+
+If you want to fix a bug in an existing feature or functionality,
+please target the simplesamlphp-2.1 (latest release) branch. If
+accepted, the team will take care of backporting it to older supported
+branches and if necessary applying it in master. 
+
+If your bug only concerns an older supported release (e.g. 2.0 but not
+2.1), you can target the older branch directly.
+
+### Documentation updates
+
+There are two main repositories for documentation. The website itself
+comes from one place and everything that is under the "Documentation"
+menu uses another process
+(https://simplesamlphp.org/docs/stable/index.html).
+
+The website lives in https://github.com/simplesamlphp/simplesamlphp.github.io
+
+That only has a "release" branch to commit to, which is the website as
+it is shown. There you'd commit to change the pages on the website,
+e.g. to the page /contrib/
+
+The "docs" repo (as described in the readme of the repo) only contains
+the scripts that generate the docs website. In order to improve the
+content of the documentation themselves, you commit using the same branches used
+for code contributions at
+https://github.com/simplesamlphp/simplesamlphp.
+
+You can address documentation updates to master
+(https://github.com/simplesamlphp/simplesamlphp/tree/master/docs).
+Though it makes sense to backport them to supported releases, so each
+version under https://simplesamlphp.org/docs/<VERSION>/ will show the
+change. In other words, if a documentation change relates to 2.1.3 you
+might like to make the pull request against the simplesamlphp-2.1
+branch and leave it to the team to also apply it to master and other
+branches in the same way that code updates work.
+
+
+
 ## Contributors
 
 We would like to thank the organisations that have contributed financially to the survival of the project:
