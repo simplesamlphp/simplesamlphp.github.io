@@ -37,13 +37,6 @@ to learn how to properly report vulnerabilities, as well as to find information 
     <td class="tg-c6of">2024-04-30</td>
     <td class="tg-c6of">2024-10-30</td>
   </tr>
-<!-- Orange for grace-period
-  <tr>
-    <td class="tg-d52n">2.0</td>
-    <td class="tg-c6of">2024-04-30</td>
-    <td class="tg-c6of">2024-10-30</td>
-  </tr>
--->
   <tr>
     <td class="tg-tw5s">&lt; 2.0</td>
     <td class="tg-c6of">No support</td>
