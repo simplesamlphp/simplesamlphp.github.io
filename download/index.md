@@ -20,6 +20,11 @@ Here you will find the packages with the current SimpleSAMLphp versions:
 Check the [GitHub releases page](https://github.com/simplesamlphp/simplesamlphp/releases)
 in case you are looking for any other version.
 
+## Docker image
+
+If you want to use a Docker container to run SimpleSAMLphp, we recommend
+the [images created by Cirrus Identity](https://hub.docker.com/r/cirrusid/simplesamlphp/).
+
 ## Github repository
 
 The core library handling the basic SAML stuff (messages, bindings, and so on) is
