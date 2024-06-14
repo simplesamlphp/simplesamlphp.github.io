@@ -87,14 +87,6 @@ This module provides an interface to do automatic testing of authentication sour
 * Package name: `simplesamlphp/simplesamlphp-module-autotest`
 * Repository: [simplesamlphp/simplesamlphp-module-autotest](https://github.com/simplesamlphp/simplesamlphp-module-autotest)
 
-#### <a name="cmdotcom" href="#cmdotcom">CM.com OTP</a>
-
-This module provides an authentication processing filter that will interface with the CM.com OTP API to send and verify
-one-time passwords through text messages.
-
-* Package name: `tvdijen/simplesamlphp-module-cmdotcom`
-* Repository: [tvdijen/simplesamlphp-module-cmdotcom](https://github.com/tvdijen/simplesamlphp-module-cmdotcom)
-
 #### <a name="consentsimpleadmin" href="#consentsimpleadmin">Consent Simple Admin</a>
 
 A SimpleSAMLphp module implementing a very simple user interface for managing consent.
