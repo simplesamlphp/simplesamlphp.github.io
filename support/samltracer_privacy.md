@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SAML-tracer privacy statement
+title: SAML-tracer Privacy Policy
 ---
 
 # SAML-tracer Privacy Policy
 
-Last Updated 3 JUNE 2024
+*Last Updated 3 JUNE 2024*
 
 ## 1. Introduction - SimpleSAMLphp and SAML-tracer
 
@@ -15,11 +15,11 @@ Any questions can be directed to saml-tracer-admin@googlegroups.com.
 
 This Privacy Policy is published pursuant to data protection laws (including the General Data Protection Regulation (EU) 2016/679 as amended from time to time).
 
-This policy explains that *no personal data is collected or otherwise processed by us*.
+This policy explains that **no personal data is collected or otherwise processed by us**.
 
 ## 2. No Personal Data is Collected, Stored or otherwise Processed by SimpleSAMLphp
 
-All processing that the SAML-tracer plugin does, happens inside the user’s own browser on the user’s own device. No personal data is shared with SimpleSAMLphp or any third party by installing or running the extension. The user is the Data Controller in respect of the user’s own personal data; SimpleSAMLphp is not a Data Processor.
+All processing that the SAML-tracer plugin does, happens inside the user’s own browser on the user’s own device. *No personal data is shared with SimpleSAMLphp or any third party by installing or running the extension.* The user is the Data Controller in respect of the user’s own personal data; SimpleSAMLphp is not a Data Processor.
 
 The SAML-tracer plugin is installed in the browser by the user. From there, a user can navigate to the URL of an application, click on the "login" button, then log in with a chosen Identity Provider. When the SAML-tracer plugin is showing, in that user's browser, the data being sent from the application to the identity provider and the identity provider to the application helps the user pinpoint where there is a mismatch between what is being sent, and what is expected from either party. 
 
@@ -32,7 +32,7 @@ The SAML-tracer plugin can be used by the user to process:
 1. personal data: name, address, email address, age or identification number; and
 1. authentication data such as passwords, credentials, security questions or personal identification number (PIN). 
 
-The SAML-tracer plugin does not collect technical data about the environment the user is running, such as browser settings, platform information or hardware properties. 
+The SAML-tracer plugin does *not* collect technical data about the environment the user is running, such as browser settings, platform information or hardware properties. 
 
 ## 4. The User Controls Their Personal Data and Decides what to store and what to do with exports
 
@@ -42,17 +42,17 @@ The SAML-tracer may collect browsing information from Private Browsing sessions,
 
 SAML-tracer provides no functionality in and of itself to share personal data with third parties. The SimpleSAMLphp project does not sell personal data to third parties. Transfers to third parties are by the user’s (or its developer’s) use of the plugin within approved use cases only and there is no transfer or use outside of the plugin’s core functionality, whether to determine creditworthiness or for lending purposes or otherwise. 
 
-The SAML-tracer does not install cookies. It does not enable third party websites to see that it is installed. SAML-tracer does not require the collection of visited URLs or user search terms for the add-on to work. Search functionality provided or loaded by the add-on does not collect search terms or intercept searches that are going to a   add-on’s primary function.
+The SAML-tracer does not install cookies. It does not enable third party websites to see that it is installed. SAML-tracer does not require the collection of visited URLs or user search terms for the add-on to work. Search functionality provided or loaded by the add-on does not collect search terms or intercept searches that are going to a add-on’s primary function.
 
 If the user processes any personal data on behalf of third parties, the user is responsible for their own compliance with data protection laws. The user should check and is referred to the privacy policies of all third party platforms which they choose to visit.
 
 ## 5. Additional Privacy Protocols
 
-The SAML-tracer plugin does not:
+The SAML-tracer plugin does *not*:
 -	leak local or user-specific information to websites or other applications (e.g. through native messaging)
 -	use native messaging 
 -	store personal data from private browsing sessions; no information that identifies a user across browsing sessions or containers is made available to web content
--	add-on injecting advertising into web page content.
+-	add-on injecting advertising into web page content
 -	inclusion any cryptocurrency miners 
 -	modify web content or facilitate redirects to include affiliate promotion tags 
 
