@@ -52,8 +52,8 @@ The SAML-tracer plugin does *not*:
 -	leak local or user-specific information to websites or other applications (e.g. through native messaging)
 -	use native messaging 
 -	store personal data from private browsing sessions; no information that identifies a user across browsing sessions or containers is made available to web content
--	add-on injecting advertising into web page content
--	inclusion any cryptocurrency miners 
+-	inject advertising into web page content
+-	include any cryptocurrency miners 
 -	modify web content or facilitate redirects to include affiliate promotion tags 
 
 ## 6. Changes to this policy
