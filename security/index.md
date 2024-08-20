@@ -24,18 +24,18 @@ to learn how to properly report vulnerabilities, as well as to find information 
 <tbody>
   <tr>
     <td class="tg-d52n">2.2</td>
-    <td class="tg-c6of">Next release +6mo</td>
-    <td class="tg-c6of">Next release +1yr</td>
+    <td class="tg-d52n">Next release +6mo</td>
+    <td class="tg-d52n">Next release +1yr</td>
   </tr>
   <tr>
     <td class="tg-3wb8">2.1</td>
-    <td class="tg-3wb8">2024-09-08</td>
-    <td class="tg-c6of">2025-03-08</td>
+    <td class="tg-tw5s">2024-09-08</td>
+    <td class="tg-d52n">2025-03-08</td>
   </tr>
   <tr>
     <td class="tg-3wb8">2.0</td>
-    <td class="tg-3wb8">2024-04-30</td>
-    <td class="tg-c6of">2024-10-30</td>
+    <td class="tg-tw5s">2024-04-30</td>
+    <td class="tg-3wb8">2024-10-30</td>
   </tr>
   <tr>
     <td class="tg-tw5s">&lt; 2.0</td>
