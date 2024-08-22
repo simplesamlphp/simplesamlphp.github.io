@@ -12,10 +12,14 @@ Here you will find the packages with the current SimpleSAMLphp versions:
 
     Released: {{ site.data.latest.published_at | date: "%Y-%m-%d" }}
 
+    {% assign sha = site.data.latest.body | split: 'SHA256 checksum slim-release: '  %}
+    {% assign sharaw = sha[1] | strip_html | replace: '`','' | truncate: 64, '' %}
+    SHA256 checksum slim-release: {{ sharaw }}
+
     {% assign sha = site.data.latest.body | split: 'SHA256 checksum full-release: '  %}
     {% assign sharaw = sha[1] | strip_html | replace: '`','' | truncate: 64, '' %}
     SHA256 checksum full-release: {{ sharaw }}
-    
+
     [View changes](/docs/stable/simplesamlphp-changelog)
 
 Check the [GitHub releases page](https://github.com/simplesamlphp/simplesamlphp/releases)
