@@ -64,6 +64,8 @@ We would like to thank the organisations that have contributed financially to th
 * [Sikt](https://sikt.no/) (formerly Uninett)
 * [Cirrus Identity](https://www.cirrusidentity.com/)
 
+The current maintainer is Ben Martin.
+
 The project wouldn't be possible either without the in-kind contributions of the many developers who have worked on it:
 
 * Tim van Dijen, main developer
