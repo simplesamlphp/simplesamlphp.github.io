@@ -5,9 +5,38 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.org/</link>
     <atom:link href="https://simplesamlphp.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Nov 2024 18:18:02 +0000</pubDate>
-    <lastBuildDate>Tue, 19 Nov 2024 18:18:02 +0000</lastBuildDate>
+    <pubDate>Mon, 25 Nov 2024 19:50:28 +0000</pubDate>
+    <lastBuildDate>Mon, 25 Nov 2024 19:50:28 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Upcoming Security Release</title>
+        <description>&lt;p&gt;Hi!&lt;/p&gt;
+
+&lt;p&gt;We’ve been made aware of a security issue in one of the dependencies of SimpleSAMLphp,
+The developers have evaluated the impact for SimpleSAMLphp, which we found to be high.
+If you’re using older versions or forks, please make sure you can build and release patched versions quickly.&lt;/p&gt;
+
+&lt;p&gt;Timeline will be as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patch release on Sunday Dec 1st (as late as possible CET zone).&lt;/li&gt;
+  &lt;li&gt;New releases for OpenConext and SimpleSAMLphp the next day on Dec 2nd as early as possible.&lt;/li&gt;
+  &lt;li&gt;Publication of the security advisory with disclosure on the vulnerability on Sunday 8th.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We understand this message will raise questions about the impact and the scope of the vulnerability, but please understand that we cannot answer any questions as long as this vulnerability is under embargo.&lt;/p&gt;
+
+&lt;p&gt;Kind regards,&lt;/p&gt;
+
+&lt;p&gt;The developer-team&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+        <link>https://simplesamlphp.org/2024/11/25/upcoming-security-release.html</link>
+        <guid isPermaLink="true">https://simplesamlphp.org/2024/11/25/upcoming-security-release.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Sspboard Strategy And Funding</title>
@@ -105,17 +134,6 @@
         <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.org/2022/12/05/SimpleSAMLphp-1.19.7.html</link>
         <guid isPermaLink="true">https://simplesamlphp.org/2022/12/05/SimpleSAMLphp-1.19.7.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Simplesamlphp 2.0.0rc2</title>
-        <description>&lt;p&gt;&lt;strong&gt;The second (and maybe final) release candidate for SimpleSAMLphp 2.0&lt;/strong&gt; is available. Please help us test this pre-release. Check the &lt;a href=&quot;/download&quot;&gt;downloads page&lt;/a&gt; for more information.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
-        <link>https://simplesamlphp.org/2022/09/26/SimpleSAMLphp-2.0.0rc2.html</link>
-        <guid isPermaLink="true">https://simplesamlphp.org/2022/09/26/SimpleSAMLphp-2.0.0rc2.html</guid>
         
         
       </item>
