@@ -5,31 +5,13 @@
     <description>SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.</description>
     <link>https://simplesamlphp.org/</link>
     <atom:link href="https://simplesamlphp.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Nov 2024 19:50:28 +0000</pubDate>
-    <lastBuildDate>Mon, 25 Nov 2024 19:50:28 +0000</lastBuildDate>
+    <pubDate>Mon, 25 Nov 2024 20:09:42 +0000</pubDate>
+    <lastBuildDate>Mon, 25 Nov 2024 20:09:42 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
         <title>Upcoming Security Release</title>
-        <description>&lt;p&gt;Hi!&lt;/p&gt;
-
-&lt;p&gt;We’ve been made aware of a security issue in one of the dependencies of SimpleSAMLphp,
-The developers have evaluated the impact for SimpleSAMLphp, which we found to be high.
-If you’re using older versions or forks, please make sure you can build and release patched versions quickly.&lt;/p&gt;
-
-&lt;p&gt;Timeline will be as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Patch release on Sunday Dec 1st (as late as possible CET zone).&lt;/li&gt;
-  &lt;li&gt;New releases for OpenConext and SimpleSAMLphp the next day on Dec 2nd as early as possible.&lt;/li&gt;
-  &lt;li&gt;Publication of the security advisory with disclosure on the vulnerability on Sunday 8th.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We understand this message will raise questions about the impact and the scope of the vulnerability, but please understand that we cannot answer any questions as long as this vulnerability is under embargo.&lt;/p&gt;
-
-&lt;p&gt;Kind regards,&lt;/p&gt;
-
-&lt;p&gt;The developer-team&lt;/p&gt;
+        <description>&lt;p&gt;Please be advised that a new security release is coming op on Dec 2nd. Please read our &lt;a href=&quot;https://groups.google.com/g/simplesamlphp-announce&quot;&gt;mailing list&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
         <link>https://simplesamlphp.org/2024/11/25/upcoming-security-release.html</link>
