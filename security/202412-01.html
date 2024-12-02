@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SSPSA 202412-01: XXE in parsing SAML messages - SimpleSAMLphp</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.org/security/202412-01.html">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.org/feed.xml">
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <header>
+  <div id="header">
+    <div class="right">
+      <form class="searchbox" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4">
+        <input type="search" name="q" placeholder="Search" value="">
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.org">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <nav>
+  <div id="headerbar">
+  <p id="breadcrumb"><a href="https://simplesamlphp.org">Home</a> » SSPSA 202412-01: XXE in parsing SAML messages</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/support/">Support</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/contrib/">Contribute</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px">
+    <br style="height: 0px; clear: both">
+  </div><!-- /#headerbar -->
+  </nav>
+  </header>
+
+  <main>
+
+    <aside><div class="sidebar-warning right">
+<h2>Date</h2>
+2 December 2024
+<h2>Affected versions</h2>
+
+<code>SimpleSAMLphp 2.3.0 - 2.3.4</code><br />
+<code>SimpleSAMLphp 2.2.0 - 2.2.4</code><br />
+<code>SimpleSAMLphp 2.1.0 - 2.1.7</code><br />
+<code>SimpleSAMLphp 2.0.0 - 2.0.14</code><br />
+
+<code>Any older version</code><br />
+<h2>Severity</h2>
+High - CVE 8.3
+</div></aside>
+
+<h1 id="202412-01">202412-01</h1>
+
+<p><strong>XXE in parsing SAML messages</strong></p>
+
+<h3 id="description">Description</h3>
+
+<p>When loading an (untrusted) XML document, for example the SAMLResponse, it’s possible to induce an XXE.</p>
+
+<h3 id="mitigation">Mitigation:</h3>
+
+<p>Remove the <code class="language-plaintext highlighter-rouge">LIBXML_DTDLOAD | LIBXML_DTDATTR</code> options from <code class="language-plaintext highlighter-rouge">$options</code> is in: https://github.com/simplesamlphp/saml2/blob/717c0adc4877ebd58428637e5626345e59fa0109/src/SAML2/DOMDocumentFactory.php#L41</p>
+
+<h3 id="background--details">Background / details</h3>
+
+<p>To be published on Dec 8th</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This vulnerability was discovered and reported by ahacker1-securesaml on November 18, 2024.
+It is registered under CVE-2024-52596.</p>
+
+    </main>
+
+<footer>
+    <img class="logo" src="/res/ssplogo-fish-2.svg" alt="">
+</footer>
+
+  </body>
+</html>
