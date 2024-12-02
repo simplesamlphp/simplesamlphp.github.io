@@ -77,6 +77,8 @@ contact us privately first in order to avoid any potential damage to those using
 
 ## List of Security Advisories
 
+* [**SSPSA 202412-01**](/security/202412-01): XXE in parsing SAML messages.
+
 * [**SSPSA 202309-01**](/security/202309-01): Regression in setting of security headers.
 
 * [**SSPSA 202004-01**](/security/202004-01): Information disclosure of source code.
