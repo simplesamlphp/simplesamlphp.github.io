@@ -101,7 +101,10 @@ High - CVE 8.3
 
 <h3 id="background--details">Background / details</h3>
 
-<p>To be published on Dec 8th</p>
+<p>While there is the NONET option, an attacker can simply bypass if by using PHP filters:
+php://filter/convert.base64-encode/resource=http://URL OR FILE</p>
+
+<p>From there an attacker can induce network connections and steal the targeted file OOB (haven’t fully tested this).</p>
 
 <h3 id="credit">Credit</h3>
 
