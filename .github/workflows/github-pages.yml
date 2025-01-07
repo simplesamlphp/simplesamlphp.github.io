@@ -1,5 +1,8 @@
 name: Build and deploy Jekyll site to GitHub Pages
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -13,13 +16,13 @@ jobs:
       - name: 📂 setup
         uses: actions/checkout@v4
       - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4 # v1.207.0
         with:
           ruby-version: 2.7
       - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
+        uses: limjh16/jekyll-action-ts@807a5f09755d777bfd3070e9505d02347844c9b2 # v2.4.2
       - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
