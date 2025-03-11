@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="google-site-verification" content="2S8M18BgYs8cLRL6ClTrfW_xGxfFtMZu2b2jhjrNlss">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SSPSA 202501-01: Signature bypass vulnerability - SimpleSAMLphp</title>
+  <meta name="description" content="SimpleSAMLphp** is an award-winning application written in native PHP that deals with authentication. It implements support for multiple protocols, most notably SAML, OpenID or OAuth.">
+
+  <link rel="stylesheet" href="/res/css/style.css">
+  <link rel="stylesheet" href="/res/css/layout.css">
+  <link rel="canonical" href="https://simplesamlphp.org/security/202501-01.html">
+  <link rel="alternate" type="application/rss+xml" title="SimpleSAMLphp" href="https://simplesamlphp.org/feed.xml">
+</head>
+
+  <body>
+      <!-- Red logo header -->
+  <header>
+  <div id="header">
+    <div class="right">
+      <form class="searchbox" method="get" action="https://www.google.com/cse">
+        <input type="hidden" name="cx" value="004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="siteurl" value="www.google.com/cse/home?cx=004202914224971217557:8ks4jjstupq">
+        <input type="hidden" name="adkw" value="AELymgVJ6Sk-kOvUjbxvgShTLwiFlma2evFuVCh0r8q23vn_4eVnkcdnPfbgMvYUTpJpVlb-KkGAKkbn0i-AlWHsVRR9O0J4CNb6cXFkEKRdjXxsC_NlVD4">
+        <input type="search" name="q" placeholder="Search" value="">
+      </form>
+    </div>
+    <div class="v-center logo-header">
+      <div id="logo">
+        <a href="https://simplesamlphp.org">
+          <span class="simple">Simple</span>
+          <span class="saml">SAML</span>
+          <span class="simple">php</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Grey header bar below -->
+  <nav>
+  <div id="headerbar">
+  <p id="breadcrumb"><a href="https://simplesamlphp.org">Home</a> » SSPSA 202501-01: Signature bypass vulnerability</p>
+    <div class="mtoolbar">
+      <div class="menuitem first">
+        <a href="/download">Download</a>
+      </div>
+      <div class="menuitem">
+        <a href="/docs">Documentation</a>
+      </div>
+      <div class="menuitem">
+        <a href="/security">Security</a>
+      </div>
+      <div class="menuitem">
+        <a href="/modules/">Modules</a>
+      </div>
+      <div class="menuitem">
+        <a href="/support/">Support</a>
+      </div>
+      <div class="menuitem last">
+        <a href="/contrib/">Contribute</a>
+      </div>
+    </div>
+    <br style="clear: both; height: 0px; width: 0px">
+    <br style="height: 0px; clear: both">
+  </div><!-- /#headerbar -->
+  </nav>
+  </header>
+
+  <main>
+
+    <aside><div class="sidebar-warning right">
+<h2>Date</h2>
+11 March 2025
+<h2>Affected versions</h2>
+
+<code>SimpleSAMLphp 2.3.0 - 2.3.6</code><br />
+<code>SimpleSAMLphp 2.2.0 - 2.2.4</code><br />
+
+<code>Any older version</code><br />
+<h2>Severity</h2>
+High - CVE 8.6
+</div></aside>
+
+<h1 id="202501-01">202501-01</h1>
+
+<p><strong>Signature bypass vulnerability</strong></p>
+
+<h3 id="description">Description</h3>
+
+<p>When passing multiple SAMLResponse-parameters, the signature would be validated on the second one instead of the first one.</p>
+
+<h3 id="mitigation">Mitigation:</h3>
+
+<p>Update to the latest version of SimpleSAMLphp, or manually bump the <code class="language-plaintext highlighter-rouge">simplesamlphp/saml2</code> dependency to v4.17.0</p>
+
+<h3 id="background--details">Background / details</h3>
+
+<p>The HTTPRedirect-binding didn’t properly check the query-parameters.
+We’ve changed it to check for duplicate parameters and any illegal combination of parameters (i.e. both a SAMLResponse and a SAMLRequest).</p>
+
+<h3 id="credit">Credit</h3>
+
+<p>This vulnerability was discovered and reported by ahacker1-securesaml on November 18, 2024.
+It is registered under CVE-2025-27773.</p>
+
+    </main>
+
+<footer>
+    <img class="logo" src="/res/ssplogo-fish-2.svg" alt="">
+</footer>
+
+  </body>
+</html>
