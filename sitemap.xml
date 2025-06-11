@@ -150,19 +150,7 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/samlidp/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/contrib/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/translation/</loc>
-        </url>
-    
-        <url>
-            <loc>https://simplesamlphp.org/modules/</loc>
+            <loc>https://simplesamlphp.org/support/</loc>
         </url>
     
         <url>
@@ -174,15 +162,27 @@
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/security/</loc>
+            <loc>https://simplesamlphp.org/contrib/</loc>
         </url>
     
         <url>
-            <loc>https://simplesamlphp.org/support/</loc>
+            <loc>https://simplesamlphp.org/translation/</loc>
         </url>
     
         <url>
             <loc>https://simplesamlphp.org/lists/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/samlidp/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/security/</loc>
+        </url>
+    
+        <url>
+            <loc>https://simplesamlphp.org/modules/</loc>
         </url>
     
         <url>
