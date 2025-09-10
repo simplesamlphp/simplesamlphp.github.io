@@ -94,14 +94,6 @@ A SimpleSAMLphp module implementing a very simple user interface for managing co
 * Package name: `simplesamlphp/simplesamlphp-module-consentsimpleadmin`
 * Repository: [simplesamlphp/simplesamlphp-module-consentsimpleadmin](https://github.com/simplesamlphp/simplesamlphp-module-consentsimpleadmin)
 
-#### <a name="discojuice" href="#discojuice">DiscoJuice</a>
-
-A SimpleSAMLphp module to provide a very flexible User Interface implementing an IdP Discovery Service. See the
-[web page](http://discojuice.org) for more information.
-
-* Package name: `simplesamlphp/simplesamlphp-module-discojuice`
-* Repository: [simplesamlphp/simplesamlphp-module-discojuice](https://github.com/simplesamlphp/simplesamlphp-module-discojuice)
-
 #### <a name="attrfromentity" href="#attrfromentity">entattribs:AttributeFromEntity</a>
 
 This SimpleSAMLphp authentication processing filter allows you to provide additional attributes based on entity
