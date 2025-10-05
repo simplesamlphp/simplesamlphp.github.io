@@ -28,8 +28,8 @@ to learn how to properly report vulnerabilities, as well as to find information 
     <td class="tg-d52n">Next release +1yr</td>
   </tr>
   <tr>
-    <td class="tg-d52n">2.3</td>
-    <td class="tg-d52n">2025-10-16</td>
+    <td class="tg-3wb8">2.3</td>
+    <td class="tg-tw5s">2025-10-16</td>
     <td class="tg-d52n">2026-04-16</td>
   </tr>
   <tr>
