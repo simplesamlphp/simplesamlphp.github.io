@@ -216,26 +216,6 @@ Identity Provider or a SAML Service Provider.</p>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-genuniqueid">safire-ac-za/simplesamlphp-modules-genuniqueid</a></li>
 </ul>
 
-<h4 id="infocard"><a name="infocard" href="#infocard">InfoCard</a></h4>
-
-<p>This is a SimpleSAMLphp module that works with Information Cards technologies and provides some basic functionalities:</p>
-
-<ul>
-  <li>
-    <p><strong>RP</strong>: acting as a Relying Party, you can accept user authentication through InfoCards consuming tokens sent by an
-STS.</p>
-  </li>
-  <li>
-    <p><strong>STS</strong>: acting as a Secure Token Service you can provide information to a RP generating tokens. Currently, only user
-password and self issued credentials are supported.</p>
-  </li>
-  <li>
-    <p><strong>InfoCard Generator</strong>: your users could request their InfoCard filling a form with their username and password.</p>
-  </li>
-  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-infocard</code></li>
-  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-infocard">simplesamlphp/simplesamlphp-module-infocard</a></li>
-</ul>
-
 <h4 id="kerberos"><a name="kerberos" href="#kerberos">Kerberos</a></h4>
 
 <p>Kerberos 5 authentication module for SimpleSAMLphp.</p>
@@ -253,20 +233,6 @@ session identifier.</p>
 <ul>
   <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-logpeek</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-logpeek">simplesamlphp/simplesamlphp-module-logpeek</a></li>
-</ul>
-
-<h4 id="metadata-aggregator"><a name="mdaggregator" href="#mdaggregator">Metadata aggregator</a></h4>
-
-<p>This module aggregates a set of SAML entities into SAML 2.0 metadata documents. The resulting metadata documents contain
-an EntitiesDescriptor element with the multiple entities configured as sources inside. Multiple aggregates can be
-configured at the same time.</p>
-
-<p>Please note that <strong>this module has been deprecated</strong> in favour of the more recent
-<a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator2">Aggregator2 module</a>.</p>
-
-<ul>
-  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-aggregator</code></li>
-  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-aggregator">simplesamlphp/simplesamlphp-module-aggregator</a></li>
 </ul>
 
 <h4 id="metadata-aggregator-2"><a name="mdaggregator2" href="#mdaggregator2">Metadata aggregator 2</a></h4>
@@ -291,15 +257,6 @@ description, as well as manually registering metadata for service providers.</p>
 <ul>
   <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-metaedit</code></li>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-metaedit">simplesamlphp/simplesamlphp-module-metaedit</a></li>
-</ul>
-
-<h4 id="modinfo"><a name="modinfo" href="#modinfo">Modinfo</a></h4>
-
-<p>A very straightforward module for SimpleSAMLphp that displays the list of modules and their status in the web interface.</p>
-
-<ul>
-  <li>Package name: <code class="language-plaintext highlighter-rouge">simplesamlphp/simplesamlphp-module-modinfo</code></li>
-  <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-modinfo">simplesamlphp/simplesamlphp-module-modinfo</a></li>
 </ul>
 
 <h4 id="monitor"><a name="monitor" href="#monitor">Monitor</a></h4>
@@ -361,16 +318,6 @@ supporting both the HTTP-Redirect and HTTP-POST bindings.</p>
   <li>Repository: <a href="https://github.com/simplesamlphp/simplesamlphp-module-saml2debug">simplesamlphp/simplesamlphp-module-saml2debug</a></li>
 </ul>
 
-<h4 id="selfregister"><a name="selfregister" href="#selfregister">Selfregister</a></h4>
-
-<p>A module that allows registration of users accounts. The original version was developed by UNINETT and supported LDAP as
-a backend. This fork adds support for SQL databases as the back-end.</p>
-
-<ul>
-  <li>Package name: <code class="language-plaintext highlighter-rouge">geant/simplesamlphp-module-selfregister</code></li>
-  <li>Repository: <a href="https://github.com/TERENA/simplesamlphp-module-selfregister">geant/simplesamlphp-module-selfregister</a></li>
-</ul>
-
 <h4 id="sql-attributes"><a name="sqlattrs" href="#sqlattrs">SQL Attributes</a></h4>
 
 <p>An authentication processing filter that allows you to provide additional attributes from a SQL datastore. It is useful
@@ -381,16 +328,6 @@ schema.</p>
 <ul>
   <li>Package name: <code class="language-plaintext highlighter-rouge">safire-ac-za/simplesamlphp-module-sqlattribs</code></li>
   <li>Repository: <a href="https://github.com/safire-ac-za/simplesamlphp-module-sqlattribs">safire-ac-za/simplesamlphp-module-sqlattribs</a></li>
-</ul>
-
-<h4 id="voot-groups"><a name="voot" href="#voot">VOOT Groups</a></h4>
-
-<p>A module to fetch group memberships from an API service protected with OAuth 2.0 using the VOOT protocol and add them
-to the list of attributes received from the identity provider.</p>
-
-<ul>
-  <li>Package name: <code class="language-plaintext highlighter-rouge">openconextapps/simplesamlphp-module-vootgroups</code></li>
-  <li>Repository: <a href="https://github.com/OpenConextApps/ssp-voot-groups">OpenConextApps/ssp-voot-groups</a></li>
 </ul>
 
 <h2 id="extending-simplesamlphp">Extending SimpleSAMLphp</h2>
