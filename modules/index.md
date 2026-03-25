@@ -121,21 +121,6 @@ Generate an `eduPersonUniqueId` attribute from various LDAP implementations' obj
 * Package name: `safire-ac-za/simplesamlphp-modules-genuniqueid`
 * Repository: [safire-ac-za/simplesamlphp-modules-genuniqueid](https://github.com/safire-ac-za/simplesamlphp-module-genuniqueid)
 
-#### <a name="infocard" href="#infocard">InfoCard</a>
-
-This is a SimpleSAMLphp module that works with Information Cards technologies and provides some basic functionalities:
-
-* **RP**: acting as a Relying Party, you can accept user authentication through InfoCards consuming tokens sent by an
-STS.
-
-* **STS**: acting as a Secure Token Service you can provide information to a RP generating tokens. Currently, only user
-password and self issued credentials are supported.
-
-* **InfoCard Generator**: your users could request their InfoCard filling a form with their username and password.
-
-* Package name: `simplesamlphp/simplesamlphp-module-infocard`
-* Repository: [simplesamlphp/simplesamlphp-module-infocard](https://github.com/simplesamlphp/simplesamlphp-module-infocard)
-
 #### <a name="kerberos" href="#kerberos">Kerberos</a>
 
 Kerberos 5 authentication module for SimpleSAMLphp.
@@ -150,19 +135,6 @@ session identifier.
 
 * Package name: `simplesamlphp/simplesamlphp-module-logpeek`
 * Repository: [simplesamlphp/simplesamlphp-module-logpeek](https://github.com/simplesamlphp/simplesamlphp-module-logpeek)
-
-
-#### <a name="mdaggregator" href="#mdaggregator">Metadata aggregator</a>
-
-This module aggregates a set of SAML entities into SAML 2.0 metadata documents. The resulting metadata documents contain
-an EntitiesDescriptor element with the multiple entities configured as sources inside. Multiple aggregates can be
-configured at the same time.
-
-Please note that **this module has been deprecated** in favour of the more recent
-[Aggregator2 module](https://github.com/simplesamlphp/simplesamlphp-module-aggregator2).
-
-* Package name: `simplesamlphp/simplesamlphp-module-aggregator`
-* Repository: [simplesamlphp/simplesamlphp-module-aggregator](https://github.com/simplesamlphp/simplesamlphp-module-aggregator)
 
 #### <a name="mdaggregator2" href="#mdaggregator2">Metadata aggregator 2</a>
 
@@ -183,13 +155,6 @@ description, as well as manually registering metadata for service providers.
 
 * Package name: `simplesamlphp/simplesamlphp-module-metaedit`
 * Repository: [simplesamlphp/simplesamlphp-module-metaedit](https://github.com/simplesamlphp/simplesamlphp-module-metaedit)
-
-#### <a name="modinfo" href="#modinfo">Modinfo</a>
-
-A very straightforward module for SimpleSAMLphp that displays the list of modules and their status in the web interface.
-
-* Package name: `simplesamlphp/simplesamlphp-module-modinfo`
-* Repository: [simplesamlphp/simplesamlphp-module-modinfo](https://github.com/simplesamlphp/simplesamlphp-module-modinfo)
 
 #### <a name="monitor" href="#monitor">Monitor</a>
 
@@ -238,14 +203,6 @@ supporting both the HTTP-Redirect and HTTP-POST bindings.
 * Package name: `simplesamlphp/simplesamlphp-module-saml2debug`
 * Repository: [simplesamlphp/simplesamlphp-module-saml2debug](https://github.com/simplesamlphp/simplesamlphp-module-saml2debug)
 
-#### <a name="selfregister" href="#selfregister">Selfregister</a>
-
-A module that allows registration of users accounts. The original version was developed by UNINETT and supported LDAP as
-a backend. This fork adds support for SQL databases as the back-end.
-
-* Package name: `geant/simplesamlphp-module-selfregister`
-* Repository: [geant/simplesamlphp-module-selfregister](https://github.com/TERENA/simplesamlphp-module-selfregister)
-
 #### <a name="sqlattrs" href="#sqlattrs">SQL Attributes</a>
 
 An authentication processing filter that allows you to provide additional attributes from a SQL datastore. It is useful
@@ -255,14 +212,6 @@ schema.
 
 * Package name: `safire-ac-za/simplesamlphp-module-sqlattribs`
 * Repository: [safire-ac-za/simplesamlphp-module-sqlattribs](https://github.com/safire-ac-za/simplesamlphp-module-sqlattribs)
-
-#### <a name="voot" href="#voot">VOOT Groups</a>
-
-A module to fetch group memberships from an API service protected with OAuth 2.0 using the VOOT protocol and add them
-to the list of attributes received from the identity provider.
-
-* Package name: `openconextapps/simplesamlphp-module-vootgroups`
-* Repository: [OpenConextApps/ssp-voot-groups](https://github.com/OpenConextApps/ssp-voot-groups)
 
 ## Extending SimpleSAMLphp
 
