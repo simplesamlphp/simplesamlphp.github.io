@@ -15,14 +15,17 @@ jobs:
     steps:
       - name: 📂 setup
         uses: actions/checkout@v6
+
       - name: 💎 setup ruby
-        uses: ruby/setup-ruby@c4e5b1316158f92e3d49443a9d58b31d25ac0f8f # v1.306.0
+        uses: ruby/setup-ruby@v1.310.0
         with:
           ruby-version: 3.3
+
       - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@807a5f09755d777bfd3070e9505d02347844c9b2 # v2.4.2
+        uses: limjh16/jekyll-action-ts@v2
+
       - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site

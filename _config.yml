@@ -8,11 +8,13 @@ url: "https://simplesamlphp.org"
 twitter_username: simplesamlphp
 github_username:  simplesamlphp
 plugins_dir: ./_plugins
+plugins:
+  - jekyll-get-json
 
 # Build settings
 markdown: kramdown
 
-jekyll_get:
+jekyll_get_json:
   - data: latest
     json: 'https://api.github.com/repos/simplesamlphp/simplesamlphp/releases/latest'
     cache: false
