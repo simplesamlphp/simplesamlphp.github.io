@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 setup
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1.310.0
+        uses: ruby/setup-ruby@v1.315.0
         with:
           ruby-version: 3.3
 
