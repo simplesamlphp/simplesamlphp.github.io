@@ -3,6 +3,7 @@ name: Build and deploy Jekyll site to GitHub Pages
 permissions:
   contents: write
   id-token: write
+  pages: write
 
 on:
   push:
